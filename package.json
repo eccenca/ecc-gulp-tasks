@@ -1,5 +1,5 @@
 {
-  "name": "gulp-tasks",
+  "name": "gulp-ecc-tasks",
   "version": "1.0.0",
   "description": "Eccenca common front-end gulp tasks",
   "main": "index.js",
