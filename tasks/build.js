@@ -18,5 +18,5 @@ module.exports = function(rootDir, config) {
     return bundler
         .bundle()
         .pipe(source('component.min.js'))
-        .pipe(gulp.dest(rootDir + 'ui-test/'));
+        .pipe(gulp.dest(rootDir + '/ui-test/'));
 };
