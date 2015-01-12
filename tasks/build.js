@@ -5,7 +5,7 @@ var source = require('vinyl-source-stream');
 var reactify = require('reactify');
 var to5Browserify = require('6to5ify');
 
-module.exports = function(rootDir) {
+module.exports = function(rootDir, config) {
     // place code for your default task here
     var bundler = browserify({
         entries: rootDir + '/ui-test/ui-test.jsx',
