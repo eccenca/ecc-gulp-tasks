@@ -2,8 +2,7 @@
 var gulp = require('gulp');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
-var reactify = require('reactify');
-var to5Browserify = require('6to5ify');
+var babelify = require('babelify');
 
 module.exports = function(rootDir, config) {
     // place code for your default task here
@@ -12,8 +11,7 @@ module.exports = function(rootDir, config) {
         extensions: ['js', 'jsx'],
         //debug: true
     });
-    bundler.transform(reactify);
-    bundler.transform(to5Browserify);
+    bundler.transform(babelify);
 
     return bundler
         .bundle()
