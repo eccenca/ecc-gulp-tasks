@@ -9,9 +9,14 @@ module.exports = function(rootDir, config) {
     var bundler = browserify({
         entries: rootDir + '/ui-test/ui-test.jsx',
         extensions: ['js', 'jsx'],
-        //debug: true
+        debug: config.debug,
     });
     bundler.transform(babelify);
+    if (config.browserifyTransforms) {
+        config.browserifyTransforms.forEach(function(transform) {
+            bundler.transform(transform);
+        });
+    }
 
     return bundler
         .bundle()
