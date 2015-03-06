@@ -1,9 +1,9 @@
 /* jshint node:true */
 var gulp = require('gulp');
-var sass = require('gulp-sass');
+var less = require('gulp-less');
 
 module.exports = function(rootDir, config) {
-    return gulp.src(rootDir + '/scss/test.scss')
-        .pipe(sass())
+    return gulp.src(rootDir + '/style/test.less')
+        .pipe(less())
         .pipe(gulp.dest(rootDir + '/ui-test/'));
 };

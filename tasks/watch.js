@@ -3,5 +3,5 @@ var gulp = require('gulp');
 
 module.exports = function(rootDir, config) {
     gulp.watch([rootDir + '/src/**/*', rootDir + '/test/*.jsx'], ['build']);
-    gulp.watch([rootDir + '/scss/**/*'], ['scss']);
+    gulp.watch([rootDir + '/style/**/*'], ['style']);
 };
