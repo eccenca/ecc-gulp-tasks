@@ -1,8 +1,8 @@
 /* jshint node:true */
 var gulp = require('gulp');
-var jsxcs = require('gulp-jsxcs');
+var jscs = require('gulp-jscs');
 
 module.exports = function(rootDir, config) {
     return gulp.src('./src/**/*')
-        .pipe(jsxcs());
+        .pipe(jscs());
 };
