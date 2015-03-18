@@ -1,8 +1,10 @@
 /* jshint node:true */
 var gulp = require('gulp');
-var jscs = require('gulp-jscs');
+var eslint = require('gulp-eslint');
 
 module.exports = function(rootDir, config) {
     return gulp.src('./src/**/*')
-        .pipe(jscs());
+        .pipe(eslint())
+        .pipe(eslint.format())
+        .pipe(eslint.failOnError());
 };
