@@ -6,5 +6,5 @@ module.exports = function(rootDir, config) {
     return gulp.src('./src/**/*')
         .pipe(eslint())
         .pipe(eslint.format())
-        .pipe(eslint.failOnError());
+        .pipe(eslint.failAfterError());
 };
