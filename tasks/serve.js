@@ -10,6 +10,9 @@ module.exports = function(config) {
     // prepare
     server.use(express.static(path));
     server.use('/node_modules', express.static(rootDir + '/node_modules'));
+    server.get('*', function(req, res) {
+        res.sendFile('/index.html', {root: path});
+    });
 
     // apply overrides if any are present
     if (config.serverOverrides) {
