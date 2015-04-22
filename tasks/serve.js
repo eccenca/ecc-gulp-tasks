@@ -6,10 +6,8 @@ var server = express();
 
 module.exports = function(config) {
     var path = config.path;
-    var rootDir = config.rootDir;
     // prepare
     server.use(express.static(path));
-    server.use('/node_modules', express.static(rootDir + '/node_modules'));
     server.get('*', function(req, res) {
         res.sendFile('/index.html', {root: path});
     });
