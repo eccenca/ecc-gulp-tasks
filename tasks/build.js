@@ -6,7 +6,7 @@ module.exports = function(config, callback) {
     // use production optimizations
     var optimizations = [
         new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.UglifyJsPlugin(),
+        new webpack.optimize.UglifyJsPlugin({output: {comments: false}}),
     ];
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
