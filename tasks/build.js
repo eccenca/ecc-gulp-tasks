@@ -1,10 +1,12 @@
 var gutil = require('gulp-util');
 var webpack = require('webpack');
+var definePlugin = require('../util/definePlugin');
 
 module.exports = function(config, callback) {
     var wpConfig = config.webpackConfig.production;
     // use production optimizations
     var optimizations = [
+        definePlugin,
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({output: {comments: false}}),
     ];
