@@ -1,11 +1,16 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "0.1.10",
+  "version": "0.2.0",
   "description": "Eccenca common front-end gulp tasks",
   "main": "index.js",
   "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
   "license": "GPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.eccenca.com/elds-ui/gulp-ecc-tasks.git"
+  },
   "dependencies": {
+    "babel": "^5.1.11",
     "babel-core": "^5.1.11",
     "babel-eslint": "^3.0.1",
     "babel-loader": "^5.0.0",
@@ -17,7 +22,9 @@
     "express": "^4.12.3",
     "file-loader": "^0.8.1",
     "gulp": "^3.8.11",
+    "gulp-spawn-mocha": "^2.0.1",
     "gulp-util": "^3.0.4",
+    "istanbul": "^0.3.13",
     "less": "^2.5.0",
     "less-loader": "^2.2.0",
     "lodash": "^3.7.0",
