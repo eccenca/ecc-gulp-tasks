@@ -25,6 +25,7 @@
     "gulp-spawn-mocha": "^2.0.1",
     "gulp-util": "^3.0.4",
     "istanbul": "^0.3.13",
+    "json-loader": "^0.5.1",
     "less": "^2.5.0",
     "less-loader": "^2.2.0",
     "lodash": "^3.7.0",

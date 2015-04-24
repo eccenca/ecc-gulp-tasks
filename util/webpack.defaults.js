@@ -26,6 +26,10 @@ var applyDefaults = function(cfg) {
                     loaders: ['style', 'css'],
                 },
                 {
+                    test: /\.json$/,
+                    loader: 'json',
+                },
+                {
                     test: /\.less$/,
                     loaders: ['style', 'css', 'less'],
                 },
