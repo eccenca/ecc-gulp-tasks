@@ -10,7 +10,7 @@ module.exports = function(config) {
     server.use(express.static(path));
     // apply overrides if any are present
     if (config.serverOverrides) {
-        config.serverOverrides(server);
+        config.serverOverrides(server, express);
     }
     // server rest as default
     server.get('*', function(req, res) {
