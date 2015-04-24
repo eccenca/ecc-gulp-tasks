@@ -8,14 +8,14 @@ module.exports = function(config) {
     var path = config.path;
     // prepare
     server.use(express.static(path));
-    server.get('*', function(req, res) {
-        res.sendFile('/index.html', {root: path});
-    });
-
     // apply overrides if any are present
     if (config.serverOverrides) {
         config.serverOverrides(server);
     }
+    // server rest as default
+    server.get('*', function(req, res) {
+        res.sendFile('/index.html', {root: path});
+    });
 
     // start nodemon
     return server.listen(8080);
