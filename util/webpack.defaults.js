@@ -12,6 +12,9 @@ var applyDefaults = function(cfg) {
             extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules'],
         },
+        node: {
+            fs: 'empty',
+        },
         module: {
             preLoaders: [
                 {
