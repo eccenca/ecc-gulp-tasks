@@ -21,6 +21,9 @@ module.exports = function(config) {
             return;
         }
         // log result
-        gutil.log('[webpack]', stats.toString());
+        gutil.log('[webpack]', stats.toString({
+            chunks: false,
+            colors: true,
+        }));
     });
 };
