@@ -119,7 +119,6 @@
     "complexity": [2, 3],
     "max-len": [2, 120],
     "max-params": [2, 2],
-    "max-nested-callbacks": [2, 1],
     // jsx rules
     "react/jsx-quotes": 1,
     "react/jsx-no-undef": 1,
