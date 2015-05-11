@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "description": "Eccenca common front-end gulp tasks",
   "main": "index.js",
   "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
