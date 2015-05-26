@@ -6,11 +6,13 @@ var applyDefaults = function(cfg) {
     return _.merge(cfg, {
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
+            fallback: path.join(__dirname, '..', 'node_modules'),
         },
         resolve: {
             packageMains: ['style', 'es5', 'main'],
             extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules'],
+            fallback: path.join(cfg.context, 'node_modules'),
         },
         node: {
             fs: 'empty',
