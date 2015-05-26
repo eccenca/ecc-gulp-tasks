@@ -8,10 +8,10 @@ var server = express();
 module.exports = function(config) {
     var path = config.path;
     // parse request bodies (req.body)
-    app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({extended: true}));
+    server.use(bodyParser.json());
+    server.use(bodyParser.urlencoded({extended: true}));
     // support _method (PUT in forms etc)
-    app.use(methodOverride());
+    server.use(methodOverride());
     // prepare
     server.use(express.static(path));
     // apply overrides if any are present
