@@ -82,7 +82,10 @@ module.exports = {
     },
     serverOverrides: function(app, express) {
         app.use(express.static(path.join(__dirname, 'dist')));
-    }
+    },
+    serverStart: function(server) {
+        startSocketServer(server);
+    },
 };
 ```
 
@@ -94,3 +97,4 @@ Exported parameters are as follows:
 - `webpackConfig.debug` - should include your webpack config used for debugging
 - `webpackConfig.production` - should include your webpack config used for compilation for production
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
+- `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)
