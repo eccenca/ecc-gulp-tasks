@@ -24,5 +24,10 @@ module.exports = function(config) {
     });
 
     // start nodemon
-    return server.listen(8080);
+    var serverInstance = server.listen(8080);
+    // apply server start override if present
+    if (config.serverStart) {
+        config.serverStart(serverInstance);
+    }
+    return serverInstance;
 };
