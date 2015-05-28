@@ -68,6 +68,10 @@ var applyDefaults = function(cfg) {
                 },
             ],
         },
+    }, function(a, b) {
+        if (_.isArray(a)) {
+            return a.concat(b);
+        }
     });
 };
 
