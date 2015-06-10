@@ -13,10 +13,7 @@ var applyDefaults = function(cfg) {
                 'style',
                 'es5',
                 'webpack',
-                'browser',
-                'web',
                 'browserify',
-                ['jam', 'main'],
                 'main'
             ],
             extensions: ['', '.js', '.jsx'],
