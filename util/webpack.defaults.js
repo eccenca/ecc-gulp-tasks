@@ -9,7 +9,16 @@ var applyDefaults = function(cfg) {
             fallback: path.join(__dirname, '..', 'node_modules'),
         },
         resolve: {
-            packageMains: ['style', 'es5', 'main'],
+            packageMains: [
+                'style',
+                'es5',
+                'webpack',
+                'browser',
+                'web',
+                'browserify',
+                ['jam', 'main'],
+                'main'
+            ],
             extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules'],
             fallback: path.join(cfg.context, 'node_modules'),
