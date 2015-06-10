@@ -19,6 +19,11 @@ var applyDefaults = function(cfg) {
             extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules'],
             fallback: path.join(cfg.context, 'node_modules'),
+            alias: {
+                // fix for broken RxJS requiring by webpack
+                // TODO: remove once fixed in webpack
+                rx: 'rx/dist/rx.all.js'
+            }
         },
         node: {
             fs: 'empty',
