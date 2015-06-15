@@ -1,7 +1,12 @@
 var gulp = require('gulp');
+var fs = require('fs');
 var applyDefaults = require('./util/webpack.defaults');
 
-module.exports = function(tasks, config) {
+// get all tasks
+var allTasks = fs.readdirSync('./tasks');
+
+// logic
+module.exports = function(config) {
     // default config to object
     config = config || {};
     // extend config
@@ -14,7 +19,7 @@ module.exports = function(tasks, config) {
         }
     }
     // process tasks
-    tasks.forEach(function(name) {
+    allTasks.forEach(function(name) {
         var task = require('./tasks/' + name).bind(this, config);
         if (task.deps) {
             gulp.task(name, task.deps, task.work);
