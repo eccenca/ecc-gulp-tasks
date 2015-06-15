@@ -4,7 +4,8 @@ var path = require('path');
 var applyDefaults = require('./util/webpack.defaults');
 
 // get all tasks
-var allTasks = fs.readdirSync(path.join(__dirname, 'tasks'));
+var tasksPath = path.join(__dirname, 'tasks');
+var allTasks = fs.readdirSync(tasksPath).map(function(file) { return file.replace('.js', ''); });
 
 // logic
 module.exports = function(config) {
