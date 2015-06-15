@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 var fs = require('fs');
+var path = require('path');
 var applyDefaults = require('./util/webpack.defaults');
 
 // get all tasks
-var allTasks = fs.readdirSync('./tasks');
+var allTasks = fs.readdirSync(path.join(__dirname, 'tasks'));
 
 // logic
 module.exports = function(config) {
