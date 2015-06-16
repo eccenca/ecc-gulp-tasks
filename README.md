@@ -8,7 +8,9 @@ Provides basic tasks for all your component needs.
 - `debug` - compiles debug version of your component with webpack, watches for changes and re-compiles when needed (until interrupted). Uses `config.webpackConfig.debug` as basic configuration.
 - `serve` - uses express.js to statically serve folder specified in `config.path` at `localhost:8080`. Servers `index.html` for all non-existent requests to allow client-side routing testing. Allows access to express.js app via `config.serverOverrides(app)` function.
 - `test` - runs mocha tests starting from file specified at `config.testEntryPoint`.
+- `bamboo-test` - runs mocha tests starting from file specified at `config.testEntryPoint` and generates output with [bamboo-mocha-reporter](https://www.npmjs.com/package/mocha-bamboo-reporter).
 - `cover` - runs istanbul to generate test coverage from file specified at `config.testEntryPoint`.
+- `lint` - runs eslint on files specified at `config.lintingFiles`.
 - `version` - generates a `version.json` file using git describe command.
 - `licenses` - generates `licenses.json` file using all currently installed packages.
 
@@ -20,10 +22,7 @@ Provides basic tasks for all your component needs.
 - Create `gulpfile.js` looks like this:
 
 ```js
-var gulp = require('ecc-gulp-tasks')([
-    'serve',
-    'debug',
-], require('./buildConfig.js'));
+var gulp = require('ecc-gulp-tasks')(require('./buildConfig.js'));
 
 gulp.task('default', ['debug', 'serve']);
 ```
