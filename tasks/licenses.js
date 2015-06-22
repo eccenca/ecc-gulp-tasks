@@ -10,6 +10,7 @@ var replaces = {
     'MIT License': 'MIT',
     'Apache*': 'Apache-2.0',
     'Apache v2': 'Apache-2.0',
+    'Apache 2.0': 'Apache-2.0',
     'Apache, Version 2.0': 'Apache-2.0',
     'Apache License, Version 2.0': 'Apache-2.0',
     'BSD*': 'BSD',
