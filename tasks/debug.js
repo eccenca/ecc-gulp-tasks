@@ -7,6 +7,7 @@ module.exports = function(config) {
     // use production optimizations
     var optimizations = [
         definePlugin,
+        new ExtractTextPlugin('style.css'),
     ];
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
