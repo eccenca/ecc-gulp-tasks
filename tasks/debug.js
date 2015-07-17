@@ -1,6 +1,7 @@
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(config) {
     var wpConfig = config.webpackConfig.debug;
