@@ -1,3 +1,4 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var _ = require('lodash');
 
@@ -42,7 +43,7 @@ var applyDefaults = function(cfg) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loaders: ['style', 'css'],
+                    loader: ExtractTextPlugin.extract('style', 'css'),
                 },
                 {
                     test: /\.json$/,
@@ -50,11 +51,11 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loader: ['style', 'css', 'less'],
+                    loader: ExtractTextPlugin.extract('style', 'css!less'),
                 },
                 {
                     test: /\.scss$/,
-                    loader: ['style', 'css', 'sass'],
+                    loader: ExtractTextPlugin.extract('style', 'css!sass'),
                 },
                 {
                     test: /\.jsx?$/,
