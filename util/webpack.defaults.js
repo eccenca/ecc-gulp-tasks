@@ -50,11 +50,11 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loader: ['style', 'css', 'less'],
+                    loaders: ['style', 'css', 'less'],
                 },
                 {
                     test: /\.scss$/,
-                    loader: ['style', 'css', 'sass'],
+                    loaders: ['style', 'css', 'sass'],
                 },
                 {
                     test: /\.jsx?$/,
