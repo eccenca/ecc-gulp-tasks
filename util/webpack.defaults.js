@@ -63,23 +63,23 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=application/font-woff',
+                    loader: 'url?limit=150000&minetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=application/octet-stream',
+                    loader: 'url?limit=150000&minetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: 'file',
+                    loader: 'url?limit=150000',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=image/svg+xml',
+                    loader: 'url?limit=150000&minetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: 'url-loader?limit=10000&mimetype=image/png',
+                    loader: 'url-loader?limit=150000&mimetype=image/png',
                 },
             ],
         },
