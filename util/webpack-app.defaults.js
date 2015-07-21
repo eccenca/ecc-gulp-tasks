@@ -72,7 +72,7 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: 'file',
+                    loader: 'url?limit=10000',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
