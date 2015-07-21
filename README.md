@@ -5,6 +5,7 @@ Provides basic tasks for all your component needs.
 ### Available tasks
 
 - `build` - compiles optimized (minified, deduped) commonjs version of your component with webpack. Uses `config.webpackConfig.production` as basic configuration.
+- `build-app` - compiles optimized (minified, deduped) application with webpack. Uses `config.webpackConfig.application` as basic configuration.
 - `debug` - compiles debug version of your component with webpack, watches for changes and re-compiles when needed (until interrupted). Uses `config.webpackConfig.debug` as basic configuration.
 - `serve` - uses express.js to statically serve folder specified in `config.path` at `localhost:8080`. Servers `index.html` for all non-existent requests to allow client-side routing testing. Allows access to express.js app via `config.serverOverrides(app)` function.
 - `test` - runs mocha tests starting from file specified at `config.testEntryPoint`.
@@ -78,6 +79,7 @@ module.exports = {
     webpackConfig: {
         debug: require('./webpack.config.js'),
         production: require('./webpack.config.prod.js'),
+        application: require('./webpack.config.app.js'),
     },
     serverOverrides: function(app, express) {
         app.use(express.static(path.join(__dirname, 'dist')));
@@ -95,5 +97,6 @@ Exported parameters are as follows:
 - `rootPath` - should point to root of your project directory, usually can be copy-pasted from example (used in `licenses` and `version` tasks)
 - `webpackConfig.debug` - should include your webpack config used for debugging
 - `webpackConfig.production` - should include your webpack config used for compilation for production
+- `webpackConfig.application` - should include your webpack config used for compilation as production application
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
 - `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)

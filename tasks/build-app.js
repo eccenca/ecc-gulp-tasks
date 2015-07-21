@@ -1,13 +1,16 @@
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(config, callback) {
-    var wpConfig = config.webpackConfig.production;
+    var wpConfig = config.webpackConfig.application;
     // use production optimizations
     var optimizations = [
         definePlugin,
+        new ExtractTextPlugin('style.css'),
         new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             output: {
                 comments: false,

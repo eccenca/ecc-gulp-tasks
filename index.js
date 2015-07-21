@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var fs = require('fs');
 var path = require('path');
 var applyDefaults = require('./util/webpack.defaults');
+var applyApplicationDefaults = require('./util/webpack-app.defaults');
 
 // get all tasks
 var tasksPath = path.join(__dirname, 'tasks');
@@ -18,6 +19,9 @@ module.exports = function(config) {
         }
         if (config.webpackConfig.production) {
             config.webpackConfig.production = applyDefaults(config.webpackConfig.production);
+        }
+        if (config.webpackConfig.application) {
+            config.webpackConfig.application = applyApplicationDefaults(config.webpackConfig.application);
         }
     }
     // process tasks
