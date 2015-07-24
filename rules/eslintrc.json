@@ -15,8 +15,7 @@
   },
   "plugins": [
     // enable react plugin
-    "react",
-    "objects"
+    "react"
   ],
   // To give you an idea how to override rule options
   "rules": {
@@ -133,11 +132,6 @@
     "react/react-in-jsx-scope": 1,
     "react/self-closing-comp": 1,
     "react/wrap-multilines": 1,
-    // Object plugin rules
-    "objects/no-object-property-split": 2,
-    "objects/no-object-properties-first-line": 1,
-    "objects/no-object-properties-last-line": 1,
-    "objects/no-object-properties-one-line": 1,
     // ES6
     "prefer-const": 2,
     "object-shorthand": [2, "always"],
