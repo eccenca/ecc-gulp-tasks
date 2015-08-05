@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
+var util = require('gulp-util');
 
 // configure server
 var server = express();
@@ -24,10 +25,20 @@ module.exports = function(config) {
     });
 
     // start nodemon
-    var serverInstance = server.listen(8080);
+    var serverInstance = server.listen(8080, function(e){
+        if (e) {
+            return;
+        }
+        util.log(
+            'Started webserver on',
+            util.colors.cyan('localhost:8080')
+        );
+    });
+
     // apply server start override if present
     if (config.serverStart) {
         config.serverStart(serverInstance);
     }
+
     return serverInstance;
 };
