@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
-var open = require('opn');
 var util = require('gulp-util');
 
 // configure server
@@ -32,10 +31,8 @@ module.exports = function(config) {
         }
         util.log(
             'Started webserver on',
-            util.colors.cyan('localhost:8080'),
-            'Opening it in your default browser.'
+            util.colors.cyan('localhost:8080')
         );
-        open('http://localhost:8080');
     });
 
     // apply server start override if present

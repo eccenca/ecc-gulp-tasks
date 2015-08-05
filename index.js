@@ -26,11 +26,11 @@ module.exports = function(config) {
     }
     // process tasks
     allTasks.forEach(function(name) {
-        var task = require('./tasks/' + name).bind(this, config);
+        var task = require('./tasks/' + name);
         if (task.deps) {
-            gulp.task(name, task.deps, task.work);
+            gulp.task(name, task.deps, task.work.bind(this, config));
         } else {
-            gulp.task(name, task);
+            gulp.task(name, task.bind(this, config));
         }
     });
 
