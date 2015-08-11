@@ -60,6 +60,10 @@ var applyDefaults = function(cfg) {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',
+                    query: {
+                        stage: 0,
+                        loose: 'all',
+                    },
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
