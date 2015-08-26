@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "description": "Eccenca common front-end gulp tasks",
   "main": "index.js",
   "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
@@ -36,7 +36,7 @@
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
     "mocha-bamboo-reporter": "^1.1.0",
-    "node-sass": "^3.2.0",
+    "node-sass": "~3.2.0",
     "opn": "^3.0.2",
     "raw-loader": "^0.5.1",
     "sass-loader": "^2.0.1",
