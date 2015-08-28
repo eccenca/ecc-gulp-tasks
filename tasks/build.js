@@ -1,3 +1,4 @@
+/* eslint no-var: 0 */
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
@@ -7,19 +8,6 @@ module.exports = function(config, callback) {
     // use production optimizations
     var optimizations = [
         definePlugin,
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
-            output: {
-                comments: false,
-            },
-            compress: {
-                warnings: false,
-                screw_ie8: true,
-            },
-            mangle: {
-                screw_ie8: true,
-            },
-        }),
     ];
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
