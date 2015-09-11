@@ -6,7 +6,10 @@ BrowserErrorPlugin.prototype.apply = function(compiler) {
     compiler.plugin('done', function(stats) {
         if (stats.hasErrors()) {
             var nonLinterErrors = stats.compilation.errors.filter(function(err) {
-                return err.module.issuer.indexOf('eslint-loader') === -1;
+                return err &&
+                    err.module &&
+                    err.module.issuer &&
+                    err.module.issuer.indexOf('eslint-loader') === -1;
             });
             if (nonLinterErrors.length) {
                 var outputFileSystem = compiler.outputFileSystem;
