@@ -16,7 +16,13 @@ BrowserErrorPlugin.prototype.apply = function(compiler) {
                 var outputOptions = compiler.options.output;
                 var main = path.join(outputOptions.path, outputOptions.filename);
                 var errors = nonLinterErrors.map(function(err) {
-                    return err.error.replace(/\n/g, '\\n').replace(/'/g, '\\\'');
+                    var msg = '';
+                    if (typeof err.error === 'string') {
+                        msg = err.error;
+                    } else {
+                        msg = err.error.message;
+                    }
+                    return msg.replace(/\n/g, '\\n').replace(/'/g, '\\\'');
                 }).join('\n\n');
                 outputFileSystem.writeFile(main, 'throw new Error(\'' + errors + '\')');
             }
