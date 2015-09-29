@@ -42,7 +42,7 @@ var applyDefaults = function(cfg) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loaders: ['style', 'css'],
+                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version'],
                 },
                 {
                     test: /\.json$/,
@@ -50,11 +50,11 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loaders: ['style', 'css', 'less'],
+                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version', 'less'],
                 },
                 {
                     test: /\.scss$/,
-                    loaders: ['style', 'css', 'sass'],
+                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version', 'sass'],
                 },
                 {
                     test: /\.jsx?$/,
