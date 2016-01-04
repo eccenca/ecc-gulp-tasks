@@ -61,6 +61,7 @@ var applyDefaults = function(cfg) {
                     exclude: /node_modules/,
                     loader: 'babel',
                     query: {
+                        plugins: ['transform-runtime'],
                         presets: ['es2015-loose', 'stage-0', 'react']
                     },
                 },
