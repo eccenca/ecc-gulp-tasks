@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "0.16.0-alpha.2",
+  "version": "0.16.0-alpha.1",
   "description": "Eccenca common front-end gulp tasks",
   "main": "index.js",
   "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
@@ -14,7 +14,6 @@
     "babel-core": "^6.0.0",
     "babel-eslint": "^5.0.0-beta1",
     "babel-loader": "^6.0.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.3.16",
     "babel-preset-es2015-loose": "^6.0.0",
     "babel-preset-react": "^6.0.0",
     "babel-preset-stage-0": "^6.0.0",
