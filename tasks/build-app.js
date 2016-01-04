@@ -8,6 +8,11 @@ module.exports = function(config, callback) {
     // use production optimizations
     var optimizations = [
         definePlugin,
+        // Set React to production mode
+        // (http://ianobermiller.com/blog/2015/06/15/shave-45kb-off-your-production-webpack-react-build/)
+        new webpack.DefinePlugin({
+            'process.env': {NODE_ENV: '"production"'}
+        }),
         new ExtractTextPlugin('style.css'),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
