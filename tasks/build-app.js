@@ -39,7 +39,8 @@ module.exports = function(config, callback) {
     // run webpack
     webpack(wpConfig, function(err, stats) {
         if (err) {
-            throw new gutil.PluginError('webpack', err);
+            callback(new gutil.PluginError('webpack', err));
+            return;
         }
         // only log when errors
         gutil.log('[webpack]: ', stats.toString({
