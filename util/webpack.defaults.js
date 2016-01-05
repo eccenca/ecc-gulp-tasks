@@ -50,11 +50,11 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version', 'less'],
+                    loaders: ['style?insertAt=top', 'css', 'autoprefixer?browsers=last 3 version', 'less'],
                 },
                 {
                     test: /\.scss$/,
-                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version', 'sass'],
+                    loaders: ['style?insertAt=top', 'css', 'autoprefixer?browsers=last 3 version', 'sass'],
                 },
                 {
                     test: /\.jsx?$/,
