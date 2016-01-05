@@ -51,11 +51,11 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 3 version!less'),
+                    loader: ExtractTextPlugin.extract('style?insertAt=top', 'css!autoprefixer?browsers=last 3 version!less'),
                 },
                 {
                     test: /\.scss$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 3 version!sass'),
+                    loader: ExtractTextPlugin.extract('style?insertAt=top', 'css!autoprefixer?browsers=last 3 version!sass'),
                 },
                 {
                     test: /\.jsx?$/,
