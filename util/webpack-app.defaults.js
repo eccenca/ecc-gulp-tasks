@@ -43,7 +43,7 @@ var applyDefaults = function(cfg) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 3 version'),
+                    loader: ExtractTextPlugin.extract('style?insertAt=top', 'css!autoprefixer?browsers=last 3 version'),
                 },
                 {
                     test: /\.json$/,
@@ -51,7 +51,7 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loader: ExtractTextPlugin.extract('style?insertAt=top', 'css!autoprefixer?browsers=last 3 version!less'),
+                    loader: ExtractTextPlugin.extract('style?insertAt=bottom', 'css!autoprefixer?browsers=last 3 version!less'),
                 },
                 {
                     test: /\.scss$/,
