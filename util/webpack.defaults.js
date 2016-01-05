@@ -2,6 +2,10 @@ var path = require('path');
 var _ = require('lodash');
 
 var applyDefaults = function(cfg) {
+
+    // This ensures that requires like mdl are added at the top of the header
+    var cssInsert = (cfg.debug) ? 'top' : 'bottom';
+    
     // extend config
     return _.merge(cfg, {
         resolveLoader: {
@@ -42,7 +46,7 @@ var applyDefaults = function(cfg) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loaders: ['style?insertAt=bottom', 'css', 'autoprefixer?browsers=last 3 version'],
+                    loaders: ['style?insertAt=' + cssInsert, 'css', 'autoprefixer?browsers=last 3 version'],
                 },
                 {
                     test: /\.json$/,
@@ -50,11 +54,11 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.less$/,
-                    loaders: ['style?insertAt=bottom', 'css', 'autoprefixer?browsers=last 3 version', 'less'],
+                    loaders: ['style?insertAt=' + cssInsert, 'css', 'autoprefixer?browsers=last 3 version', 'less'],
                 },
                 {
                     test: /\.scss$/,
-                    loaders: ['style?insertAt=bottom', 'css', 'autoprefixer?browsers=last 3 version', 'sass'],
+                    loaders: ['style?insertAt=' + cssInsert, 'css', 'autoprefixer?browsers=last 3 version', 'sass'],
                 },
                 {
                     test: /\.jsx?$/,
