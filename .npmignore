@@ -1,3 +1,10 @@
+#START
+# PLEASE PLACE CUSTOM NPM IGNORES BELOW #END
+#
+# ANYTHING YOU PLACE BEFORE THE END TAG
+# WILL BE OVERWRITTEN BY OUR COMMON-FILES
+# INSTALL-SCRIPT
+
 # ignore git
 .git/
 .gitignore
@@ -15,7 +22,13 @@ coverage/
 
 # ignore symlinks
 .editorconfig
-.eslintrc
+.eslintrc.yml
+Makefile
 
-# ignore webstorm
+# ignore data folders by jetbrains products
 .idea/
+
+#END
+
+# ignore custom install.js file
+install.js

@@ -1,1 +1,19 @@
+#START
+# PLEASE PLACE CUSTOM GIT IGNORES BELOW #END
+#
+# ANYTHING YOU PLACE BEFORE THE END TAG
+# WILL BE OVERWRITTEN BY OUR COMMON-FILES
+# INSTALL-SCRIPT
+
+# node-modules
 node_modules/
+
+# ignore symlinks
+.editorconfig
+.eslintrc.yml
+Makefile
+
+# ignore data folders by jetbrains products
+.idea/
+
+#END
