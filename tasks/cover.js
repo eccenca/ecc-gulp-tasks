@@ -5,7 +5,7 @@ module.exports = function(config) {
     return gulp
         .src(config.testEntryPoint)
         .pipe(mocha({
-            compilers: 'jsx?:babel/register',
+            compilers: 'jsx?:babel-core/register',
             istanbul: true,
         }));
 };
