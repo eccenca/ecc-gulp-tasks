@@ -5,7 +5,7 @@ var applyDefaults = function(cfg) {
 
     // This ensures that requires like mdl are added at the top of the header
     var cssInsert = (cfg.debug) ? 'top' : 'bottom';
-    
+
     // extend config
     return _.merge(cfg, {
         resolveLoader: {
@@ -66,7 +66,7 @@ var applyDefaults = function(cfg) {
                     loader: 'babel',
                     query: {
                         plugins: ['transform-runtime'],
-                        presets: ['es2015-loose', 'stage-0', 'react']
+                        presets: ['eccenca']
                     },
                 },
                 {
