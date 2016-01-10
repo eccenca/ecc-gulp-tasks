@@ -5,10 +5,12 @@
 # WILL BE OVERWRITTEN BY OUR COMMON-FILES
 # INSTALL-SCRIPT
 
-# node-modules
+# node && npm
 node_modules/
+npm-debug.log
 
 # ignore symlinks
+.babelrc
 .editorconfig
 .eslintrc.yml
 Makefile

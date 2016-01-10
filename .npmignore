@@ -5,6 +5,10 @@
 # WILL BE OVERWRITTEN BY OUR COMMON-FILES
 # INSTALL-SCRIPT
 
+# ignore node_modules and debug log
+node_modules/
+npm-debug.log
+
 # ignore git
 .git/
 .gitignore
@@ -21,6 +25,7 @@ test/
 coverage/
 
 # ignore symlinks
+.babelrc
 .editorconfig
 .eslintrc.yml
 Makefile
