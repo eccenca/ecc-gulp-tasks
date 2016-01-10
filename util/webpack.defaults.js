@@ -33,7 +33,7 @@ var applyDefaults = function(cfg) {
             fs: 'empty',
         },
         eslint: {
-            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.json'),
+            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.yml'),
         },
         module: {
             preLoaders: [
