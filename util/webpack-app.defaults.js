@@ -67,7 +67,7 @@ var applyDefaults = function(cfg) {
                     loader: 'babel',
                     query: {
                         plugins: ['transform-runtime'],
-                        presets: ['es2015-loose', 'stage-0', 'react']
+                        presets: ['eccenca']
                     },
                 },
                 {
