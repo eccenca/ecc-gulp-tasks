@@ -6,6 +6,6 @@ module.exports = function(config) {
         .src(config.testEntryPoint)
         .pipe(mocha({
             R: 'mocha-bamboo-reporter',
-            compilers: 'jsx?:babel/register',
+            compilers: 'jsx?:babel-core/register',
         }));
 };
