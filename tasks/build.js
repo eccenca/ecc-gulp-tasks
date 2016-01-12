@@ -1,10 +1,12 @@
 /* eslint no-var: 0 */
-var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
+var webpackBuildCB = require('../util/webpackBuildCB');
 
 module.exports = function(config, callback) {
+
     var wpConfig = config.webpackConfig.production;
+
     // use production optimizations
     var optimizations = [
         definePlugin,
@@ -14,19 +16,10 @@ module.exports = function(config, callback) {
     } else {
         wpConfig.plugins = optimizations;
     }
+
     // remove linting
     delete wpConfig.module.preLoaders;
+
     // run webpack
-    webpack(wpConfig, function(err, stats) {
-        if (err) {
-            throw new gutil.PluginError('webpack', err);
-        }
-        // only log when errors
-        gutil.log('[webpack]: ', stats.toString({
-            chunks: false,
-            modules: false,
-            colors: true,
-        }));
-        callback();
-    });
+    webpack(wpConfig, webpackBuildCB.bind(undefined, callback));
 };
