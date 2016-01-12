@@ -1,22 +1,8 @@
-# Eccenca common gulp tasks
+# Eccenca common gulp tasks (ecc-gulp-tasks)
 
-Provides basic tasks for all your component needs.
+A set of common gulp tasks for front-end development
 
-## Upgrading to ^0.16.0
-
-ecc-gulp-tasks 0.16.0 contains breaking changes. Babel was updated to version 6.
-
-If your package uses babel itself (or any babel-\* packages) please make sue you know what you are doing.
- 
-Good reads are:
-- [The Six Things You Need To Know About Babel 6](http://jamesknelson.com/the-six-things-you-need-to-know-about-babel-6/)
-- [Using ES6 and ES7 in the Browser, with Babel 6 and Webpack](http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/)
-- [Quick guide: how to update Babel 5.x -> 6.x](https://medium.com/@malyw/d828c230ec53)
-
-A main think that broke is requiring modules with `require` instead of `import`. If you have problems with that, please read: [Misunderstanding ES6 Modules, Upgrading Babel, Tears, and a Solution](https://medium.com/@kentcdodds/ad2d5ab93ce0) 
-
-
-### Available tasks
+## Available tasks
 
 - `build` - compiles optimized (minified, deduped) commonjs version of your component with webpack. Uses `config.webpackConfig.production` as basic configuration.
 - `build-app` - compiles optimized (minified, deduped) application with webpack. Uses `config.webpackConfig.application` as basic configuration.
@@ -29,9 +15,7 @@ A main think that broke is requiring modules with `require` instead of `import`.
 - `version` - generates a `version.json` file using git describe command.
 - `licenses` - generates `licenses.json` file using all currently installed packages.
 
-
-
-### Usage
+## Usage
 
 - Include into your project using `npm i --save-dev ecc-gulp-tasks`
 - Create `gulpfile.js` looks like this:
@@ -45,8 +29,6 @@ gulp.task('default', ['debug', 'serve']);
 As you can see, you need to provide two arguments while requiring the package.
 First one is an array of string names of available tasks you wish to use.
 The second one is your build config (described below).
-
-
 
 ### Adding custom gulp tassk
 
@@ -63,8 +45,6 @@ require('./gulp/my-other-task.js')(gulp);
 // ...
 ```
 
-
-
 ### How to run things synchonously?
 
 Normally gulp runs everything asynchronously, but sometimes you might want to run tasks in sync.
@@ -77,8 +57,6 @@ var gulp = require('ecc-gulp-tasks')(/* ... */);
 // ....
 gulp.task('deploy', gulpSequence('version', 'licenses', 'build'));
 ```
-
-
 
 ### Build config
 
