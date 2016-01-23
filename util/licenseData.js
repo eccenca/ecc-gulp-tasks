@@ -5,7 +5,7 @@ module.exports = [
     },
     {
         name: 'BSD',
-        aliases: ['BSD*', 'BSD-3-Clause', 'BSD-2-Clause']
+        aliases: ['BSD*', 'BSD-3-Clause', 'BSD-2-Clause', 'BSD-like']
     },
     {
         name: 'Apache-2.0',
@@ -41,5 +41,9 @@ module.exports = [
     {
         name: 'CC-0',
         aliases: ['CC0 1.0 Universal License', 'CC0–1.0', 'CC0-1.0']
+    },
+    {
+        name: 'LGPL',
+        aliases: []
     }
 ];

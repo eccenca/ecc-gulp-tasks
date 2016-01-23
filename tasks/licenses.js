@@ -20,6 +20,49 @@ var replacementMap = _.reduce(licenseData, function(result, curr) {
 
 var licenseOrder = _.pluck(licenseData, 'name').reverse();
 
+module.exports = function(config, callback) {
+    checker.init({
+        start: config.rootPath,
+        production: true,
+    }, function(licenses) {
+
+        licenses = _.chain(licenses)
+            .map(function(pkg, key) {
+                pkg.pkg = key.split('@')[0];
+                pkg.version = key.split('@')[1];
+                pkg.license = getPreferredLicense(pkg.licenses);
+                pkg.repository = getRepositoryURL(pkg.repository);
+                delete pkg.licenses;
+                delete pkg.licenseFile;
+                return pkg;
+            })
+            .omit(isIgnoredModule)
+            .groupBy('license')
+            .tap(logMissingAndUnknownLicenses)
+            .mapValues(function(group) {
+                return _.chain(group)
+                    .groupBy('pkg')
+                    .map(function(pkg) {
+                        //var versions = _.pluck(pkg, 'version');
+                        //_.set(pkg,'[0].version', versions)
+                        return _.pick(_.first(pkg), ['pkg', 'repository']);
+                    })
+                    .value();
+            })
+            .value();
+
+
+        fs.writeFile(path.join(config.rootPath, 'licenses.json'), JSON.stringify(licenses), function(err) {
+            if (err) {
+                callback(new Error(err));
+            }
+
+            callback();
+        });
+    });
+
+};
+
 function getLicenseOrder(license) {
     return _.indexOf(licenseOrder, license);
 }
@@ -55,65 +98,31 @@ function getRepositoryURL(repositoryURL) {
     return repositoryURL;
 }
 
-module.exports = function(config, callback) {
-    checker.init({
-        start: config.rootPath,
-        production: true,
-    }, function(licenses) {
-
-        licenses = _.chain(licenses)
-            .map(function(pkg, key) {
-                pkg.pkg = key.split('@')[0];
-                pkg.version = key.split('@')[1];
-                pkg.license = getPreferredLicense(pkg.licenses);
-                pkg.repository = getRepositoryURL(pkg.repository);
-                delete pkg.licenses;
-                delete pkg.licenseFile;
-                return pkg;
-            })
-            .omit(isIgnoredModule)
-            .groupBy('license')
-            .tap(function(licenses) {
-                _.forEach(_.get(licenses, 'UNKNOWN'), function(pkg) {
-                    util.log(
-                        util.colors.red('[WARNING]:'),
-                        'license of',
-                        util.colors.cyan(pkg.pkg + '@' + pkg.version),
-                        'unknown'
-                    );
-                });
-
-                delete licenses['UNKNOWN']
-
-            }).mapValues(function(group) {
-                return _.chain(group)
-                    .groupBy('pkg')
-                    .map(function(pkg) {
-                        //var versions = _.pluck(pkg, 'version');
-                        //_.set(pkg,'[0].version', versions)
-                        return _.pick(_.first(pkg), ['pkg', 'repository']);
-                    })
-                    .value();
-            })
-            .value();
-
-        _.forEach(_.keys(licenses), function(license) {
-            if (!_.contains(licenseOrder, license)) {
-                util.log(
-                    util.colors.red('[WARNING]:'),
-                    'a new unmatched license',
-                    util.colors.cyan(license)
-                );
-            }
-        });
-
-        fs.writeFile(path.join(config.rootPath, 'licenses.json'), JSON.stringify(licenses), function(err) {
-            if (err) {
-                callback(new Error(err));
-            }
-
-            callback();
-        });
+function logMissingAndUnknownLicenses(licenses) {
+    _.forEach(_.get(licenses, 'UNKNOWN'), function(pkg) {
+        util.log(
+            util.colors.red('[WARNING]:'),
+            'license of',
+            util.colors.cyan(pkg.pkg + '@' + pkg.version),
+            'unknown/missing'
+        );
     });
 
-};
+    delete licenses['UNKNOWN'];
+
+    _.forEach(licenses, function(pkgs, licenseName) {
+        if (!_.contains(licenseOrder, licenseName)) {
+
+            var sample = _.sample(pkgs);
+
+            util.log(
+                util.colors.red('[WARNING]:'),
+                'a new unmatched license',
+                util.colors.cyan(licenseName),
+                'found for example in',
+                util.colors.cyan(sample.pkg + '@' + sample.version)
+            );
+        }
+    });
+
+}
