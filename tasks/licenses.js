@@ -3,71 +3,113 @@ var fs = require('fs');
 var path = require('path');
 var checker = require('license-checker');
 var _ = require('lodash');
+var util = require('gulp-util');
 
-var replaces = {
-    'MIT*': 'MIT',
-    'MIT/X11': 'MIT',
-    'MIT License': 'MIT',
-    'Apache*': 'Apache-2.0',
-    'Apache v2': 'Apache-2.0',
-    'Apache 2.0': 'Apache-2.0',
-    'Apache, Version 2.0': 'Apache-2.0',
-    'Apache License, Version 2.0': 'Apache-2.0',
-    'BSD*': 'BSD',
-    'BSD-3-Clause': 'BSD',
-    'BSD-2-Clause': 'BSD',
-};
+var licenseData = require('../util/licenseData');
 
-var ignoredNames = [
-    'ecc-',
-    'wkd-',
-];
+var replacementMap = _.reduce(licenseData, function(result, curr) {
+
+    _.forEach(curr.aliases, function(alias) {
+        _.set(result, alias.toLocaleLowerCase(), curr.name);
+    });
+
+    _.set(result, curr.name.toLocaleLowerCase(), curr.name);
+
+    return result;
+}, {});
+
+var licenseOrder = _.pluck(licenseData, 'name').reverse();
+
+function getLicenseOrder(license) {
+    return _.indexOf(licenseOrder, license);
+}
+
+function getPreferredLicense(licenses) {
+
+    return _.chain([licenses])
+        .map(function(license) {
+            if (_.isString(license)) {
+                return license.replace(/^\((.+)\)$/, '$1')
+                    .replace(/ (AND|OR) /g, '|x|')
+                    .split('|x|');
+            }
+            return license;
+        })
+        .flatten()
+        .map(function(license) {
+            return _.get(replacementMap, license.toLocaleLowerCase(), license);
+        })
+        .sortBy(getLicenseOrder)
+        .last()
+        .value();
+}
+
+function isIgnoredModule(pkg) {
+    return _.contains(pkg.repository, 'gitlab.eccenca.com');
+}
+
+function getRepositoryURL(repositoryURL) {
+    if (_.isString(repositoryURL)) {
+        return repositoryURL.replace(/^git\+/, '');
+    }
+    return repositoryURL;
+}
 
 module.exports = function(config, callback) {
     checker.init({
         start: config.rootPath,
-    }, function(json) {
-        var licenses = {};
-        for (var pkg in json) {
-            var license = json[pkg].licenses;
-            // console.log(json[pkg], pkg);
-            if (_.isArray(license)) {
-                license = license[0];
-            }
-            // replace name if needed
-            if (replaces[license]) {
-                license = replaces[license];
-            }
+        production: true,
+    }, function(licenses) {
 
-            // prepare info
-            var name = pkg.split('@')[0];
-            // check if we should ignore name
-            var ignore = false;
-            for (var i in ignoredNames) {
-                var prefix = ignoredNames[i];
-                if (name.indexOf(prefix) !== -1) {
-                    ignore = true;
-                }
+        licenses = _.chain(licenses)
+            .map(function(pkg, key) {
+                pkg.pkg = key.split('@')[0];
+                pkg.version = key.split('@')[1];
+                pkg.license = getPreferredLicense(pkg.licenses);
+                pkg.repository = getRepositoryURL(pkg.repository);
+                delete pkg.licenses;
+                delete pkg.licenseFile;
+                return pkg;
+            })
+            .omit(isIgnoredModule)
+            .groupBy('license')
+            .tap(function(licenses) {
+                _.forEach(_.get(licenses, 'UNKNOWN'), function(pkg) {
+                    util.log(
+                        util.colors.red('[WARNING]:'),
+                        'license of',
+                        util.colors.cyan(pkg.pkg + '@' + pkg.version),
+                        'unknown'
+                    );
+                });
+
+                delete licenses['UNKNOWN']
+
+            }).mapValues(function(group) {
+                return _.chain(group)
+                    .groupBy('pkg')
+                    .map(function(pkg) {
+                        //var versions = _.pluck(pkg, 'version');
+                        //_.set(pkg,'[0].version', versions)
+                        return _.pick(_.first(pkg), ['pkg', 'repository']);
+                    })
+                    .value();
+            })
+            .value();
+
+        _.forEach(_.keys(licenses), function(license) {
+            if (!_.contains(licenseOrder, license)) {
+                util.log(
+                    util.colors.red('[WARNING]:'),
+                    'a new unmatched license',
+                    util.colors.cyan(license)
+                );
             }
-            if (ignore) {
-                continue;
-            }
-            // make info
-            var info = {
-                pkg: name,
-                repository: json[pkg].repository,
-            };
-            if (licenses[license] !== undefined) {
-                if (!_.find(licenses[license], {pkg: name})) {
-                    licenses[license].push(info);
-                }
-            } else {
-                licenses[license] = [info];
-            }
-        }
+        });
+
         fs.writeFile(path.join(config.rootPath, 'licenses.json'), JSON.stringify(licenses), function(err) {
             if (err) {
-                console.error(err);
+                callback(new Error(err));
             }
 
             callback();
