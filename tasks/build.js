@@ -1,6 +1,7 @@
 /* eslint no-var: 0 */
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
 
 module.exports = function(config, callback) {
@@ -10,6 +11,7 @@ module.exports = function(config, callback) {
     // use production optimizations
     var optimizations = [
         definePlugin,
+        new ExtractTextPlugin('style.css'),
     ];
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
