@@ -18,7 +18,7 @@ module.exports = function(config) {
             config.webpackConfig.debug = applyDefaults(config.webpackConfig.debug);
         }
         if (config.webpackConfig.production) {
-            config.webpackConfig.production = applyDefaults(config.webpackConfig.production);
+            config.webpackConfig.production = applyApplicationDefaults(config.webpackConfig.production);
         }
         if (config.webpackConfig.application) {
             config.webpackConfig.application = applyApplicationDefaults(config.webpackConfig.application);
