@@ -32,8 +32,9 @@ module.exports = function(config, callback) {
                 pkg.version = key.split('@')[1];
                 pkg.license = getPreferredLicense(pkg.licenses);
                 pkg.repository = getRepositoryURL(pkg.repository);
-                delete pkg.licenses;
-                delete pkg.licenseFile;
+
+                //delete pkg.licenses;
+                //delete pkg.licenseFile;
                 return pkg;
             })
             .omit(isIgnoredModule)
@@ -45,7 +46,7 @@ module.exports = function(config, callback) {
                     .map(function(pkg) {
                         //var versions = _.pluck(pkg, 'version');
                         //_.set(pkg,'[0].version', versions)
-                        return _.pick(_.first(pkg), ['pkg', 'repository']);
+                        return _.pick(_.first(pkg), ['pkg','version', 'repository']);
                     })
                     .value();
             })

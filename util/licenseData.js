@@ -5,7 +5,15 @@ module.exports = [
     },
     {
         name: 'BSD',
-        aliases: ['BSD*', 'BSD-3-Clause', 'BSD-2-Clause', 'BSD-like']
+        aliases: ['BSD*', 'BSD-like']
+    },
+    {
+        name: 'BSD-2-Clause',
+        aliases: []
+    },
+    {
+        name: 'BSD-3-Clause',
+        aliases: []
     },
     {
         name: 'Apache-2.0',
