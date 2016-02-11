@@ -72,23 +72,23 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=application/font-woff',
+                    loader: 'url?name=font/[name].[ext]?[hash]&limit=10000&mimetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=application/octet-stream',
+                    loader: 'url?name=font/[name].[ext]?[hash]&limit=10000&mimetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: 'url?limit=10000',
+                    loader: 'url?name=font/[name].[ext]?[hash]&limit=10000',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=image/svg+xml',
+                    loader: 'url?name=image/[name].[ext]?[hash]&limit=10000&mimetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: 'url-loader?limit=10000&mimetype=image/png',
+                    loader: 'url-loader?name=image/[name].[ext]?[hash]&limit=10000&mimetype=image/png',
                 },
             ],
         },
