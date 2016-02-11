@@ -29,6 +29,17 @@ module.exports = function(config, callback) {
             },
         }),
     ];
+
+    if (config.html) {
+
+        var HtmlWebpackPlugin = require('html-webpack-plugin');
+        var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
+
+        optimizations.push(new HTMLTemplatePlugin());
+        optimizations.push(new HtmlWebpackPlugin(config.html));
+
+    }
+
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
     } else {

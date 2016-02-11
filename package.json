@@ -33,6 +33,7 @@
     "gulp-eslint": "^1.0.0",
     "gulp-spawn-mocha": "^2.2.1",
     "gulp-util": "^3.0.6",
+    "html-webpack-plugin": "^2.8.1",
     "istanbul": "^0.3.18",
     "json-loader": "^0.5.2",
     "less": "^2.5.1",
