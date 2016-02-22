@@ -90,6 +90,18 @@ var applyDefaults = function(cfg) {
                     test: /\.png$/,
                     loader: 'url-loader?name=image/[name].[ext]?[hash]&limit=10000&mimetype=image/png',
                 },
+                {
+                    test: /\.jpe?g$/,
+                    loader: 'url-loader?name=image/[name].[ext]?[hash]&limit=10000&mimetype=image/jpeg',
+                },
+                {
+                    test: /\.gif$/,
+                    loader: 'url-loader?name=image/[name].[ext]?[hash]&limit=10000&mimetype=image/gif',
+                },
+                {
+                    test: /\.ico$/,
+                    loader: 'url-loader?name=image/[name].[ext]?[hash]&limit=10000&mimetype=image/x-icon',
+                },
             ],
         },
     }, function(a, b) {

@@ -87,7 +87,19 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.png$/,
-                    loader: 'url-loader?limit=200000&mimetype=image/png',
+                    loader: 'url?limit=200000&mimetype=image/png',
+                },
+                {
+                    test: /\.jpe?g$/,
+                    loader: 'url?limit=200000&mimetype=image/jpeg',
+                },
+                {
+                    test: /\.gif$/,
+                    loader: 'url?limit=200000&mimetype=image/gif',
+                },
+                {
+                    test: /\.ico$/,
+                    loader: 'url?limit=200000&mimetype=image/x-icon',
                 },
             ],
         },
