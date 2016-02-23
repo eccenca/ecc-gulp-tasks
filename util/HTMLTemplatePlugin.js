@@ -17,7 +17,7 @@ HTMLTemplatePlugin.prototype.apply = function(compiler) {
 
             var chunks = _.get(htmlPluginData, 'assets.chunks', []);
 
-            _.forEach(htmlPluginData, function(chunk, name) {
+            _.forEach(chunks, function(chunk, name) {
 
                 // Replace script tags that have a matching chunk name
                 var search = new RegExp('(<script.*?src=")' + name + '\.js(".*?>(<\/script>)?)', "g");
