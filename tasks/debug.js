@@ -1,3 +1,5 @@
+/* eslint no-var: 0 */
+
 var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');

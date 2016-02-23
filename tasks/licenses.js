@@ -1,4 +1,9 @@
-/* eslint-disable no-console */
+/* eslint no-var: 0 */
+/* eslint no-console: 0 */
+/* eslint func-style: 0 */
+/* eslint dot-notation: 0 */
+/* eslint no-use-before-define: ["error", { "functions": false }] */
+
 var fs = require('fs');
 var path = require('path');
 var checker = require('license-checker');
@@ -46,7 +51,7 @@ module.exports = function(config, callback) {
                     .map(function(pkg) {
                         //var versions = _.pluck(pkg, 'version');
                         //_.set(pkg,'[0].version', versions)
-                        return _.pick(_.first(pkg), ['pkg','version', 'repository']);
+                        return _.pick(_.first(pkg), ['pkg', 'version', 'repository']);
                     })
                     .value();
             })

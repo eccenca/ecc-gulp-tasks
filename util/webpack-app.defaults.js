@@ -1,13 +1,16 @@
+/* eslint no-var: 0 */
+
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var _ = require('lodash');
+var autoprefixer = require('autoprefixer');
 
 var applyDefaults = function(cfg) {
 
     // This ensures that requires like mdl are added at the top of the header
     var cssInsert = (cfg.debug) ? 'top' : 'bottom';
 
-    var cssLoader = 'css!autoprefixer?browsers=last 3 version';
+    var cssLoader = 'css!postcss';
 
     var urlLoader = 'url?limit=10000';
 
@@ -113,6 +116,9 @@ var applyDefaults = function(cfg) {
                     loader: imageLoader + '&mimetype=image/x-icon',
                 },
             ],
+        },
+        postcss: function() {
+            return [autoprefixer];
         },
     }, function(a, b) {
         if (_.isArray(a)) {

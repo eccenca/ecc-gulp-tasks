@@ -21,14 +21,14 @@ module.exports = function(config, callback) {
 
     var styleSCSS = path.join(config.webpackConfig.production.context, 'style', 'style.scss');
 
-    if(fs.existsSync(styleSCSS)){
+    if (fs.existsSync(styleSCSS)) {
 
         var outputPath = config.webpackConfig.production.output.path;
         var outputFileName = config.webpackConfig.production.output.filename;
 
         optimizations.push(
             new SCSSBannerPlugin(outputPath, outputFileName, styleSCSS)
-        )
+        );
     }
 
     if (wpConfig.plugins) {

@@ -1,5 +1,9 @@
+/* eslint no-var: 0 */
+
 var path = require('path');
 var _ = require('lodash');
+var autoprefixer = require('autoprefixer');
+
 
 var applyDefaults = function(cfg) {
 
@@ -9,7 +13,7 @@ var applyDefaults = function(cfg) {
     var cssLoaders = [
         'style?insertAt=' + cssInsert,
         'css',
-        'autoprefixer?browsers=last 3 version'].join('!');
+        'postcss'].join('!');
 
     var urlLoader = 'url?limit=200000';
 
@@ -109,6 +113,9 @@ var applyDefaults = function(cfg) {
                     loader: urlLoader + '&mimetype=image/x-icon',
                 },
             ],
+        },
+        postcss: function() {
+            return [autoprefixer];
         },
     }, function(a, b) {
         if (_.isArray(a)) {
