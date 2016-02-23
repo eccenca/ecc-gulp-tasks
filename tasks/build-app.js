@@ -35,6 +35,8 @@ module.exports = function(config, callback) {
         var HtmlWebpackPlugin = require('html-webpack-plugin');
         var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
 
+        config.html.inject = false;
+
         optimizations.push(new HTMLTemplatePlugin());
         optimizations.push(new HtmlWebpackPlugin(config.html));
 
