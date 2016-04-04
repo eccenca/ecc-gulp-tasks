@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
