@@ -1,8 +1,8 @@
-# Eccenca common gulp tasks
+# Eccenca common gulp tasks (ecc-gulp-tasks)
 
-Provides basic tasks for all your component needs.
+A set of common gulp tasks for front-end development
 
-### Available tasks
+## Available tasks
 
 - `build` - compiles optimized (minified, deduped) commonjs version of your component with webpack. Uses `config.webpackConfig.production` as basic configuration.
 - `build-app` - compiles optimized (minified, deduped) application with webpack. Uses `config.webpackConfig.application` as basic configuration.
@@ -15,9 +15,7 @@ Provides basic tasks for all your component needs.
 - `version` - generates a `version.json` file using git describe command.
 - `licenses` - generates `licenses.json` file using all currently installed packages.
 
-
-
-### Usage
+## Usage
 
 - Include into your project using `npm i --save-dev ecc-gulp-tasks`
 - Create `gulpfile.js` looks like this:
@@ -31,8 +29,6 @@ gulp.task('default', ['debug', 'serve']);
 As you can see, you need to provide two arguments while requiring the package.
 First one is an array of string names of available tasks you wish to use.
 The second one is your build config (described below).
-
-
 
 ### Adding custom gulp tassk
 
@@ -49,8 +45,6 @@ require('./gulp/my-other-task.js')(gulp);
 // ...
 ```
 
-
-
 ### How to run things synchonously?
 
 Normally gulp runs everything asynchronously, but sometimes you might want to run tasks in sync.
@@ -63,8 +57,6 @@ var gulp = require('ecc-gulp-tasks')(/* ... */);
 // ....
 gulp.task('deploy', gulpSequence('version', 'licenses', 'build'));
 ```
-
-
 
 ### Build config
 

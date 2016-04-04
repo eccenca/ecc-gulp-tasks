@@ -3,6 +3,20 @@ var path = require('path');
 var _ = require('lodash');
 
 var applyDefaults = function(cfg) {
+
+    // This ensures that requires like mdl are added at the top of the header
+    var cssInsert = (cfg.debug) ? 'top' : 'bottom';
+
+    var cssLoader = 'css!autoprefixer?browsers=last 3 version';
+
+    var urlLoader = 'url?limit=10000';
+
+    var fileName = '[name].[ext]?[hash:5]';
+
+    var imageLoader = urlLoader + '&name=image/' + fileName;
+
+    var fontLoader = urlLoader + '&name=fonts/' + fileName;
+
     // extend config
     return _.merge(cfg, {
         resolveLoader: {
@@ -30,7 +44,7 @@ var applyDefaults = function(cfg) {
             fs: 'empty',
         },
         eslint: {
-            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.json'),
+            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.yml'),
         },
         module: {
             preLoaders: [
@@ -43,48 +57,60 @@ var applyDefaults = function(cfg) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 3 version'),
+                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader),
+                },
+                {
+                    test: /\.less$/,
+                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader + '!less'),
+                },
+                {
+                    test: /\.scss$/,
+                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader + '!sass'),
                 },
                 {
                     test: /\.json$/,
                     loader: 'json',
                 },
                 {
-                    test: /\.less$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 3 version!less'),
-                },
-                {
-                    test: /\.scss$/,
-                    loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?browsers=last 3 version!sass'),
-                },
-                {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',
                     query: {
-                        stage: 0,
-                        loose: 'all',
+                        plugins: ['transform-runtime'],
+                        presets: ['eccenca']
                     },
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=application/font-woff',
+                    loader: fontLoader + '&mimetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=application/octet-stream',
+                    loader: fontLoader + '&mimetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: 'url?limit=10000',
+                    loader: fontLoader + '&mimetype=application/vnd.ms-fontobject',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: 'url?limit=10000&minetype=image/svg+xml',
+                    loader: imageLoader + '&mimetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: 'url-loader?limit=10000&mimetype=image/png',
+                    loader: imageLoader + '&mimetype=image/png',
+                },
+                {
+                    test: /\.jpe?g$/,
+                    loader: imageLoader + '&mimetype=image/jpeg',
+                },
+                {
+                    test: /\.gif$/,
+                    loader: imageLoader + '&mimetype=image/gif',
+                },
+                {
+                    test: /\.ico$/,
+                    loader: imageLoader + '&mimetype=image/x-icon',
                 },
             ],
         },

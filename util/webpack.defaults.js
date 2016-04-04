@@ -2,6 +2,17 @@ var path = require('path');
 var _ = require('lodash');
 
 var applyDefaults = function(cfg) {
+
+    // This ensures that requires like mdl are added at the top of the header
+    var cssInsert = (cfg.debug) ? 'top' : 'bottom';
+
+    var cssLoaders = [
+        'style?insertAt=' + cssInsert,
+        'css',
+        'autoprefixer?browsers=last 3 version'].join('!');
+
+    var urlLoader = 'url?limit=200000';
+
     // extend config
     return _.merge(cfg, {
         resolveLoader: {
@@ -29,7 +40,7 @@ var applyDefaults = function(cfg) {
             fs: 'empty',
         },
         eslint: {
-            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.json'),
+            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.yml'),
         },
         module: {
             preLoaders: [
@@ -42,48 +53,60 @@ var applyDefaults = function(cfg) {
             loaders: [
                 {
                     test: /\.css$/,
-                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version'],
+                    loader: cssLoaders,
+                },
+                {
+                    test: /\.less$/,
+                    loader: cssLoaders + '!less',
+                },
+                {
+                    test: /\.scss$/,
+                    loader: cssLoaders + '!sass',
                 },
                 {
                     test: /\.json$/,
                     loader: 'json',
                 },
                 {
-                    test: /\.less$/,
-                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version', 'less'],
-                },
-                {
-                    test: /\.scss$/,
-                    loaders: ['style', 'css', 'autoprefixer?browsers=last 3 version', 'sass'],
-                },
-                {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',
                     query: {
-                        stage: 0,
-                        loose: 'all',
+                        plugins: ['transform-runtime'],
+                        presets: ['eccenca']
                     },
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: 'url?limit=150000&minetype=application/font-woff',
+                    loader: urlLoader + '&mimetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: 'url?limit=150000&minetype=application/octet-stream',
+                    loader: urlLoader + '&mimetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: 'url?limit=150000',
+                    loader: urlLoader + '&mimetype=application/vnd.ms-fontobject',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: 'url?limit=150000&minetype=image/svg+xml',
+                    loader: urlLoader + '&mimetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: 'url-loader?limit=150000&mimetype=image/png',
+                    loader: urlLoader + '&mimetype=image/png',
+                },
+                {
+                    test: /\.jpe?g$/,
+                    loader: urlLoader + '&mimetype=image/jpeg',
+                },
+                {
+                    test: /\.gif$/,
+                    loader: urlLoader + '&mimetype=image/gif',
+                },
+                {
+                    test: /\.ico$/,
+                    loader: urlLoader + '&mimetype=image/x-icon',
                 },
             ],
         },

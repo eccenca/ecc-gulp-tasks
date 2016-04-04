@@ -1,14 +1,19 @@
-var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var webpackBuildCB = require('../util/webpackBuildCB');
 
 module.exports = function(config, callback) {
     var wpConfig = config.webpackConfig.application;
     // use production optimizations
     var optimizations = [
         definePlugin,
-        new ExtractTextPlugin('style.css'),
+        // Set React to production mode
+        // (http://ianobermiller.com/blog/2015/06/15/shave-45kb-off-your-production-webpack-react-build/)
+        new webpack.DefinePlugin({
+            'process.env': {NODE_ENV: '"production"'}
+        }),
+        new ExtractTextPlugin('style.css?[contenthash:5]'),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
@@ -24,6 +29,19 @@ module.exports = function(config, callback) {
             },
         }),
     ];
+
+    if (config.html) {
+
+        var HtmlWebpackPlugin = require('html-webpack-plugin');
+        var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
+
+        config.html.inject = false;
+
+        optimizations.push(new HTMLTemplatePlugin());
+        optimizations.push(new HtmlWebpackPlugin(config.html));
+
+    }
+
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
     } else {
@@ -31,17 +49,7 @@ module.exports = function(config, callback) {
     }
     // remove linting
     delete wpConfig.module.preLoaders;
+
     // run webpack
-    webpack(wpConfig, function(err, stats) {
-        if (err) {
-            throw new gutil.PluginError('webpack', err);
-        }
-        // only log when errors
-        gutil.log('[webpack]: ', stats.toString({
-            chunks: false,
-            modules: false,
-            colors: true,
-        }));
-        callback();
-    });
+    webpack(wpConfig, webpackBuildCB.bind(undefined, callback));
 };
