@@ -1,6 +1,8 @@
+/* eslint no-var: 0 */
+
 var gutil = require('gulp-util');
 
-module.exports = function webpackBuildCB(gulpCallback, err, stats){
+module.exports = function webpackBuildCB(gulpCallback, err, stats) {
 
     if (err) {
         gulpCallback(new gutil.PluginError('webpack', err));
@@ -8,16 +10,19 @@ module.exports = function webpackBuildCB(gulpCallback, err, stats){
     }
 
     var ret = stats.toString({
+        children: false,
         chunks: false,
-        modules: false,
         colors: true,
+        modules: false,
+        timings: true,
     });
 
-    if(stats.hasErrors()){
+    if (stats.hasErrors()) {
         gulpCallback(new gutil.PluginError('webpack', ret));
         return;
     }
-
-    gutil.log('[webpack]: ', ret);
+    if (process.env.NODE_ENV !== 'test') {
+        gutil.log('[webpack]: ', ret);
+    }
     gulpCallback();
 };

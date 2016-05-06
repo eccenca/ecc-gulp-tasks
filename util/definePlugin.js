@@ -1,3 +1,4 @@
+/* eslint no-var: 0 */
 var webpack = require('webpack');
 
 // definePlugin takes raw strings and inserts them, so you can put strings of JS if you want.

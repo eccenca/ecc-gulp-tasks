@@ -1,3 +1,5 @@
+/* eslint no-var: 0 */
+
 var gulp = require('gulp');
 var mocha = require('gulp-spawn-mocha');
 

@@ -1,6 +1,6 @@
 var fs = require('fs');
 
-var src = './common-files/dotfiles/.eslintrc.yml';
+var src = './node_modules/ecc-dotfiles/dotfiles/.eslintrc.yml';
 var dest = './rules/eslintrc.yml';
 
 var content = fs.readFileSync(src);

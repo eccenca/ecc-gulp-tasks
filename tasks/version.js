@@ -1,4 +1,7 @@
-/* eslint-disable no-console */
+/* eslint no-var: 0 */
+/* eslint no-console: 0 */
+/* eslint max-params: 0 */
+
 var fs = require('fs');
 var path = require('path');
 var exec = require('child_process').exec;

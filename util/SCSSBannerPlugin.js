@@ -1,3 +1,5 @@
+/* eslint no-var: 0 */
+
 var path = require('path');
 var ConcatSource = require("webpack-core/lib/ConcatSource");
 

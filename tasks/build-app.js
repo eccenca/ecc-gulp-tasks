@@ -1,3 +1,8 @@
+/* eslint no-var: 0 */
+/* eslint camelcase: ["error", {properties: "never"}] */
+/*eslint-env node, mocha */
+
+
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');

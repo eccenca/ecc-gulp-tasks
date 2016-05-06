@@ -1,3 +1,5 @@
+/* eslint no-var: 0 */
+
 var _ = require('lodash');
 
 var cssTemplate = _.template('    <link rel="stylesheet" type="text/css" href="${styleSheet}">\n');

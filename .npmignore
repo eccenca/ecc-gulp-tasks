@@ -2,7 +2,7 @@
 # PLEASE PLACE CUSTOM NPM IGNORES BELOW #END
 #
 # ANYTHING YOU PLACE BEFORE THE END TAG
-# WILL BE OVERWRITTEN BY OUR COMMON-FILES
+# WILL BE OVERWRITTEN BY ecc-dotfiles
 # INSTALL-SCRIPT
 
 # ignore node_modules and debug log
@@ -35,5 +35,6 @@ Makefile
 
 #END
 
-# ignore custom install.js file
+# ignore custom install.js and gulpfile
 install.js
+gulpfile.js
