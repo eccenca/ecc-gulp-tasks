@@ -10,7 +10,7 @@
     "url": "https://github.com/elds/ecc-gulp-tasks.git"
   },
   "scripts": {
-    "init": "node install.js",
+    "init": "ecc-link-dotfiles && node install.js",
     "prepublish": "npm run init"
   },
   "dependencies": {
@@ -50,11 +50,11 @@
     "webpack": "^1.12.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.1.1"
+    "ecc-dotfiles": "^1.4.0"
   },
   "devDependencies": {
     "diff": "^2.2.2",
-    "ecc-dotfiles": "^1.1.1",
+    "ecc-dotfiles": "^1.4.0",
     "should": "^8.3.1"
   }
 }
