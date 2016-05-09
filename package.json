@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "eccenca GmbH <elds-support@eccenca.com> (http://eccenca.com)",
