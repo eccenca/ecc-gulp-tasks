@@ -1,16 +1,16 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "1.5.0",
+  "version": "2.0.1",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
-  "author": "Tim Ermilov <yamalight@gmail.com> (http://codezen.net)",
+  "author": "eccenca GmbH <elds-support@eccenca.com> (http://eccenca.com)",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.eccenca.com/elds-ui/ecc-gulp-tasks.git"
+    "url": "https://github.com/elds/ecc-gulp-tasks.git"
   },
   "scripts": {
-    "init": "node install.js",
+    "init": "ecc-link-dotfiles && node install.js",
     "prepublish": "npm run init"
   },
   "dependencies": {
@@ -50,11 +50,11 @@
     "webpack": "^1.12.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.1.1"
+    "ecc-dotfiles": "^1.4.0"
   },
   "devDependencies": {
     "diff": "^2.2.2",
-    "ecc-dotfiles": "^1.1.1",
+    "ecc-dotfiles": "^1.4.0",
     "should": "^8.3.1"
   }
 }
