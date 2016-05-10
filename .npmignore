@@ -24,11 +24,14 @@ test/
 # ignore coverage report
 coverage/
 
-# ignore symlinks
+# ignore dotfiles
 .babelrc
 .editorconfig
 .eslintrc.yml
 Makefile
+
+# ignore gulpfile
+gulpfile.js
 
 # ignore data folders by jetbrains products
 .idea/
@@ -37,4 +40,3 @@ Makefile
 
 # ignore custom install.js and gulpfile
 install.js
-gulpfile.js
