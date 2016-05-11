@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
-  "author": "eccenca GmbH <elds-support@eccenca.com> (http://eccenca.com)",
+  "author": "eccenca GmbH <opensource@eccenca.com> (http://eccenca.com)",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
