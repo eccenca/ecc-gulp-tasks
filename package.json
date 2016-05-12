@@ -59,5 +59,8 @@
   },
   "bugs": {
     "url": "https://github.com/elds/ecc-gulp-tasks/issues"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
   }
 }
