@@ -63,6 +63,11 @@ module.exports = function(config, callback) {
                 callback(new Error(err));
             }
 
+            util.log(
+                util.colors.red('[WARNING]:'),
+                '`gulp licenses` is deprecated, start using `gulp licenses-yaml2json` instead'
+            );
+
             callback();
         });
     });

@@ -13,7 +13,8 @@ A set of common gulp tasks for front-end development
 - `cover` - runs istanbul to generate test coverage from file specified at `config.testEntryPoint`.
 - `lint` - runs eslint on files specified at `config.lintingFiles`.
 - `version` - generates a `version.json` file using git describe command.
-- `licenses` - generates `licenses.json` file using all currently installed packages.
+- `licenses` **deprecated** - generates `licenses.json` file using all currently installed packages.
+- `licenses-yaml2json` - generates a `licenses.json` from a `licenses.yaml` file.
 
 ## Usage
 
@@ -79,6 +80,11 @@ module.exports = {
     serverStart: function(server) {
         startSocketServer(server);
     },
+    licenseReport: {
+        input: path.resolve(__dirname, 'license-report.yaml'),
+        outputName: 'licenses.json',
+        outputPath: path.resolve(__dirname, 'dist')
+    }
 };
 ```
 
@@ -92,3 +98,4 @@ Exported parameters are as follows:
 - `webpackConfig.application` - should include your webpack config used for compilation as production application
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
 - `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)
+- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report 
