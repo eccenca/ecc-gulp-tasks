@@ -4,6 +4,7 @@ var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
 var BrowserErrorPlugin = require('../util/browserErrorPlugin');
 
 module.exports = function(config) {
@@ -13,6 +14,7 @@ module.exports = function(config) {
         definePlugin,
         new ExtractTextPlugin('style.css'),
         new BrowserErrorPlugin(),
+        new ForceCaseSensitivityPlugin(),
     ];
     if (wpConfig.plugins) {
         wpConfig.plugins = wpConfig.plugins.concat(optimizations);
