@@ -11,6 +11,7 @@
   },
   "scripts": {
     "init": "ecc-link-dotfiles && node install.js",
+    "test": "gulp test",
     "prepublish": "npm run init"
   },
   "dependencies": {
