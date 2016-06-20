@@ -11,7 +11,6 @@ fs.readdirSync('node_modules')
 
 module.exports = {
     context: path.resolve(__dirname),
-    entry: './index.js',
     output: {
         path: path.join(__dirname, 'es5'),
         filename: 'component.js',

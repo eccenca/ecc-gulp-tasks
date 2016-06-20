@@ -6,6 +6,7 @@
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
 
 module.exports = function(config, callback) {
@@ -19,6 +20,7 @@ module.exports = function(config, callback) {
             'process.env': {NODE_ENV: '"production"'}
         }),
         new ExtractTextPlugin('style.css?[contenthash:5]'),
+        new ForceCaseSensitivityPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({

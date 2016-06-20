@@ -9,34 +9,68 @@ var path = require('path');
 
 describe('build', function() {
 
-    var config;
+    describe('working build', function() {
 
-    before(function(done) {
-        var applyApplicationDefaults = require('../util/webpack-app.defaults');
+        var config;
 
-        config = require('./project/buildConfig');
+        before(function(done) {
+            // Increase timeout because webpack may take longer
+            this.timeout(10000);
+            config = buildWrapper('./index-working.js', done);
+        });
 
-        if (config.webpackConfig.production) {
-            config.webpackConfig.production = applyApplicationDefaults(config.webpackConfig.production);
-        }
+        it('webpack should produce the correct component.js', function(done) {
 
-        build(config, done);
+            var assertionFile = path.join(config.webpackConfig.production.context, 'es5_result', 'component.js');
+            var generatedFile = path.join(config.webpackConfig.production.context, 'es5', 'component.js');
+            compareFiles(assertionFile, generatedFile);
+            done();
+        });
+
+        it('webpack should produce the correct style.css', function(done) {
+
+            var assertionFile = path.join(config.webpackConfig.production.context, 'es5_result', 'style.css');
+            var generatedFile = path.join(config.webpackConfig.production.context, 'es5', 'style.css');
+            compareFiles(assertionFile, generatedFile);
+            done();
+        });
+
     });
-    it('webpack should produce the correct component.js', function(done) {
 
-        var assertionFile = path.join(config.webpackConfig.production.context, 'es5_result', 'component.js');
-        var generatedFile = path.join(config.webpackConfig.production.context, 'es5', 'component.js');
-        compareFiles(assertionFile, generatedFile);
-        done();
-    });
-    it('webpack should produce the correct style.css', function(done) {
+    describe('failing builds', function() {
 
-        var assertionFile = path.join(config.webpackConfig.production.context, 'es5_result', 'style.css');
-        var generatedFile = path.join(config.webpackConfig.production.context, 'es5', 'style.css');
-        compareFiles(assertionFile, generatedFile);
-        done();
+        it('webpack should throw an error if case sensivity does not match the correct component.js', function(done) {
+            this.timeout(10000);
+            buildWrapper('./index-case-sensivity-check.js', function(err) {
+                should(err).be.an.Error(err)
+                    .and.have.property('message')
+                    .which.is.a.String()
+                    .and.match(/ForceCaseSensitivityPlugin.+does not match the corresponding file on disk/);
+                done();
+            });
+
+        });
+
     });
+
 });
+
+
+function buildWrapper(indexFile, callback) {
+
+    var applyApplicationDefaults = require('../util/webpack-app.defaults');
+
+    var config = require('./project/buildConfig');
+
+    if (config.webpackConfig.production) {
+        config.webpackConfig.production.entry = indexFile;
+        config.webpackConfig.production = applyApplicationDefaults(config.webpackConfig.production);
+    }
+
+    build(config, callback);
+
+    return config;
+}
 
 function compareFiles(oldFile, newFile) {
     var oldFileContent = fs.readFileSync(oldFile).toString();
@@ -51,7 +85,7 @@ function compareFiles(oldFile, newFile) {
             hasChanges = true;
         }
     });
-    
+
     if (hasChanges) {
         diff = jsdiff.createTwoFilesPatch(oldFile, newFile, oldFileContent, newFileContent);
         console.warn(diff);

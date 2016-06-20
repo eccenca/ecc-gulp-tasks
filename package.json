@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "eccenca GmbH <opensource@eccenca.com> (http://eccenca.com)",
@@ -11,6 +11,7 @@
   },
   "scripts": {
     "init": "ecc-link-dotfiles && node install.js",
+    "test": "gulp test",
     "prepublish": "npm run init"
   },
   "dependencies": {
@@ -30,6 +31,7 @@
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.4",
+    "force-case-sensitivity-webpack-plugin": "^0.1.1",
     "gulp": "^3.9.0",
     "gulp-change": "^1.0.0",
     "gulp-eslint": "^2.0.0",
