@@ -26,7 +26,7 @@ describe('building component', function() {
         beforeEach(function(done) {
             // Increase timeout because webpack may take longer
             this.timeout(10000);
-            runComponentBuild('./index-working.js', done);
+            runComponentBuild('./index-working.jsx', done);
         });
 
         it('the correct javascript (component.js)', function(done) {
@@ -128,6 +128,7 @@ function compareFiles(assertionFile, generatedFile) {
     if (hasChanges) {
         diff = jsdiff.createTwoFilesPatch(assertionFile, generatedFile, oldFileContent, newFileContent);
         console.warn(diff);
+        fs.writeFileSync(path.join(fixturesPath, 'failed-' + (new Date).getTime().toString() + '-' + path.basename(assertionFile)), newFileContent);
         throw new Error('Files do not match (see above for div)');
     }
 

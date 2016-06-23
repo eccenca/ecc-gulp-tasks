@@ -1,78 +1,83 @@
 // This is necessary so that components may use variables in scss
 if(__WEBPACK__){
-    require('../style/style.scss');
+  require('../style/style.scss');
 }
 module.exports =
-    /******/ (function(modules) { // webpackBootstrap
-    /******/ 	// The module cache
-    /******/ 	var installedModules = {};
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
 
-    /******/ 	// The require function
-    /******/ 	function __webpack_require__(moduleId) {
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
 
-        /******/ 		// Check if module is in cache
-        /******/ 		if(installedModules[moduleId])
-        /******/ 			return installedModules[moduleId].exports;
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
 
-        /******/ 		// Create a new module (and put it into the cache)
-        /******/ 		var module = installedModules[moduleId] = {
-            /******/ 			exports: {},
-            /******/ 			id: moduleId,
-            /******/ 			loaded: false
-            /******/ 		};
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
 
-        /******/ 		// Execute the module function
-        /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
-        /******/ 		// Flag the module as loaded
-        /******/ 		module.loaded = true;
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
 
-        /******/ 		// Return the exports of the module
-        /******/ 		return module.exports;
-        /******/ 	}
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 
 
-    /******/ 	// expose the modules object (__webpack_modules__)
-    /******/ 	__webpack_require__.m = modules;
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
 
-    /******/ 	// expose the module cache
-    /******/ 	__webpack_require__.c = installedModules;
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
 
-    /******/ 	// __webpack_public_path__
-    /******/ 	__webpack_require__.p = "";
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
 
-    /******/ 	// Load entry module and return exports
-    /******/ 	return __webpack_require__(0);
-    /******/ })
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
 /************************************************************************/
 /******/ ([
-    /* 0 */
-    /***/ function(module, exports, __webpack_require__) {
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
 
-        'use strict';
+	'use strict';
 
-        exports.__esModule = true;
-        /* global __WEBPACK__ */
-        // only load style when using webpack
-        if (true) {
-            __webpack_require__(1);
-        }
+	exports.__esModule = true;
+	/* global __WEBPACK__, React*/
+	// only load style when using webpack
+	if (true) {
+	    __webpack_require__(1);
+	}
 
-        if (__DEBUG__) {
-            console.log('yeah');
-        }
+	if (__DEBUG__) {
+	    console.log('yeah');
+	}
 
-        var foo = x;
+	exports.default = {
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            'TestComponent'
+	        );
+	    }
+	};
+	module.exports = exports['default'];
 
-        //noinspection JSAnnotator
-        exports.default = foo;
-        module.exports = exports['default'];
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
 
-        /***/ },
-    /* 1 */
-    /***/ function(module, exports) {
+	// removed by extract-text-webpack-plugin
 
-        // removed by extract-text-webpack-plugin
-
-        /***/ }
-    /******/ ]);
+/***/ }
+/******/ ]);
