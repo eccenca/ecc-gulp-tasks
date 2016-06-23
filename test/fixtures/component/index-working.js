@@ -4,6 +4,10 @@ if (__WEBPACK__) {
     require('./style/style.scss');
 }
 
+if (__DEBUG__) {
+    console.log('yeah');
+}
+
 const foo = x;
 
 //noinspection JSAnnotator
