@@ -12,6 +12,9 @@ module.exports = function(config) {
     // use production optimizations
     var optimizations = [
         definePlugin,
+        new webpack.DefinePlugin({
+            __DEBUG__: true
+        }),
         new ExtractTextPlugin('style.css'),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),

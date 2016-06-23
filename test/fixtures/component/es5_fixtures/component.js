@@ -52,16 +52,25 @@ module.exports =
 	'use strict';
 
 	exports.__esModule = true;
-	/* global __WEBPACK__ */
+	/* global __WEBPACK__, React*/
 	// only load style when using webpack
 	if (true) {
 	    __webpack_require__(1);
 	}
 
-	var foo = x;
+	if (__DEBUG__) {
+	    console.log('yeah');
+	}
 
-	//noinspection JSAnnotator
-	exports.default = foo;
+	exports.default = {
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            'TestComponent'
+	        );
+	    }
+	};
 	module.exports = exports['default'];
 
 /***/ },

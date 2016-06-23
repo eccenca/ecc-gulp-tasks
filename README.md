@@ -99,3 +99,27 @@ Exported parameters are as follows:
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
 - `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)
 - `licenseReport` - should point to a license yaml file and contain parameters for the generated license report 
+
+### Javascript flags
+
+There are two Javascript flags set:
+
+`__WEBPACK__` is set to true while using `gulp build|build-app|debug`.
+This may be used for doing things only webpack can do, like requiring style sheets, etc:
+
+```
+if(__WEBPACK__){
+  require('./style.css')
+}
+```
+
+`__DEBUG__` is set to `true` during `gulp debug`.
+If you run `gulp build-app`, `__DEBUG__` is set to `false`, effectively stripping all debug statements.
+This may be used for doing things only during development:
+
+```
+// The following block will only be run during development
+if(__DEBUG__){
+  console.info('Dear Developer, have a nice day')
+}
+```
