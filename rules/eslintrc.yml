@@ -1,6 +1,10 @@
 {
   # I want to use babel-eslint for parsing!
   "parser": "babel-eslint",
+  "globals": {
+      __DEBUG__: true,
+      __WEBPACK__: true
+  },
   "env": {
     # I write for browser
     "browser": true,

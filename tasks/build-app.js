@@ -18,7 +18,7 @@ module.exports = function(config, callback) {
         // (http://ianobermiller.com/blog/2015/06/15/shave-45kb-off-your-production-webpack-react-build/)
         new webpack.DefinePlugin({
             'process.env': {NODE_ENV: '"production"'},
-            __DEBUG__: false
+            '__DEBUG__': false
         }),
         new ExtractTextPlugin('style.css?[contenthash:5]'),
         new ForceCaseSensitivityPlugin(),
