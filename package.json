@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "eccenca GmbH <opensource@eccenca.com> (http://eccenca.com)",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^6.3.6",
-    "babel-core": "^6.0.0",
+    "babel-core": "^6.11.4",
     "babel-eslint": "^6.0.4",
     "babel-loader": "^6.0.0",
     "babel-plugin-transform-runtime": "^6.3.13",
@@ -25,16 +25,16 @@
     "body-parser": "^1.13.3",
     "css-loader": "^0.23.1",
     "ecc-license-checker": "^2.3.0",
-    "eslint": "^2.10.2",
+    "eslint": "^3.1.1",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-react": "^5.1.1",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.8.4",
+    "file-loader": "^0.9.0",
     "force-case-sensitivity-webpack-plugin": "^0.1.1",
     "gulp": "^3.9.0",
     "gulp-change": "^1.0.0",
-    "gulp-eslint": "^2.0.0",
+    "gulp-eslint": "^3.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-spawn-mocha": "^2.2.1",
     "gulp-util": "^3.0.6",
@@ -49,19 +49,19 @@
     "node-sass": "^3.7.0",
     "postcss-loader": "^0.9.1",
     "raw-loader": "^0.5.1",
-    "sass-loader": "^3.2.0",
+    "sass-loader": "^4.0.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.13.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.4.1"
+    "ecc-dotfiles": "^1.5.0"
   },
   "devDependencies": {
     "del": "^2.2.1",
     "diff": "^2.2.2",
-    "ecc-dotfiles": "^1.4.1",
-    "should": "^8.3.2"
+    "ecc-dotfiles": "^1.5.0",
+    "should": "^10.0.0"
   },
   "bugs": {
     "url": "https://github.com/elds/ecc-gulp-tasks/issues"
