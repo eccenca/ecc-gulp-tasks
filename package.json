@@ -1,6 +1,6 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "eccenca GmbH <opensource@eccenca.com> (http://eccenca.com)",
@@ -55,12 +55,12 @@
     "webpack": "^1.13.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.5.1"
+    "ecc-dotfiles": "^1.5.2"
   },
   "devDependencies": {
     "del": "^2.2.1",
     "diff": "^2.2.2",
-    "ecc-dotfiles": "^1.5.1",
+    "ecc-dotfiles": "^1.5.2",
     "should": "^10.0.0"
   },
   "bugs": {
