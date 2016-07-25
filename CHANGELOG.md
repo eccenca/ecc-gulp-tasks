@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [2.4.2] 2016-07-25
 ### Fixed
 - Updated eslint jsdoc rule regarding void functions
 
