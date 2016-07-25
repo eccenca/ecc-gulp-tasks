@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [2.4.1] 2016-07-25
+### Fixed
+- Updated eslint rule regarding jsdoc
+
 ## [2.4.0] 2016-07-21 
 ### Added
 - `gulp lint` target for linting gulp-tasks file
