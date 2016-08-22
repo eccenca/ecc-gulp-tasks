@@ -32,7 +32,7 @@ var serverGetInstance = function(portsArray) {
         serverInstance.on('listening', function() {
             util.log(
                 'Started webserver on',
-                util.colors.green('localhost:' + port)
+                util.colors.green('http://localhost:' + port)
             );
         });
     }
