@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [2.4.3] 2016-08-22
 ### Changed
 - Added `http://` to serve task, so that it can be opened in the browser per click
   
