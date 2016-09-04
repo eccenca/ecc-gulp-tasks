@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
+### Added
+- `lib` subfolders are now ignored for `eslint` during development
+
 ### Removed
 - `reduce-css-calc` dependency, as the issue has been resolved upstream 
 
