@@ -84,7 +84,8 @@ module.exports = {
         input: path.resolve(__dirname, 'license-report.yaml'),
         outputName: 'licenses.json',
         outputPath: path.resolve(__dirname, 'dist')
-    }
+    },
+    momentLocales: /(de|en).js/
 };
 ```
 
@@ -98,7 +99,8 @@ Exported parameters are as follows:
 - `webpackConfig.application` - should include your webpack config used for compilation as production application
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
 - `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)
-- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report 
+- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
+- `momentLocales` - a regex which matches the locales for `moment.js`. Webpack includes all locales by default. By setting this parameter, the build size can be reduced a lot.
 
 ### Javascript flags
 

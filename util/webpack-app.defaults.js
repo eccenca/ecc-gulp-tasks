@@ -53,7 +53,10 @@ var applyDefaults = function(cfg) {
             preLoaders: [
                 {
                     test: /\.jsx?$/,
-                    exclude: /node_modules/,
+                    exclude: [
+                        /node_modules/,
+                        path.join(cfg.context, 'lib')
+                    ],
                     loader: 'eslint-loader'
                 },
             ],
