@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 ### Added
 - `lib` subfolders are now ignored for `eslint` during development
+- normally webpack pulls in all locales for `moment.js`. A `momentLocales` parameter has been added to the buildConfig. This parameter takes an regex which evaluates which locales will be pulled in.
 
 ### Removed
 - `reduce-css-calc` dependency, as the issue has been resolved upstream 

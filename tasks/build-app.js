@@ -38,6 +38,11 @@ module.exports = function(config, callback) {
         }),
     ];
 
+    if (config.momentLocales) {
+        var momentLocales = new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, config.momentLocales);
+        optimizations.unshift(momentLocales);
+    }
+
     if (config.html) {
 
         var HtmlWebpackPlugin = require('html-webpack-plugin');
