@@ -1,8 +1,8 @@
 var should = require('should');
-var lint = require('../tasks/lint');
+var lint = require('../src/tasks/lint');
 
 describe('eslint', function() {
-    
+
     it('should fail with an invalid js file', function(done) {
         var stream = lint({
             lintingFiles: [

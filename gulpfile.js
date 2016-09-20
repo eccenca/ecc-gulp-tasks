@@ -2,7 +2,7 @@ var gulp = require('gulp');
 
 var mocha = require('gulp-spawn-mocha');
 
-var lint = require('./tasks/lint');
+var lint = require('./src/tasks/lint');
 
 gulp.task('test', function() {
     return gulp.src(['test/*.test.js'], {read: false})
@@ -12,5 +12,5 @@ gulp.task('test', function() {
 });
 
 gulp.task('lint', function() {
-    return lint({lintingFiles: './tasks/*.js'});
+    return lint({lintingFiles: './src/tasks/*.js'});
 });

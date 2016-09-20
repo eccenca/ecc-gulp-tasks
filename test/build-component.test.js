@@ -1,4 +1,4 @@
-var build = require('../tasks/build');
+var build = require('../src/tasks/build');
 
 var fs = require('fs');
 var path = require('path');
@@ -84,7 +84,7 @@ describe('building component', function() {
  */
 function runComponentBuild(indexFile, callback) {
 
-    var applyApplicationDefaults = require('../util/webpack-app.defaults');
+    var applyApplicationDefaults = require('../src/util/webpack-app.defaults');
 
     var config = {};
 
