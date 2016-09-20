@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [Unreleased]
+### Changed
+- Require `ecc-dotfiles@1.6.0` as a peer dependency which brings gitlab merge request templates
+
 ## [2.5.0] 2016-09-05
 ### Added
 - `lib` subfolders are now ignored for `eslint` during development

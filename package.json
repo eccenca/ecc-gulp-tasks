@@ -55,7 +55,7 @@
     "webpack": "^1.13.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.5.2"
+    "ecc-dotfiles": "^1.6.0"
   },
   "devDependencies": {
     "del": "^2.2.1",
