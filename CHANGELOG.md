@@ -3,8 +3,14 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
+
+### Breaking
+- Update to `gulp-spawn-mocha@3`, brings a few breaking changes: https://github.com/mochajs/mocha/pull/2350
 ### Changed
 - Require `ecc-dotfiles@1.6.0` as a peer dependency which brings gitlab merge request templates
+- Update to `force-case-sensitivity-plugin@0.2` which now also errors on wrong casing of folders
+- Updated dependencies to `css-loader@0.25` and `postcss-loader@0.13` 
+- Updated dev dependencies to `diff@3` and `should@11`
 
 ## [2.5.0] 2016-09-05
 ### Added
