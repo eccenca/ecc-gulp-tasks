@@ -6,7 +6,7 @@
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
+var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
 
 module.exports = function(config, callback) {

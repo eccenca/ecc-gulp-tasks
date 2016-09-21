@@ -4,7 +4,7 @@ var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
+var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var BrowserErrorPlugin = require('../util/browserErrorPlugin');
 
 module.exports = function(config) {

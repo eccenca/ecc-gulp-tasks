@@ -55,7 +55,7 @@ describe('building component', function() {
                 should(err).be.an.Error(err)
                     .and.have.property('message')
                     .which.is.a.String()
-                    .and.match(/ForceCaseSensitivityPlugin.+does not match the corresponding file on disk/);
+                    .and.match(/CaseSensitivePathsPlugin.+does not match the corresponding path on disk/);
                 done();
             });
         });
@@ -66,7 +66,7 @@ describe('building component', function() {
                 should(err).be.an.Error(err)
                     .and.have.property('message')
                     .which.is.a.String()
-                    .and.match(/ForceCaseSensitivityPlugin.+does not match the corresponding file on disk/);
+                    .and.match(/CaseSensitivePathsPlugin.+does not match the corresponding path on disk/);
                 done();
             });
         });
