@@ -12,8 +12,6 @@ A set of common gulp tasks for front-end development
 - `bamboo-test` - runs mocha tests starting from file specified at `config.testEntryPoint` and generates output with [bamboo-mocha-reporter](https://www.npmjs.com/package/mocha-bamboo-reporter).
 - `cover` - runs istanbul to generate test coverage from file specified at `config.testEntryPoint`.
 - `lint` - runs eslint on files specified at `config.lintingFiles`.
-- `version` - generates a `version.json` file using git describe command.
-- `licenses` **deprecated** - generates `licenses.json` file using all currently installed packages.
 - `licenses-yaml2json` - generates a `licenses.json` from a `licenses.yaml` file.
 
 ## Usage
@@ -49,14 +47,14 @@ require('./gulp/my-other-task.js')(gulp);
 ### How to run things synchonously?
 
 Normally gulp runs everything asynchronously, but sometimes you might want to run tasks in sync.
-That is useful for example if you want to generate a version and licenses files before compiling the app itself.
+That is useful for example if you want to run tests and then build a component.
 To do that, you can use [gulp-sequence](https://github.com/teambition/gulp-sequence) package, like so:
 
 ```js
 var gulpSequence = require('gulp-sequence');
 var gulp = require('ecc-gulp-tasks')(/* ... */);
 // ....
-gulp.task('deploy', gulpSequence('version', 'licenses', 'build'));
+gulp.task('deploy', gulpSequence('test', 'build-app'));
 ```
 
 ### Build config
@@ -104,12 +102,12 @@ Exported parameters are as follows:
 
 ### Javascript flags
 
-There are two Javascript flags set:
+There are the following flags set:
 
 `__WEBPACK__` is set to true while using `gulp build|build-app|debug`.
 This may be used for doing things only webpack can do, like requiring style sheets, etc:
 
-```
+```js
 if(__WEBPACK__){
   require('./style.css')
 }
@@ -119,9 +117,14 @@ if(__WEBPACK__){
 If you run `gulp build-app`, `__DEBUG__` is set to `false`, effectively stripping all debug statements.
 This may be used for doing things only during development:
 
-```
+```js
 // The following block will only be run during development
 if(__DEBUG__){
   console.info('Dear Developer, have a nice day')
 }
+```
+
+`__VERSION__` is set to the result of `git describe --always --dirty`:
+```jsx
+const version = (<div>{__VERSION__}</div>);
 ```

@@ -7,6 +7,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Breaking
 - Update to `gulp-spawn-mocha@3`, brings a few breaking changes: https://github.com/mochajs/mocha/pull/2350
 - removed deprecated `gulp licenses` target
+-   removed `gulp version` target
+    
+    Migration: Use the `__VERSION__` variable. See README for more details.
 
 ### Changed
 - Require `ecc-dotfiles@1.6.0` as a peer dependency which brings gitlab merge request templates
