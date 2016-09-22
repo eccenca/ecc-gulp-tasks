@@ -19,13 +19,13 @@ var appFixturesPath = path.join(componentPath, 'es5_app');
 
 describe('building', function() {
 
-    // afterEach(function(done) {
-    //     del([path.join(outputPath, '**')]).then(function() {
-    //         done();
-    //     });
-    // });
+    afterEach(function(done) {
+        del([path.join(outputPath, '**')]).then(function() {
+            done();
+        });
+    });
 
-    describe('app', function(){
+    describe('app', function() {
         describe('should work and produce', function() {
 
             beforeEach(function(done) {
@@ -50,10 +50,18 @@ describe('building', function() {
                 done();
             });
 
+            it('the correct html (index.html)', function(done) {
+
+                var assertionFile = path.join(appFixturesPath, 'index.html');
+                var generatedFile = path.join(outputPath, 'index.html');
+                compareFiles(assertionFile, generatedFile);
+                done();
+            });
+
         });
     });
 
-    describe('component', function(){
+    describe('component', function() {
 
         describe('should work and produce', function() {
 
@@ -159,7 +167,7 @@ function runAppBuild(indexFile, callback) {
         },
         output: {
             path: outputPath,
-            filename: '[name].js',
+            filename: '[name].js?[chunkhash:5]',
         },
         resolve: {
             alias: {
@@ -167,6 +175,9 @@ function runAppBuild(indexFile, callback) {
                 'lodash/camelCase': './empty-module.js',
                 'lodash': './empty-module.js',
             }
+        },
+        html: {
+            template: 'index.html'
         },
     }));
 
