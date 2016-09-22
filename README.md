@@ -66,22 +66,24 @@ var path = require('path');
 module.exports = {
     path: path.resolve(__dirname),
     testEntryPoint: path.join(__dirname, 'test', 'index.jsx'),
-    rootPath: path.resolve(__dirname),
     webpackConfig: {
         debug: require('./webpack.config.js'),
         production: require('./webpack.config.prod.js'),
         application: require('./webpack.config.app.js'),
+        common: {
+            context: path.resolve(__dirname),
+        },
+    },
+    licenseReport: {
+        input: path.resolve(__dirname, 'license-report.yaml'),
+        outputName: 'licenses.json',
+        outputPath: path.resolve(__dirname, 'dist')
     },
     serverOverrides: function(app, express) {
         app.use(express.static(path.join(__dirname, 'dist')));
     },
     serverStart: function(server) {
         startSocketServer(server);
-    },
-    licenseReport: {
-        input: path.resolve(__dirname, 'license-report.yaml'),
-        outputName: 'licenses.json',
-        outputPath: path.resolve(__dirname, 'dist')
     },
 };
 ```
@@ -90,13 +92,13 @@ Exported parameters are as follows:
 
 - `path` - should point to directory you want to serve (used in `serve` task)
 - `testEntryPoint` - should point to your test entry point (to be run by mocha)
-- `rootPath` - should point to root of your project directory, usually can be copy-pasted from example (used in `licenses` and `version` tasks)
 - `webpackConfig.debug` - should include your webpack config used for debugging
 - `webpackConfig.production` - should include your webpack config used for compilation for production
 - `webpackConfig.application` - should include your webpack config used for compilation as production application
+- `webpackConfig.common` - may webpack config that `webpackConfig.debug`, `webpackConfig.production` and `webpackConfig.application` have in common 
+- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
 - `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)
-- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
 
 ### Javascript flags
 

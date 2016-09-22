@@ -52,6 +52,32 @@ var applyDefaults = function(common, cfg) {
                 rx: 'rx/dist/rx.all.js'
             }
         },
+        externals: [
+            function(context, request, callback) {
+                // Every module prefixed with "global-" becomes external
+                // "global-abc" -> abc
+
+                if (_.includes(ignored, request)) {
+                    return callback(null, "commonjs " + request);
+                }
+
+                if (
+                    _.startsWith(request, './') ||
+                    _.startsWith(request, '../') ||
+                    _.startsWith(request, '/') ||
+                    _.includes(request, '!')
+                ) {
+                    return callback();
+
+                }
+                ignored.push(request);
+                if (process.env.NODE_ENV !== 'test') {
+                    console.log("Not including " + request + " in build");
+                }
+                return callback(null, "commonjs " + request);
+
+            },
+        ],
         node: {
             fs: 'empty',
         },

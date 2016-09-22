@@ -9,6 +9,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
 var SCSSBannerPlugin = require('../util/SCSSBannerPlugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(config, callback) {
 
@@ -16,6 +17,10 @@ module.exports = function(config, callback) {
 
     // use production optimizations
     var optimizations = [
+        new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
+            root: path.dirname(wpConfig.output.path),
+            verbose: process.env.NODE_ENV !== 'test',
+        }),
         definePlugin,
         new ExtractTextPlugin('style.css'),
         new ForceCaseSensitivityPlugin(),

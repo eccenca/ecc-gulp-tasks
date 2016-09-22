@@ -5,25 +5,34 @@ var _ = require('lodash');
 var autoprefixer = require('autoprefixer');
 
 
-var applyDefaults = function(cfg) {
+var applyDefaults = function(common, cfg) {
+
+    var config = _.mergeWith({}, common, cfg, function(a, b) {
+        if (_.isArray(a)) {
+            return a.concat(b);
+        }
+    });
 
     // This ensures that requires like mdl are added at the top of the header
-    var cssInsert = (cfg.debug) ? 'top' : 'bottom';
+    var cssInsert = (config.debug) ? 'top' : 'bottom';
 
     var cssLoaders = [
         'style?insertAt=' + cssInsert,
-        'css',
+        'css?-minimize',
         'postcss'].join('!');
 
     var urlLoader = 'url?limit=200000';
 
     // extend config
-    return _.merge(cfg, {
+    return _.mergeWith({}, config, {
+        devtool: 'inline-source-map',
+        debug: true,
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
             fallback: path.join(__dirname, '..', 'node_modules'),
         },
         resolve: {
+            root: config.context,
             packageMains: [
                 'style',
                 'es5',
@@ -33,7 +42,7 @@ var applyDefaults = function(cfg) {
             ],
             extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules'],
-            fallback: path.join(cfg.context, 'node_modules'),
+            fallback: path.join(config.context, 'node_modules'),
             alias: {
                 // fix for broken RxJS requiring by webpack
                 // TODO: remove once fixed in webpack
@@ -52,7 +61,7 @@ var applyDefaults = function(cfg) {
                     test: /\.jsx?$/,
                     exclude: [
                         /node_modules/,
-                        path.join(cfg.context, 'lib')
+                        path.join(config.context, 'lib'),
                     ],
                     loader: 'eslint-loader'
                 },
@@ -118,7 +127,10 @@ var applyDefaults = function(cfg) {
             ],
         },
         postcss: function() {
-            return [autoprefixer];
+            return {
+                defaults: [autoprefixer],
+                cleaner:  [autoprefixer({ browsers: [] })],
+            };
         },
     }, function(a, b) {
         if (_.isArray(a)) {
