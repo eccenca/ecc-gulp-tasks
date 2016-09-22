@@ -7,6 +7,17 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Breaking
 - Update to `gulp-spawn-mocha@3`, brings a few breaking changes: https://github.com/mochajs/mocha/pull/2350
 - removed deprecated `gulp licenses` target
+-   removed `momentLocales` config parameter.
+    By default when building an app NO moment locales are included.
+    
+    Migration: Import locales directly in the source code
+    ```js
+    //es6
+    import 'moment/locale/de';
+
+    //es5
+    require('moment/locale/de')
+    ```
 -   removed `gulp version` target
     
     Migration: Use the `__VERSION__` variable. See README for more details.

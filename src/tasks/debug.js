@@ -15,6 +15,7 @@ module.exports = function(config) {
         new webpack.DefinePlugin({
             __DEBUG__: true
         }),
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
         new ExtractTextPlugin('style.css'),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),

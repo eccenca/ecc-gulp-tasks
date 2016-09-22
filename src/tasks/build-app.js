@@ -20,6 +20,7 @@ module.exports = function(config, callback) {
             'process.env': {NODE_ENV: '"production"'},
             '__DEBUG__': false
         }),
+        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
         new ExtractTextPlugin('style.css?[contenthash:5]'),
         new ForceCaseSensitivityPlugin(),
         new webpack.optimize.OccurenceOrderPlugin(),
