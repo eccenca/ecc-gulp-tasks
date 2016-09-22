@@ -60,8 +60,8 @@
   "devDependencies": {
     "del": "^2.2.1",
     "diff": "^2.2.2",
-    "should": "^10.0.0"
     "ecc-dotfiles": "^1.6.0",
+    "should": "^10.0.0"
   },
   "bugs": {
     "url": "https://github.com/elds/ecc-gulp-tasks/issues"
