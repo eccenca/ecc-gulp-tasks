@@ -94,7 +94,10 @@ Exported parameters are as follows:
 - `testEntryPoint` - should point to your test entry point (to be run by mocha)
 - `webpackConfig.debug` - should include your webpack config used for debugging
 - `webpackConfig.production` - should include your webpack config used for compilation for production
-- `webpackConfig.application` - should include your webpack config used for compilation as production application
+- `webpackConfig.application` - should include your webpack config used for compilation as production application. It allows for the following special parameters:
+    -  `browsers`: a [browserslist](https://github.com/ai/browserslist) definition which is used for css autoprefixing
+    -  `copyFiles`: a list of [copy-webpack-plugin patterns](https://github.com/kevlened/copy-webpack-plugin#usage)  which is used for copying files to the output folder
+    -  `html`: a [html template](https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md) for the [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin#configuration)
 - `webpackConfig.common` - may webpack config that `webpackConfig.debug`, `webpackConfig.production` and `webpackConfig.application` have in common 
 - `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task

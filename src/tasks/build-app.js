@@ -2,18 +2,23 @@
 /* eslint camelcase: ["error", {properties: "never"}] */
 /*eslint-env node, mocha */
 
-
+var _ = require('lodash');
 var path = require('path');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(config, callback) {
+
     var wpConfig = config.webpackConfig.application;
     // use production optimizations
+
+    var browsers = _.get(wpConfig, 'browsers', []);
+
     var optimizations = [
         new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
             root: path.dirname(wpConfig.output.path),
@@ -43,17 +48,36 @@ module.exports = function(config, callback) {
                 screw_ie8: true,
             },
         }),
+        new OptimizeCssAssetsPlugin({
+            assetNameRegExp: /\.css(\?.+)?$/g,
+            cssProcessor: require('cssnano'),
+            cssProcessorOptions: {
+                autoprefixer: {add: true, browsers: browsers},
+                discardComments: {
+                    removeAll: true
+                }
+            },
+            canPrint: process.env.NODE_ENV !== 'test'
+        }),
     ];
 
-    if (config.html) {
+    if (wpConfig.html) {
 
         var HtmlWebpackPlugin = require('html-webpack-plugin');
         var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
 
-        config.html.inject = false;
+        wpConfig.html.inject = false;
 
         optimizations.push(new HTMLTemplatePlugin());
-        optimizations.push(new HtmlWebpackPlugin(config.html));
+        optimizations.push(new HtmlWebpackPlugin(wpConfig.html));
+
+    }
+
+    if(wpConfig.copyFiles) {
+
+        var CopyWebpackPlugin = require('copy-webpack-plugin');
+
+        optimizations.push(new CopyWebpackPlugin(wpConfig.copyFiles));
 
     }
 
