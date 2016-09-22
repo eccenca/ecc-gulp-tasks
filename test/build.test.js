@@ -176,6 +176,9 @@ function runAppBuild(indexFile, callback) {
                 'lodash': './empty-module.js',
             }
         },
+        browsers: [
+            'ie >= 9'
+        ],
         html: {
             template: 'index.html'
         },
