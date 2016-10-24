@@ -1,15 +1,19 @@
 /* eslint no-var: 0 */
 var webpack = require('webpack');
 
-var execSync = require('child_process').execSync;
-
 var version = 'VERSION';
 
-try {
-    version = execSync('git describe --always --dirty').toString();
+if(process.env.GT_BUILD_VERSION){
+    version = process.env.GT_BUILD_VERSION;
     console.log('VERSION: ' + version);
-} catch(e) {
+} else{
+    try {
+        var execSync = require('child_process').execSync;
+        version = execSync('git describe --always --dirty').toString();
+        console.log('VERSION: ' + version);
+    } catch(e) {
 
+    }
 }
 
 

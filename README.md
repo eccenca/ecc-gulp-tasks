@@ -127,7 +127,13 @@ if(__DEBUG__){
 }
 ```
 
-`__VERSION__` is set to the result of `git describe --always --dirty`:
+`__VERSION__` is set to `'VERSION'`
+
+If the environment variable `GT_BUILD_VERSION` is set, `__VERSION__` will be set to that value.
+Otherwise it will be set to the result of `git describe --always --dirty`, if that does not fail.
+
+Usage:
+
 ```jsx
 const version = (<div>{__VERSION__}</div>);
 ```
