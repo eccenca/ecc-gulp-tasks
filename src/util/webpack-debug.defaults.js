@@ -52,9 +52,6 @@ var applyDefaults = function(common, cfg) {
         node: {
             fs: 'empty',
         },
-        eslint: {
-            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.yml'),
-        },
         module: {
             preLoaders: [
                 {

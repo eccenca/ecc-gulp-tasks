@@ -17,7 +17,7 @@ module.exports = function(config, callback) {
     var wpConfig = config.webpackConfig.application;
     // use production optimizations
 
-    var browsers = _.get(wpConfig, 'browsers', []);
+    var compatibleBrowsers = _.get(wpConfig, 'browsers', []);
 
     var optimizations = [
         new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
@@ -52,7 +52,7 @@ module.exports = function(config, callback) {
             assetNameRegExp: /\.css(\?.+)?$/g,
             cssProcessor: require('cssnano'),
             cssProcessorOptions: {
-                autoprefixer: {add: true, browsers: browsers},
+                autoprefixer: {add: true, browsers: compatibleBrowsers},
                 discardComments: {
                     removeAll: true
                 }
@@ -73,7 +73,7 @@ module.exports = function(config, callback) {
 
     }
 
-    if(wpConfig.copyFiles) {
+    if (wpConfig.copyFiles) {
 
         var CopyWebpackPlugin = require('copy-webpack-plugin');
 

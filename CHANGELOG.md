@@ -43,6 +43,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Removed
 - unused `rootPath` config parameter
+- included `.eslintrc` rules. The config file which is specified for the source file will be used.
 
 ## [2.5.0] 2016-09-05
 ### Added
