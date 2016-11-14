@@ -34,7 +34,7 @@ describe('building', function() {
                 runAppBuild('./index-working.jsx', done);
             });
 
-            it('the correct javascript (component.js)', function(done) {
+            it('the correct javascript (main.js)', function(done) {
 
                 var assertionFile = path.join(appFixturesPath, 'main.js');
                 var generatedFile = path.join(outputPath, 'main.js');
