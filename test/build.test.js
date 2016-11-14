@@ -58,6 +58,14 @@ describe('building', function() {
                 done();
             });
 
+            it('the correct copied html (copy/index.html)', function(done) {
+
+                var assertionFile = path.join(appFixturesPath, 'copy/index.html');
+                var generatedFile = path.join(outputPath, 'copy/index.html');
+                compareFiles(assertionFile, generatedFile);
+                done();
+            });
+
         });
     });
 
@@ -182,6 +190,9 @@ function runAppBuild(indexFile, callback) {
         html: {
             template: 'index.html'
         },
+        copyFiles: [
+            { from: './index.html', to: './copy' }
+        ]
     }));
 
     buildApp(config, callback);
