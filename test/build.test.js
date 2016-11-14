@@ -79,10 +79,10 @@ describe('building', function() {
                 done();
             });
 
-            it('the correct styles (style.css)', function(done) {
+            it('the correct styles (component.css)', function(done) {
 
-                var assertionFile = path.join(fixturesPath, 'style.css');
-                var generatedFile = path.join(outputPath, 'style.css');
+                var assertionFile = path.join(fixturesPath, 'component.css');
+                var generatedFile = path.join(outputPath, 'component.css');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });

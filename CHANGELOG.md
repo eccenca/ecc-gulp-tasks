@@ -26,6 +26,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Added
 -   `webpackConfig.common` config parameter which allows to set common webpack parameters for production, debug and application
+-   `webpackConfig.production.prependSCSS` config parameter which allows to choose the file to which the SCSS prefix is added. Defaults to `webpackConfig.production.output.filename`
 -   `webpackConfig.application` allows the following optional parameters:
     -  `browsers`: a [browserslist](https://github.com/ai/browserslist) definition which is used for css autoprefixing
     -  `copyFiles`: a list of [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin) patterns which is used for copying files to the output folder

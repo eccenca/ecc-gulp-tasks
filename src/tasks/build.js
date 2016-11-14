@@ -10,6 +10,7 @@ var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
 var SCSSBannerPlugin = require('../util/SCSSBannerPlugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
+var _ = require('lodash');
 
 module.exports = function(config, callback) {
 
@@ -22,16 +23,21 @@ module.exports = function(config, callback) {
             verbose: process.env.NODE_ENV !== 'test',
         }),
         definePlugin,
-        new ExtractTextPlugin('style.css'),
         new ForceCaseSensitivityPlugin(),
     ];
+
+    if (_.isPlainObject(config.webpackConfig.production.entry)) {
+        optimizations.push(new ExtractTextPlugin('[name].css'));
+    } else {
+        optimizations.push(new ExtractTextPlugin('component.css'));
+    }
 
     var styleSCSS = path.join(config.webpackConfig.production.context, 'style', 'style.scss');
 
     if (fs.existsSync(styleSCSS)) {
 
         var outputPath = config.webpackConfig.production.output.path;
-        var outputFileName = config.webpackConfig.production.output.filename;
+        var outputFileName = config.webpackConfig.production.prependSCSS || config.webpackConfig.production.output.filename;
 
         optimizations.push(
             new SCSSBannerPlugin(outputPath, outputFileName, styleSCSS)
