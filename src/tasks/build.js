@@ -37,7 +37,7 @@ module.exports = function(config, callback) {
     if (fs.existsSync(styleSCSS)) {
 
         var outputPath = config.webpackConfig.production.output.path;
-        var outputFileName = config.webpackConfig.production.prependSCSS || config.webpackConfig.production.output.filename;
+        var outputFileName = config.webpackConfig.production.output.filename;
 
         optimizations.push(
             new SCSSBannerPlugin(outputPath, outputFileName, styleSCSS)
