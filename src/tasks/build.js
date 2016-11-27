@@ -6,9 +6,11 @@ var path = require('path');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForceCaseSensitivityPlugin = require('force-case-sensitivity-webpack-plugin');
+var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var webpackBuildCB = require('../util/webpackBuildCB');
 var SCSSBannerPlugin = require('../util/SCSSBannerPlugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var _ = require('lodash');
 
 module.exports = function(config, callback) {
 
@@ -16,10 +18,19 @@ module.exports = function(config, callback) {
 
     // use production optimizations
     var optimizations = [
+        new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
+            root: path.dirname(wpConfig.output.path),
+            verbose: process.env.NODE_ENV !== 'test',
+        }),
         definePlugin,
-        new ExtractTextPlugin('style.css'),
         new ForceCaseSensitivityPlugin(),
     ];
+
+    if (_.isPlainObject(config.webpackConfig.production.entry)) {
+        optimizations.push(new ExtractTextPlugin('[name].css'));
+    } else {
+        optimizations.push(new ExtractTextPlugin('component.css'));
+    }
 
     var styleSCSS = path.join(config.webpackConfig.production.context, 'style', 'style.scss');
 

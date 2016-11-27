@@ -12,8 +12,6 @@ A set of common gulp tasks for front-end development
 - `bamboo-test` - runs mocha tests starting from file specified at `config.testEntryPoint` and generates output with [bamboo-mocha-reporter](https://www.npmjs.com/package/mocha-bamboo-reporter).
 - `cover` - runs istanbul to generate test coverage from file specified at `config.testEntryPoint`.
 - `lint` - runs eslint on files specified at `config.lintingFiles`.
-- `version` - generates a `version.json` file using git describe command.
-- `licenses` **deprecated** - generates `licenses.json` file using all currently installed packages.
 - `licenses-yaml2json` - generates a `licenses.json` from a `licenses.yaml` file.
 
 ## Usage
@@ -49,14 +47,14 @@ require('./gulp/my-other-task.js')(gulp);
 ### How to run things synchonously?
 
 Normally gulp runs everything asynchronously, but sometimes you might want to run tasks in sync.
-That is useful for example if you want to generate a version and licenses files before compiling the app itself.
+That is useful for example if you want to run tests and then build a component.
 To do that, you can use [gulp-sequence](https://github.com/teambition/gulp-sequence) package, like so:
 
 ```js
 var gulpSequence = require('gulp-sequence');
 var gulp = require('ecc-gulp-tasks')(/* ... */);
 // ....
-gulp.task('deploy', gulpSequence('version', 'licenses', 'build'));
+gulp.task('deploy', gulpSequence('test', 'build-app'));
 ```
 
 ### Build config
@@ -68,11 +66,18 @@ var path = require('path');
 module.exports = {
     path: path.resolve(__dirname),
     testEntryPoint: path.join(__dirname, 'test', 'index.jsx'),
-    rootPath: path.resolve(__dirname),
     webpackConfig: {
         debug: require('./webpack.config.js'),
         production: require('./webpack.config.prod.js'),
         application: require('./webpack.config.app.js'),
+        common: {
+            context: path.resolve(__dirname),
+        },
+    },
+    licenseReport: {
+        input: path.resolve(__dirname, 'license-report.yaml'),
+        outputName: 'licenses.json',
+        outputPath: path.resolve(__dirname, 'dist')
     },
     serverOverrides: function(app, express) {
         app.use(express.static(path.join(__dirname, 'dist')));
@@ -80,12 +85,6 @@ module.exports = {
     serverStart: function(server) {
         startSocketServer(server);
     },
-    licenseReport: {
-        input: path.resolve(__dirname, 'license-report.yaml'),
-        outputName: 'licenses.json',
-        outputPath: path.resolve(__dirname, 'dist')
-    },
-    momentLocales: /(de|en).js/
 };
 ```
 
@@ -93,23 +92,25 @@ Exported parameters are as follows:
 
 - `path` - should point to directory you want to serve (used in `serve` task)
 - `testEntryPoint` - should point to your test entry point (to be run by mocha)
-- `rootPath` - should point to root of your project directory, usually can be copy-pasted from example (used in `licenses` and `version` tasks)
 - `webpackConfig.debug` - should include your webpack config used for debugging
 - `webpackConfig.production` - should include your webpack config used for compilation for production
-- `webpackConfig.application` - should include your webpack config used for compilation as production application
+- `webpackConfig.application` - should include your webpack config used for compilation as production application. It allows for the following special parameters:
+    -  `browsers`: a [browserslist](https://github.com/ai/browserslist) definition which is used for css autoprefixing
+    -  `copyFiles`: a list of [copy-webpack-plugin patterns](https://github.com/kevlened/copy-webpack-plugin#usage)  which is used for copying files to the output folder
+    -  `html`: a [html template](https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md) for the [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin#configuration)
+- `webpackConfig.common` - may webpack config that `webpackConfig.debug`, `webpackConfig.production` and `webpackConfig.application` have in common 
+- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
 - `serverOverrides` - should contain a function that can be used to override defaults from `serve` task
 - `serverStart` - should contain function that can be used to start something on top of server instance (e.g. websocket server)
-- `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
-- `momentLocales` - a regex which matches the locales for `moment.js`. Webpack includes all locales by default. By setting this parameter, the build size can be reduced a lot.
 
 ### Javascript flags
 
-There are two Javascript flags set:
+There are the following flags set:
 
 `__WEBPACK__` is set to true while using `gulp build|build-app|debug`.
 This may be used for doing things only webpack can do, like requiring style sheets, etc:
 
-```
+```js
 if(__WEBPACK__){
   require('./style.css')
 }
@@ -119,9 +120,20 @@ if(__WEBPACK__){
 If you run `gulp build-app`, `__DEBUG__` is set to `false`, effectively stripping all debug statements.
 This may be used for doing things only during development:
 
-```
+```js
 // The following block will only be run during development
 if(__DEBUG__){
   console.info('Dear Developer, have a nice day')
 }
+```
+
+`__VERSION__` is set to `'VERSION'`
+
+If the environment variable `GT_BUILD_VERSION` is set, `__VERSION__` will be set to that value.
+Otherwise it will be set to the result of `git describe --always --dirty`, if that does not fail.
+
+Usage:
+
+```jsx
+const version = (<div>{__VERSION__}</div>);
 ```

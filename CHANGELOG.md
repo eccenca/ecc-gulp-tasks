@@ -2,6 +2,49 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [Unreleased]
+
+### Breaking
+-   Update to `gulp-spawn-mocha@3`, brings a few breaking changes: https://github.com/mochajs/mocha/pull/2350
+-   removed deprecated `gulp licenses` target.
+
+    Migration: Use the `gulp licenses-yaml2json` target. See README for usage instructions. 
+-   removed `momentLocales` config parameter.
+    By default when building an app NO moment locales are included.
+    
+    Migration: Import locales directly in the source code
+    ```js
+    //es6
+    import 'moment/locale/de';
+
+    //es5
+    require('moment/locale/de')
+    ```
+-   removed `gulp version` target
+    
+    Migration: Use the `__VERSION__` variable. See README for more details.
+
+### Added
+-   `webpackConfig.common` config parameter which allows to set common webpack parameters for production, debug and application
+-   `webpackConfig.application` allows the following optional parameters:
+    -  `browsers`: a [browserslist](https://github.com/ai/browserslist) definition which is used for css autoprefixing
+    -  `copyFiles`: a list of [copy-webpack-plugin](https://github.com/kevlened/copy-webpack-plugin) patterns which is used for copying files to the output folder
+
+### Changed
+- Require `ecc-dotfiles@1.6.0` as a peer dependency which brings gitlab merge request templates
+- `gulp build` and `gulp build-app` clean the output folders
+- Update to `force-case-sensitivity-plugin@0.2` which now also errors on wrong casing of folders
+- Updated dependencies to `css-loader@0.25` and `postcss-loader@0.13` 
+- Updated dev dependencies to `diff@3` and `should@11`
+
+### Fixed
+- `gulp build` does not include subfolder paths of node_modules (like `import 'lodash/camelCase'`) into the bundle anymore.
+- `gulp build` now properly minifies css bundles with the `optimize-css-assets-webpack-plugin`
+
+### Removed
+- unused `rootPath` config parameter
+- included `.eslintrc` rules. The config file which is specified for the source file will be used.
+
 ## [2.5.0] 2016-09-05
 ### Added
 - `lib` subfolders are now ignored for `eslint` during development

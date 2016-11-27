@@ -1,29 +1,41 @@
 /* eslint no-var: 0 */
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var _ = require('lodash');
 var autoprefixer = require('autoprefixer');
 
+var ignored = [];
 
-var applyDefaults = function(cfg) {
+var applyDefaults = function(common, cfg) {
+
+    var config = _.mergeWith({}, common, cfg, function(a, b) {
+        if (_.isArray(a)) {
+            return a.concat(b);
+        }
+    });
 
     // This ensures that requires like mdl are added at the top of the header
-    var cssInsert = (cfg.debug) ? 'top' : 'bottom';
+    var cssInsert = (config.debug) ? 'top' : 'bottom';
 
-    var cssLoaders = [
-        'style?insertAt=' + cssInsert,
-        'css',
-        'postcss'].join('!');
+    var cssLoader = 'css?-minimize!postcss?pack=cleaner';
 
-    var urlLoader = 'url?limit=200000';
+    var urlLoader = 'url?limit=10000';
+
+    var fileName = '[name].[ext]?[hash:5]';
+
+    var imageLoader = urlLoader + '&name=image/' + fileName;
+
+    var fontLoader = urlLoader + '&name=fonts/' + fileName;
 
     // extend config
-    return _.merge(cfg, {
+    return _.mergeWith({}, config, {
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
             fallback: path.join(__dirname, '..', 'node_modules'),
         },
         resolve: {
+            root: config.context,
             packageMains: [
                 'style',
                 'es5',
@@ -33,7 +45,7 @@ var applyDefaults = function(cfg) {
             ],
             extensions: ['', '.js', '.jsx'],
             modulesDirectories: ['node_modules'],
-            fallback: path.join(cfg.context, 'node_modules'),
+            fallback: path.join(config.context, 'node_modules'),
             alias: {
                 // fix for broken RxJS requiring by webpack
                 // TODO: remove once fixed in webpack
@@ -43,32 +55,19 @@ var applyDefaults = function(cfg) {
         node: {
             fs: 'empty',
         },
-        eslint: {
-            configFile: path.join(__dirname, '..', 'rules', 'eslintrc.yml'),
-        },
         module: {
-            preLoaders: [
-                {
-                    test: /\.jsx?$/,
-                    exclude: [
-                        /node_modules/,
-                        path.join(cfg.context, 'lib')
-                    ],
-                    loader: 'eslint-loader'
-                },
-            ],
             loaders: [
                 {
                     test: /\.css$/,
-                    loader: cssLoaders,
+                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader),
                 },
                 {
                     test: /\.less$/,
-                    loader: cssLoaders + '!less',
+                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader + '!less'),
                 },
                 {
                     test: /\.scss$/,
-                    loader: cssLoaders + '!sass',
+                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader + '!sass'),
                 },
                 {
                     test: /\.json$/,
@@ -85,40 +84,43 @@ var applyDefaults = function(cfg) {
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/font-woff',
+                    loader: fontLoader + '&mimetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/octet-stream',
+                    loader: fontLoader + '&mimetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/vnd.ms-fontobject',
+                    loader: fontLoader + '&mimetype=application/vnd.ms-fontobject',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=image/svg+xml',
+                    loader: imageLoader + '&mimetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: urlLoader + '&mimetype=image/png',
+                    loader: imageLoader + '&mimetype=image/png',
                 },
                 {
                     test: /\.jpe?g$/,
-                    loader: urlLoader + '&mimetype=image/jpeg',
+                    loader: imageLoader + '&mimetype=image/jpeg',
                 },
                 {
                     test: /\.gif$/,
-                    loader: urlLoader + '&mimetype=image/gif',
+                    loader: imageLoader + '&mimetype=image/gif',
                 },
                 {
                     test: /\.ico$/,
-                    loader: urlLoader + '&mimetype=image/x-icon',
+                    loader: imageLoader + '&mimetype=image/x-icon',
                 },
             ],
         },
         postcss: function() {
-            return [autoprefixer];
+            return {
+                defaults: [autoprefixer],
+                cleaner: [autoprefixer({add: false, browsers: []})],
+            };
         },
     }, function(a, b) {
         if (_.isArray(a)) {
