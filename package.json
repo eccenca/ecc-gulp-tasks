@@ -60,12 +60,12 @@
     "webpack": "^1.13.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.7.1"
+    "ecc-dotfiles": "^1.9.1"
   },
   "devDependencies": {
     "del": "^2.2.1",
     "diff": "^3.0.0",
-    "ecc-dotfiles": "^1.7.1",
+    "ecc-dotfiles": "^1.9.1",
     "should": "^11.1.0"
   },
   "bugs": {
