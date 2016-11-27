@@ -5,6 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 
 ### Breaking
+
+Generally upgrading should be possible without any problems, especially in simple components.
+
 -   Update to `gulp-spawn-mocha@3`, brings a few breaking changes: https://github.com/mochajs/mocha/pull/2350
 -   removed deprecated `gulp licenses` target.
 
