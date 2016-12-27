@@ -3538,13 +3538,7 @@ mkdirp@^0.3.5:
   version "0.3.5"
   resolved "https://artifactory.eccenca.com/api/npm/npm/mkdirp/-/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
 
-mocha-bamboo-reporter@^1.1.0:
-  version "1.1.1"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/mocha-bamboo-reporter/-/mocha-bamboo-reporter-1.1.1.tgz#baa3d024641b736ace1afc9fa0d188413ab7e4f9"
-  dependencies:
-    mocha ">=1.8.1"
-
-mocha@>=1.8.1, mocha@^3.0.2:
+mocha@^3.0.2:
   version "3.2.0"
   resolved "https://artifactory.eccenca.com/api/npm/npm/mocha/-/mocha-3.2.0.tgz#7dc4f45e5088075171a68896814e6ae9eb7a85e3"
   dependencies:
@@ -3698,15 +3692,15 @@ node-sass@^3.13.1:
     request "^2.61.0"
     sass-graph "^2.1.1"
 
-"nopt@2 || 3", nopt@3.x, nopt@~3.0.6:
-  version "3.0.6"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
+"nopt@2 || 3", nopt@^2.2.0:
+  version "2.2.1"
+  resolved "https://artifactory.eccenca.com/api/npm/npm/nopt/-/nopt-2.2.1.tgz#2aa09b7d1768487b3b89a9c5aa52335bff0baea7"
   dependencies:
     abbrev "1"
 
-nopt@^2.2.0:
-  version "2.2.1"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/nopt/-/nopt-2.2.1.tgz#2aa09b7d1768487b3b89a9c5aa52335bff0baea7"
+nopt@3.x, nopt@~3.0.6:
+  version "3.0.6"
+  resolved "https://artifactory.eccenca.com/api/npm/npm/nopt/-/nopt-3.0.6.tgz#c6465dbf08abcd4db359317f79ac68a646b28ff9"
   dependencies:
     abbrev "1"
 

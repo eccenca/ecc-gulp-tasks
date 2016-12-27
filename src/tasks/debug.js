@@ -9,7 +9,7 @@ var BrowserErrorPlugin = require('../util/browserErrorPlugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var chalk = gutil.colors;
 var CleanWebpackPlugin = require('clean-webpack-plugin');
-var serve = require('./serve');
+var serve = require('../util/serve');
 var path = require('path');
 
 function isExternal(module) {

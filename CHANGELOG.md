@@ -19,6 +19,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
     -   Default devtool is now `cheap-module-eval-source-map` instead of `inline-sourcemap`
     -   Split bundles into multiple, deduped chunks.
         The source code of a component now lives in a different chunk than the vendor scripts.
+        
+### Removed
+-   unused `licenseData.js` util
+-   unused `gulp bamboo-test` task
+-   unnecessary `gulp serve` task
 
 ## [3.0.0] 2016-11-27
 

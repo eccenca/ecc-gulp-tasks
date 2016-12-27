@@ -31,7 +31,7 @@ module.exports = function(config) {
     allTasks.forEach(function(name) {
         var task = require(path.join(tasksPath, name));
         if (task.deps) {
-            gulp.task(name, task.deps, task.work.bind(this, config));
+            gulp.task(name, task.deps, task.bind(this, config));
         } else {
             gulp.task(name, task.bind(this, config));
         }

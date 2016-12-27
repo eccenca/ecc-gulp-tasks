@@ -66,6 +66,7 @@ module.exports = function(config, callback) {
 
         var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+        //@deprecated
         if (wpConfig.html.template && /\.html$/.test(wpConfig.html.template)) {
 
             gutil.log(

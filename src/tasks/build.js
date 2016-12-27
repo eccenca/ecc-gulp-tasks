@@ -26,18 +26,18 @@ module.exports = function(config, callback) {
         new ForceCaseSensitivityPlugin(),
     ];
 
-    if (_.isPlainObject(config.webpackConfig.production.entry)) {
+    if (_.isPlainObject(wpConfig.entry)) {
         optimizations.push(new ExtractTextPlugin('[name].css'));
     } else {
         optimizations.push(new ExtractTextPlugin('component.css'));
     }
 
-    var styleSCSS = path.join(config.webpackConfig.production.context, 'style', 'style.scss');
+    var styleSCSS = path.join(wpConfig.context, 'style', 'style.scss');
 
     if (fs.existsSync(styleSCSS)) {
 
-        var outputPath = config.webpackConfig.production.output.path;
-        var outputFileName = config.webpackConfig.production.output.filename;
+        var outputPath = wpConfig.output.path;
+        var outputFileName = wpConfig.output.filename;
 
         optimizations.push(
             new SCSSBannerPlugin(outputPath, outputFileName, styleSCSS)
