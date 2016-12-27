@@ -20,7 +20,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
     -   Split bundles into multiple, deduped chunks.
         The source code of a component now lives in a different chunk than the vendor scripts.
 -   Output of `gulp debug` now displays only changed files & all javascript files
-        
+      
+### Added
+-   `copyFiles` option is now also considered in `gulp debug`
+
 ### Removed
 -   unused `licenseData.js` util
 -   unused `gulp bamboo-test` task

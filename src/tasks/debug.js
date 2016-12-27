@@ -110,6 +110,14 @@ module.exports = function(config) {
         );
     }
 
+    if (wpConfig.copyFiles) {
+
+        var CopyWebpackPlugin = require('copy-webpack-plugin');
+
+        optimizations.push(new CopyWebpackPlugin(wpConfig.copyFiles));
+
+    }
+
     optimizations.push(new HtmlWebpackPlugin(wpConfig.html));
 
     if (wpConfig.plugins) {
