@@ -14,12 +14,13 @@ var serverGetInstance = function(portsArray) {
     var port = 0;
 
     if ((portsArray.length > 0) && (port = portsArray.shift())) {
-        util.log('Try to start webserver on localhost:' + port);
+        util.log(util.colors.cyan('[serve]'), `Try to start webserver on localhost:${port}`);
         serverInstance = server.listen(port);
         serverInstance.on('error', function(err) {
             util.log(
-                'Error while starting webserver on localhost:' + port + '.',
-                util.colors.red(err.code)
+                util.colors.red('[serve]'),
+                `Error while starting webserver on localhost:${port}.`,
+                util.colors.red(err.toString())
             );
             if (portsArray.length > 0) {
                 serverInstance = serverGetInstance(portsArray);
@@ -31,8 +32,9 @@ var serverGetInstance = function(portsArray) {
         });
         serverInstance.on('listening', function() {
             util.log(
+                util.colors.cyan('[serve]'),
                 'Started webserver on',
-                util.colors.green('http://localhost:' + port)
+                util.colors.green(`http://localhost:${port}`)
             );
         });
     }
@@ -49,22 +51,12 @@ module.exports = function(config) {
     server.use(methodOverride());
     // prepare
     server.use(express.static(path));
-    // apply overrides if any are present
-    if (config.serverOverrides) {
-        config.serverOverrides(server, express);
-    }
+
     // server rest as default
     server.get('*', function(req, res) {
         res.sendFile('/index.html', {root: path});
     });
 
     // start nodemon
-    var serverInstance = serverGetInstance(serverPorts);
-
-    // apply server start override if present
-    if (config.serverStart) {
-        config.serverStart(serverInstance);
-    }
-
-    return serverInstance;
+    return serverGetInstance(serverPorts);
 };

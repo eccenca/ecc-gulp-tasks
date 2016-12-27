@@ -4,6 +4,7 @@
 
 var _ = require('lodash');
 var path = require('path');
+var gutil = require('gulp-util');
 var webpack = require('webpack');
 var definePlugin = require('../util/definePlugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -64,11 +65,19 @@ module.exports = function(config, callback) {
     if (wpConfig.html) {
 
         var HtmlWebpackPlugin = require('html-webpack-plugin');
-        var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
 
-        wpConfig.html.inject = false;
+        if (wpConfig.html.template && /\.html$/.test(wpConfig.html.template)) {
 
-        optimizations.push(new HTMLTemplatePlugin());
+            gutil.log(
+                gutil.colors.yellow('[DEPRECATION]'),
+                'Please provide an .ejs template for html-webpack plugin and no .html template'
+            );
+
+            var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
+            wpConfig.html.inject = false;
+            optimizations.push(new HTMLTemplatePlugin());
+        }
+
         optimizations.push(new HtmlWebpackPlugin(wpConfig.html));
 
     }

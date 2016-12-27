@@ -23,6 +23,9 @@ var applyDefaults = function(common, cfg) {
     var defaults = {
         devtool: 'inline-source-map',
         debug: true,
+        html: {
+            template: path.join(__dirname, 'component.html.ejs')
+        },
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
             fallback: path.join(__dirname, '..', 'node_modules'),
