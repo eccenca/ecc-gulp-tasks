@@ -2,8 +2,6 @@
 
 var path = require('path');
 var _ = require('lodash');
-var autoprefixer = require('autoprefixer');
-
 var mergeFunction = require('./mergeFunction');
 
 var applyDefaults = function(common, cfg) {
@@ -16,7 +14,8 @@ var applyDefaults = function(common, cfg) {
     var cssLoaders = [
         'style?insertAt=' + cssInsert,
         'css?-minimize',
-        'postcss'].join('!');
+    ].join('!');
+
 
     var urlLoader = 'url?limit=200000';
 
@@ -120,11 +119,6 @@ var applyDefaults = function(common, cfg) {
                 },
             ],
         },
-        postcss: function() {
-            return {
-                defaults: [autoprefixer],
-                cleaner:  [autoprefixer({ browsers: [] })],
-            };
     };
 
     _.mergeWith(defaults, config, mergeFunction);

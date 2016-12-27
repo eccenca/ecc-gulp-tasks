@@ -4,8 +4,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 ### Changed
-- Downgraded `css-loader`, due to [performance concerns](https://github.com/webpack/css-loader/issues/124)
-- Upgraded dependencies
+-   Upgraded dependencies
+-   Major Speed Improvements in Debug mode:
+    - Downgraded `css-loader`, due to [performance concerns](https://github.com/webpack/css-loader/issues/124)
+    - Removed css cleaning and postprocessing in `gulp debug`
 
 ## [3.0.0] 2016-11-27
 
