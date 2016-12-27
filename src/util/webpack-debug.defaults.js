@@ -27,7 +27,7 @@ var applyDefaults = function(common, cfg) {
 
     // extend config
     var defaults = {
-        devtool: 'inline-source-map',
+        devtool: 'cheap-module-eval-source-map',
         debug: true,
         html: {
             template: path.join(__dirname, 'component.html.ejs')
