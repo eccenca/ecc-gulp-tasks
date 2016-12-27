@@ -7,7 +7,9 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
 var BrowserErrorPlugin = require('../util/browserErrorPlugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var _ = require('lodash');
 var chalk = gutil.colors;
+var webpackStatsToString = require('webpack/lib/Stats').jsonToString;
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 var serve = require('../util/serve');
 var path = require('path');
@@ -36,6 +38,24 @@ function isEccenca(module) {
     return userRequest.lastIndexOf('ecc-') >= 0 && userRequest.lastIndexOf('node_modules/ecc-') === userRequest.lastIndexOf('node_modules')
 }
 
+function statsToString(stats, firstRun) {
+
+    const statsJson = stats.toJson({
+        hash: false,
+        version: firstRun,
+        timings: true,
+        assets: true,
+        chunks: false,
+        children: false,
+    }, true);
+
+    statsJson.assets = _.filter(statsJson.assets, (asset) => {
+        return asset.emitted || /\.(js|html)/.test(asset.name);
+    });
+
+    return (webpackStatsToString(statsJson, true))
+
+}
 
 module.exports = function(config) {
     var wpConfig = config.webpackConfig.debug;
@@ -108,11 +128,8 @@ module.exports = function(config) {
             gutil.log(chalk.red('[webpack-error]'), err.toString());
             return;
         }
-        // log result
-        gutil.log('[webpack]', stats.toString({
-            chunks: false,
-            colors: true,
-        }));
+
+        gutil.log(chalk.cyan('[webpack]'), statsToString(stats, firstRun));
 
         if (firstRun) {
             //callback();
