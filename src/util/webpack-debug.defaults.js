@@ -58,16 +58,6 @@ var applyDefaults = function(common, cfg) {
             fs: 'empty',
         },
         module: {
-            preLoaders: [
-                {
-                    test: /\.jsx?$/,
-                    exclude: [
-                        /node_modules/,
-                        path.join(config.context, 'lib'),
-                    ],
-                    loader: 'eslint-loader'
-                },
-            ],
             loaders: [
                 {
                     test: /\.css$/,

@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 -   `gulp serve` target. Already removed, as `gulp debug` runs it's own server now.
 
 ### Changed
+-   Removed `eslint-loader` as it caused OOM errors of node
 -   Upgraded dependencies
 -   Debug will build into a `.tmp` directory and served from there.
     - A default `index.html` will be generated which includes all needed assets (js and css).
