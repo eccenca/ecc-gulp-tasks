@@ -4,14 +4,11 @@ var path = require('path');
 var _ = require('lodash');
 var autoprefixer = require('autoprefixer');
 
+var mergeFunction = require('./mergeFunction');
 
 var applyDefaults = function(common, cfg) {
 
-    var config = _.mergeWith({}, common, cfg, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    var config = _.mergeWith({}, common, cfg, mergeFunction);
 
     // This ensures that requires like mdl are added at the top of the header
     var cssInsert = (config.debug) ? 'top' : 'bottom';
@@ -24,7 +21,7 @@ var applyDefaults = function(common, cfg) {
     var urlLoader = 'url?limit=200000';
 
     // extend config
-    return _.mergeWith({}, config, {
+    var defaults = {
         devtool: 'inline-source-map',
         debug: true,
         resolveLoader: {
@@ -128,12 +125,11 @@ var applyDefaults = function(common, cfg) {
                 defaults: [autoprefixer],
                 cleaner:  [autoprefixer({ browsers: [] })],
             };
-        },
-    }, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    };
+
+    _.mergeWith(defaults, config, mergeFunction);
+
+    return defaults;
 };
 
 module.exports = applyDefaults;

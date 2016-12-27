@@ -4,16 +4,13 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var path = require('path');
 var _ = require('lodash');
 var autoprefixer = require('autoprefixer');
+var mergeFunction = require('./mergeFunction');
 
 var ignored = [];
 
 var applyDefaults = function(common, cfg) {
 
-    var config = _.mergeWith({}, common, cfg, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    var config = _.mergeWith({}, common, cfg, mergeFunction);
 
     // This ensures that requires like mdl are added at the top of the header
     var cssInsert = (config.debug) ? 'top' : 'bottom';
@@ -29,7 +26,7 @@ var applyDefaults = function(common, cfg) {
     var fontLoader = urlLoader + '&name=fonts/' + fileName;
 
     // extend config
-    return _.mergeWith({}, config, {
+    var defaults = {
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
             fallback: path.join(__dirname, '..', 'node_modules'),
@@ -54,8 +51,6 @@ var applyDefaults = function(common, cfg) {
         },
         externals: [
             function(context, request, callback) {
-                // Every module prefixed with "global-" becomes external
-                // "global-abc" -> abc
 
                 if (_.includes(ignored, request)) {
                     return callback(null, "commonjs " + request);
@@ -148,11 +143,9 @@ var applyDefaults = function(common, cfg) {
                 cleaner: [autoprefixer({add: false, browsers: []})],
             };
         },
-    }, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    };
+
+    return _.mergeWith(defaults, config, mergeFunction);
 };
 
 module.exports = applyDefaults;
