@@ -16,8 +16,14 @@ var applyDefaults = function(common, cfg) {
         'css?-minimize',
     ].join('!');
 
+    var urlLoader = 'url?limit=10000';
 
-    var urlLoader = 'url?limit=200000';
+    var fileName = '[name].[ext]?[hash:5]';
+
+    var imageLoader = urlLoader + '&name=image/' + fileName;
+
+    var fontLoader = urlLoader + '&name=fonts/' + fileName;
+
 
     // extend config
     var defaults = {
@@ -90,35 +96,35 @@ var applyDefaults = function(common, cfg) {
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/font-woff',
+                    loader: fontLoader + '&mimetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/octet-stream',
+                    loader: fontLoader + '&mimetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/vnd.ms-fontobject',
+                    loader: fontLoader + '&mimetype=application/vnd.ms-fontobject',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=image/svg+xml',
+                    loader: imageLoader + '&mimetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: urlLoader + '&mimetype=image/png',
+                    loader: imageLoader + '&mimetype=image/png',
                 },
                 {
                     test: /\.jpe?g$/,
-                    loader: urlLoader + '&mimetype=image/jpeg',
+                    loader: imageLoader + '&mimetype=image/jpeg',
                 },
                 {
                     test: /\.gif$/,
-                    loader: urlLoader + '&mimetype=image/gif',
+                    loader: imageLoader + '&mimetype=image/gif',
                 },
                 {
                     test: /\.ico$/,
-                    loader: urlLoader + '&mimetype=image/x-icon',
+                    loader: imageLoader + '&mimetype=image/x-icon',
                 },
             ],
         },

@@ -11,9 +11,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 -   Upgraded dependencies
 -   Debug will build into a `.tmp` directory and served from there.
     - A default `index.html` will be generated which includes all needed assets (js and css).
--   Major Speed Improvements in Debug mode:
+-   Major Speed Improvements in `gulp debug`:
     - Downgraded `css-loader`, due to [performance concerns](https://github.com/webpack/css-loader/issues/124)
     - Removed css cleaning and postprocessing in `gulp debug`
+    - Write big assets like images or fonts into `.tmp` folder
 
 ## [3.0.0] 2016-11-27
 
