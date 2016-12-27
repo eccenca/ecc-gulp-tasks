@@ -12,9 +12,12 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 -   Debug will build into a `.tmp` directory and served from there.
     - A default `index.html` will be generated which includes all needed assets (js and css).
 -   Major Speed Improvements in `gulp debug`:
-    - Downgraded `css-loader`, due to [performance concerns](https://github.com/webpack/css-loader/issues/124)
-    - Removed css cleaning and postprocessing in `gulp debug`
-    - Write big assets like images or fonts into `.tmp` folder
+    -   Downgraded `css-loader`, due to [performance concerns](https://github.com/webpack/css-loader/issues/124)
+    -   Removed css cleaning and postprocessing in `gulp debug`
+    -   Write big assets like images or fonts into `.tmp` folder
+    -   Default devtool is now `cheap-module-eval-source-map` instead of `inline-sourcemap`
+    -   Split bundles into multiple, deduped chunks.
+        The source code of a component now lives in a different chunk than the vendor scripts.
 
 ## [3.0.0] 2016-11-27
 
