@@ -57,7 +57,7 @@ function statsToString(stats, firstRun) {
 
 }
 
-module.exports = function(config) {
+function debug(config) {
     var wpConfig = config.webpackConfig.debug;
 
     wpConfig.output.path = path.join(wpConfig.context, '.tmp')
@@ -147,4 +147,8 @@ module.exports = function(config) {
         }
 
     });
-};
+}
+
+debug.deps = ['doctor'];
+
+module.exports = debug;
