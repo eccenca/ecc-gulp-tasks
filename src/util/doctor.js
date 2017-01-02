@@ -2,6 +2,7 @@ const globby = require('globby');
 const path = require('path');
 const _ = require('lodash');
 const fs = require('fs-extra');
+const semver = require('semver');
 
 class Doctor {
     constructor(dir, config) {
@@ -64,12 +65,76 @@ class Doctor {
             'ui-test/**/*.woff*',
             'ui-test/**/*.ttf',
             'ui-test/**/*.svg',
+            'version.json',
         ]);
 
         // Check package.json
         this.checkPackageJson();
 
         this.checkGulpConfig();
+
+        this.checkEnv();
+
+    }
+
+    checkEnv() {
+        const execSync = require('child_process').execSync;
+
+        const messages = [];
+
+        const checkCommands = {
+            yarn: {
+                cmd: '--version',
+                version: '0.18.1',
+                resolution: (tool, version) => {
+                    return `Please run \`npm i -g ${tool}@${version}\``
+                },
+            }, npm: {
+                cmd: '--version',
+                version: '3.10.9',
+                resolution: (tool, version) => {
+                    return `Please run \`npm i -g ${tool}@${version}\``
+                },
+            }, node: {
+                cmd: '--version',
+                version: '6.9.1',
+            },
+        };
+
+        _.forEach(checkCommands, ({cmd, version, resolution}, tool) => {
+
+            try {
+                const installedVersion = execSync(`${tool} ${cmd}`).toString().replace(/\r?\n/g, '');
+
+                if (!semver.satisfies(installedVersion, `~${version}`, true)) {
+
+                    let m = `You are using ${tool}@${installedVersion}.`
+                    m += ` The current recommended version is ${version}.`;
+
+                    if(_.isFunction(resolution)){
+                        m+= ` ${resolution(tool, version)}.`;
+                    }
+
+                    messages.push(m);
+
+                }
+
+            } catch (e) {
+                // we die gracefully, as the check errored, or something
+            }
+
+        });
+
+        if (!_.isEmpty(messages)) {
+            let envMessages = 'The following problems have been found with your environment:';
+            _.map(messages, (message) => {
+                envMessages += `\n\t${message}`;
+            });
+
+            this.messages.envMessages = envMessages;
+
+        }
+
 
     }
 
@@ -84,8 +149,6 @@ class Doctor {
 
         _.forEach(deprectatedValues, (key) => {
             const value = _.get(this.config, key, false);
-
-            console.log(value, key, this.config);
 
             if (value) {
                 messages.push(`Please delete deprecated option '${key}': '${value}' from your gulp buildConfig.`);
