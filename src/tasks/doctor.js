@@ -6,7 +6,6 @@ module.exports = function(config, callback) {
 
     const doctor = new Doctor(dir, config);
 
-
     if (gutil.env.heal) {
         gutil.log(doctor.heal());
     }

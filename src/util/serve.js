@@ -1,27 +1,27 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const util = require('gulp-util');
+const chalk = require('gulp-util').colors;
 
 // configure server
 const server = express();
 const serverPorts = [8080, 8081, 8082, 8083, 8084, 8085];
-const serverGetInstance = function(portsArray) {
+const serverGetInstance = (portsArray, logger) => {
 
     let serverInstance = false;
     let port = 0;
 
     if ((portsArray.length > 0) && (port = portsArray.shift())) {
-        util.log(util.colors.cyan('[serve]'), `Try to start webserver on localhost:${port}`);
+        logger(chalk.cyan('[serve]'), `Try to start webserver on localhost:${port}`);
         serverInstance = server.listen(port);
         serverInstance.on('error', function(err) {
-            util.log(
-                util.colors.red('[serve]'),
+            logger(
+                chalk.red('[serve]'),
                 `Error while starting webserver on localhost:${port}.`,
-                util.colors.red(err.toString())
+                chalk.red(err.toString())
             );
             if (portsArray.length > 0) {
-                serverInstance = serverGetInstance(portsArray);
+                serverInstance = serverGetInstance(portsArray, logger);
             }
             else {
                 serverInstance.close();
@@ -29,10 +29,10 @@ const serverGetInstance = function(portsArray) {
             }
         });
         serverInstance.on('listening', function() {
-            util.log(
-                util.colors.cyan('[serve]'),
+            logger(
+                chalk.cyan('[serve]'),
                 'Started webserver on',
-                util.colors.green(`http://localhost:${port}`)
+                chalk.green(`http://localhost:${port}`)
             );
         });
     }
@@ -40,8 +40,7 @@ const serverGetInstance = function(portsArray) {
     return serverInstance;
 };
 
-module.exports = function(config) {
-    const path = config.path;
+module.exports = ({path, logger = console.log}) => {
     // parse request bodies (req.body)
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({extended: true}));
@@ -56,5 +55,5 @@ module.exports = function(config) {
     });
 
     // start nodemon
-    return serverGetInstance(serverPorts);
+    return serverGetInstance(serverPorts, logger);
 };

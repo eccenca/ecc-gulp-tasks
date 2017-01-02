@@ -11,6 +11,7 @@ const webpackStatsToString = require('webpack/lib/Stats').jsonToString;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const serve = require('../util/serve');
 const path = require('path');
+const Doctor = require('../util/doctor');
 
 const isEccenca = (module) => {
     const userRequest = module.userRequest;
@@ -54,8 +55,13 @@ const statsToString = (stats, firstRun) => {
 
 };
 
-const debug = (config) => {
+const debug = (config, callback) => {
     const wpConfig = config.webpackConfig.debug;
+
+    Doctor.asyncSelfCheck({
+        dir: wpConfig.context,
+        logger: gutil.log.bind(null, gutil.colors.yellow('[WARNING]:')),
+    });
 
     wpConfig.output.path = path.join(wpConfig.context, '.tmp');
 
@@ -137,10 +143,10 @@ const debug = (config) => {
         gutil.log(chalk.cyan('[webpack]'), statsToString(stats, firstRun));
 
         if (firstRun) {
-            //callback();
             gutil.log(chalk.cyan('[webpack]'), 'Finished initial build');
-            serve({path: wpConfig.output.path});
+            serve({path: wpConfig.output.path, logger: gutil.log});
             firstRun = false;
+            callback();
         }
 
     });

@@ -42,12 +42,12 @@
     "gulp-rename": "^1.2.2",
     "gulp-spawn-mocha": "^3.1.0",
     "gulp-util": "^3.0.8",
-    "html-webpack-plugin": "^2.8.1",
+    "html-webpack-plugin": "^2.25.0",
     "istanbul": "^0.4.5",
     "json-loader": "^0.5.2",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
-    "lodash": "^4.17.3",
+    "lodash": "^4.17.4",
     "method-override": "^2.3.5",
     "mocha": "^3.0.2",
     "node-sass": "^3.13.1",
@@ -61,12 +61,12 @@
     "webpack": "^1.13.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^1.9.1"
+    "ecc-dotfiles": "^1.11.0"
   },
   "devDependencies": {
     "del": "^2.2.1",
     "diff": "^3.2.0",
-    "ecc-dotfiles": "^1.9.1",
+    "ecc-dotfiles": "^1.11.0",
     "should": "^11.1.0"
   },
   "bugs": {

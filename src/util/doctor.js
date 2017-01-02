@@ -3,6 +3,8 @@ const path = require('path');
 const _ = require('lodash');
 const fs = require('fs-extra');
 const semver = require('semver');
+const cp = require('child_process');
+const execSync = cp.execSync;
 
 class Doctor {
     constructor(dir, config) {
@@ -50,6 +52,37 @@ class Doctor {
 
     }
 
+    static asyncSelfCheck({dir, logger = console.log}) {
+
+        const checkPackages = {
+            'ecc-dotfiles': path.join(dir, 'node_modules', 'ecc-dotfiles', 'package.json'),
+            'ecc-gulp-tasks': path.join(__dirname, '../../package.json')
+        };
+
+        _.forEach(checkPackages, (pjson, dep) => {
+            try {
+                const dfVersion = fs.readJsonSync(pjson).version;
+                cp.exec(`yarn info ${dep} version --json`, function(err, stdout, stderr) {
+
+                    if (err || !_.isEmpty(stderr.toString())) {
+                        return;
+                    }
+
+                    try {
+                        const latest = JSON.parse(stdout.toString()).data;
+                        if (!semver.satisfies(dfVersion, latest)) {
+                            logger(`${dep}@${dfVersion} installed. Newest version is ${latest}. Please run \`yarn upgrade ${dep}\``)
+                        }
+                    } catch (e) {
+                        // empty catch
+                    }
+                });
+            } catch (e) {
+                // empty catch
+            }
+        });
+    };
+
     check() {
         this.messages = {};
         this.deleteCandidates = [];
@@ -78,8 +111,6 @@ class Doctor {
     }
 
     checkEnv() {
-        const execSync = require('child_process').execSync;
-
         const messages = [];
 
         const checkCommands = {
@@ -104,15 +135,21 @@ class Doctor {
         _.forEach(checkCommands, ({cmd, version, resolution}, tool) => {
 
             try {
-                const installedVersion = execSync(`${tool} ${cmd}`).toString().replace(/\r?\n/g, '');
+                const installedVersion = execSync(
+                    `${tool} ${cmd}`,
+                    {
+                        cwd: this.basedir,
+                    })
+                    .toString()
+                    .replace(/\r?\n/g, '');
 
                 if (!semver.satisfies(installedVersion, `~${version}`, true)) {
 
                     let m = `You are using ${tool}@${installedVersion}.`
                     m += ` The current recommended version is ${version}.`;
 
-                    if(_.isFunction(resolution)){
-                        m+= ` ${resolution(tool, version)}.`;
+                    if (_.isFunction(resolution)) {
+                        m += ` ${resolution(tool, version)}.`;
                     }
 
                     messages.push(m);

@@ -23,6 +23,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
         The source code of a component now lives in a different chunk than the vendor scripts.
     
 -   Output of `gulp debug` now displays only changed files & all javascript files
+-   `gulp debug` now checks if `ecc-gulp-tasks` and `ecc-dotfiles` are up to date
       
 ### Added
 -   `copyFiles` option is now also considered in `gulp debug`
