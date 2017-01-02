@@ -2,11 +2,11 @@ const fs = require('fs');
 const path = require('path');
 
 const webpack = require('webpack');
-const definePlugin = require('../util/definePlugin');
+const definePlugin = require('../webpack/plugins/definePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
-const webpackBuildCB = require('../util/webpackBuildCB');
-const SCSSBannerPlugin = require('../util/SCSSBannerPlugin');
+const webpackBuildCB = require('../webpack/webpackBuildCB');
+const SCSSBannerPlugin = require('../webpack/plugins/SCSSBannerPlugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const _ = require('lodash');
 

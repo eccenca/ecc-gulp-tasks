@@ -5,10 +5,10 @@ const _ = require('lodash');
 const path = require('path');
 const gutil = require('gulp-util');
 const webpack = require('webpack');
-const definePlugin = require('../util/definePlugin');
+const definePlugin = require('../webpack/plugins/definePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
-const webpackBuildCB = require('../util/webpackBuildCB');
+const webpackBuildCB = require('../webpack/webpackBuildCB');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -73,7 +73,7 @@ module.exports = function(config, callback) {
                 'Please provide an .ejs template for html-webpack plugin and no .html template'
             );
 
-            const HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
+            const HTMLTemplatePlugin = require('../webpack/plugins/HTMLTemplatePlugin');
             wpConfig.html.inject = false;
             optimizations.push(new HTMLTemplatePlugin());
         }

@@ -1,9 +1,9 @@
 const gutil = require('gulp-util');
 const webpack = require('webpack');
-const definePlugin = require('../util/definePlugin');
+const definePlugin = require('../webpack/plugins/definePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
-const BrowserErrorPlugin = require('../util/browserErrorPlugin');
+const BrowserErrorPlugin = require('../webpack/plugins/browserErrorPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const _ = require('lodash');
 const chalk = gutil.colors;
@@ -12,29 +12,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const serve = require('../util/serve');
 const path = require('path');
 const Doctor = require('../util/doctor');
-
-const isEccenca = (module) => {
-    const userRequest = module.userRequest;
-
-    if (typeof userRequest !== 'string') {
-        return false;
-    }
-
-    return userRequest.lastIndexOf('ecc-') >= 0 &&
-        userRequest.lastIndexOf('node_modules/ecc-') === userRequest.lastIndexOf('node_modules');
-};
-
-const isExternal = (module) => {
-    const userRequest = module.userRequest;
-
-    if (typeof userRequest !== 'string' || isEccenca(module)) {
-        return false;
-    }
-
-    return userRequest.indexOf('bower_components') >= 0 ||
-        userRequest.indexOf('node_modules') >= 0 ||
-        userRequest.indexOf('libraries') >= 0;
-};
+const {isEccenca, isExternal} = require('../webpack/utils');
 
 const statsToString = (stats, firstRun) => {
 
