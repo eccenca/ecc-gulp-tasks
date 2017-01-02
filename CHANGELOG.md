@@ -2,6 +2,45 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.1.0] 2017-01-02
+
+### Deprecated
+-   `gulp serve` target. Already removed, as `gulp debug` runs it's own server now.
+
+### Changed
+-   Removed `eslint-loader` as it caused OOM errors of node
+-   Upgraded dependencies
+-   Debug will build into a `.tmp` directory and served from there.
+    
+    -   A default `index.html` will be generated which includes all needed assets (js and css).
+-   Major Speed Improvements in `gulp debug`:
+    
+    -   Downgraded `css-loader`, due to [performance concerns](https://github.com/webpack/css-loader/issues/124)
+    -   Removed css cleaning and postprocessing in `gulp debug`
+    -   Write big assets like images or fonts into `.tmp` folder
+    -   Default devtool is now `cheap-module-eval-source-map` instead of `inline-sourcemap`
+    -   Split bundles into multiple, deduped chunks.
+        The source code of a component now lives in a different chunk than the vendor scripts.
+    
+-   Output of `gulp debug` now displays only changed files & all javascript files
+-   `gulp debug` now checks if `ecc-gulp-tasks` and `ecc-dotfiles` are up to date
+      
+### Added
+-   `copyFiles` option is now also considered in `gulp debug`
+-   `gulp doctor` target which checks:
+    
+    -   If unnecessary files exist
+    -   If package.json contains faulty segments
+    -   If build script config contains deprecated config
+    -   If yarn, node and npm are up to date
+    
+    Some of these points are fixable with running `gulp doctor --heal` 
+
+### Removed
+-   unused `licenseData.js` util
+-   unused `gulp bamboo-test` task
+-   unnecessary `gulp serve` task
+
 ## [3.0.0] 2016-11-27
 
 ### Breaking

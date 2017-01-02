@@ -1,6 +1,4 @@
-/* eslint no-var: 0 */
-
-var gutil = require('gulp-util');
+const gutil = require('gulp-util');
 
 module.exports = function webpackBuildCB(gulpCallback, err, stats) {
 
@@ -9,7 +7,7 @@ module.exports = function webpackBuildCB(gulpCallback, err, stats) {
         return;
     }
 
-    var ret = stats.toString({
+    const ret = stats.toString({
         children: false,
         chunks: false,
         colors: true,

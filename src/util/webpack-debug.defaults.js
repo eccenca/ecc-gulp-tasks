@@ -1,32 +1,35 @@
-/* eslint no-var: 0 */
+const path = require('path');
+const _ = require('lodash');
+const mergeFunction = require('./mergeFunction');
 
-var path = require('path');
-var _ = require('lodash');
-var autoprefixer = require('autoprefixer');
+const applyDefaults = function(common, cfg) {
 
-
-var applyDefaults = function(common, cfg) {
-
-    var config = _.mergeWith({}, common, cfg, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    const config = _.mergeWith({}, common, cfg, mergeFunction);
 
     // This ensures that requires like mdl are added at the top of the header
-    var cssInsert = (config.debug) ? 'top' : 'bottom';
+    const cssInsert = (config.debug) ? 'top' : 'bottom';
 
-    var cssLoaders = [
+    const cssLoaders = [
         'style?insertAt=' + cssInsert,
         'css?-minimize',
-        'postcss'].join('!');
+    ].join('!');
 
-    var urlLoader = 'url?limit=200000';
+    const urlLoader = 'url?limit=10000';
+
+    const fileName = '[name].[ext]?[hash:5]';
+
+    const imageLoader = urlLoader + '&name=image/' + fileName;
+
+    const fontLoader = urlLoader + '&name=fonts/' + fileName;
+
 
     // extend config
-    return _.mergeWith({}, config, {
-        devtool: 'inline-source-map',
+    const defaults = {
+        devtool: 'cheap-module-eval-source-map',
         debug: true,
+        html: {
+            template: path.join(__dirname, 'component.html.ejs')
+        },
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
             fallback: path.join(__dirname, '..', 'node_modules'),
@@ -53,16 +56,6 @@ var applyDefaults = function(common, cfg) {
             fs: 'empty',
         },
         module: {
-            preLoaders: [
-                {
-                    test: /\.jsx?$/,
-                    exclude: [
-                        /node_modules/,
-                        path.join(config.context, 'lib'),
-                    ],
-                    loader: 'eslint-loader'
-                },
-            ],
             loaders: [
                 {
                     test: /\.css$/,
@@ -91,49 +84,43 @@ var applyDefaults = function(common, cfg) {
                 },
                 {
                     test: /\.woff\d?(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/font-woff',
+                    loader: fontLoader + '&mimetype=application/font-woff',
                 },
                 {
                     test: /\.ttf(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/octet-stream',
+                    loader: fontLoader + '&mimetype=application/octet-stream',
                 },
                 {
                     test: /\.eot(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=application/vnd.ms-fontobject',
+                    loader: fontLoader + '&mimetype=application/vnd.ms-fontobject',
                 },
                 {
                     test: /\.svg(\?.+)?$/,
-                    loader: urlLoader + '&mimetype=image/svg+xml',
+                    loader: imageLoader + '&mimetype=image/svg+xml',
                 },
                 {
                     test: /\.png$/,
-                    loader: urlLoader + '&mimetype=image/png',
+                    loader: imageLoader + '&mimetype=image/png',
                 },
                 {
                     test: /\.jpe?g$/,
-                    loader: urlLoader + '&mimetype=image/jpeg',
+                    loader: imageLoader + '&mimetype=image/jpeg',
                 },
                 {
                     test: /\.gif$/,
-                    loader: urlLoader + '&mimetype=image/gif',
+                    loader: imageLoader + '&mimetype=image/gif',
                 },
                 {
                     test: /\.ico$/,
-                    loader: urlLoader + '&mimetype=image/x-icon',
+                    loader: imageLoader + '&mimetype=image/x-icon',
                 },
             ],
         },
-        postcss: function() {
-            return {
-                defaults: [autoprefixer],
-                cleaner:  [autoprefixer({ browsers: [] })],
-            };
-        },
-    }, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    };
+
+    _.mergeWith(defaults, config, mergeFunction);
+
+    return defaults;
 };
 
 module.exports = applyDefaults;
