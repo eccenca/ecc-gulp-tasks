@@ -1,6 +1,6 @@
-var util = require('gulp-util');
+const util = require('gulp-util');
 
-/**
+/*
  * @deprecated
  */
 module.exports = function(config, callback) {

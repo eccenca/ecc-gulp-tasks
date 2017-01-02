@@ -1,9 +1,7 @@
-/* eslint no-var: 0 */
+const util = require('gulp-util');
+const test = require('./test');
 
-var util = require('gulp-util');
-var test = require('./test');
-
-/**
+/*
  * @deprecated
  */
 module.exports = function(config) {

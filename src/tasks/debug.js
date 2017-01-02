@@ -1,44 +1,41 @@
-/* eslint no-var: 0 */
+const gutil = require('gulp-util');
+const webpack = require('webpack');
+const definePlugin = require('../util/definePlugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
+const BrowserErrorPlugin = require('../util/browserErrorPlugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const _ = require('lodash');
+const chalk = gutil.colors;
+const webpackStatsToString = require('webpack/lib/Stats').jsonToString;
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const serve = require('../util/serve');
+const path = require('path');
 
-var gutil = require('gulp-util');
-var webpack = require('webpack');
-var definePlugin = require('../util/definePlugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
-var BrowserErrorPlugin = require('../util/browserErrorPlugin');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var _ = require('lodash');
-var chalk = gutil.colors;
-var webpackStatsToString = require('webpack/lib/Stats').jsonToString;
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var serve = require('../util/serve');
-var path = require('path');
-
-function isExternal(module) {
-    var userRequest = module.userRequest;
-
-    if (typeof userRequest !== 'string' || isEccenca(module)) {
-        return false;
-    }
-
-    var r = userRequest.indexOf('bower_components') >= 0 ||
-        userRequest.indexOf('node_modules') >= 0 ||
-        userRequest.indexOf('libraries') >= 0;
-
-    return r;
-}
-
-function isEccenca(module) {
-    var userRequest = module.userRequest;
+const isEccenca = (module) => {
+    const userRequest = module.userRequest;
 
     if (typeof userRequest !== 'string') {
         return false;
     }
 
-    return userRequest.lastIndexOf('ecc-') >= 0 && userRequest.lastIndexOf('node_modules/ecc-') === userRequest.lastIndexOf('node_modules')
-}
+    return userRequest.lastIndexOf('ecc-') >= 0 &&
+        userRequest.lastIndexOf('node_modules/ecc-') === userRequest.lastIndexOf('node_modules');
+};
 
-function statsToString(stats, firstRun) {
+const isExternal = (module) => {
+    const userRequest = module.userRequest;
+
+    if (typeof userRequest !== 'string' || isEccenca(module)) {
+        return false;
+    }
+
+    return userRequest.indexOf('bower_components') >= 0 ||
+        userRequest.indexOf('node_modules') >= 0 ||
+        userRequest.indexOf('libraries') >= 0;
+};
+
+const statsToString = (stats, firstRun) => {
 
     const statsJson = stats.toJson({
         hash: false,
@@ -53,19 +50,19 @@ function statsToString(stats, firstRun) {
         return asset.emitted || /\.(js|html)/.test(asset.name);
     });
 
-    return (webpackStatsToString(statsJson, true))
+    return (webpackStatsToString(statsJson, true));
 
-}
+};
 
-function debug(config) {
-    var wpConfig = config.webpackConfig.debug;
+const debug = (config) => {
+    const wpConfig = config.webpackConfig.debug;
 
-    wpConfig.output.path = path.join(wpConfig.context, '.tmp')
+    wpConfig.output.path = path.join(wpConfig.context, '.tmp');
 
     gutil.log(chalk.cyan('[webpack]'), 'Started initial build (this make some time)');
 
     // use production optimizations
-    var optimizations = [
+    const optimizations = [
         new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
             root: path.dirname(wpConfig.output.path),
             verbose: process.env.NODE_ENV !== 'test',
@@ -93,7 +90,7 @@ function debug(config) {
                 name: 'eccenca',
                 filename: 'eccenca.js',
                 chunks: ['main'],
-                minChunks: function(module) {
+                minChunks(module) {
                     return isEccenca(module);
                 }
             })
@@ -103,7 +100,7 @@ function debug(config) {
                 name: 'vendors',
                 filename: 'vendor.js',
                 chunks: ['main', 'eccenca'],
-                minChunks: function(module) {
+                minChunks(module) {
                     return isExternal(module);
                 }
             })
@@ -112,7 +109,7 @@ function debug(config) {
 
     if (wpConfig.copyFiles) {
 
-        var CopyWebpackPlugin = require('copy-webpack-plugin');
+        const CopyWebpackPlugin = require('copy-webpack-plugin');
 
         optimizations.push(new CopyWebpackPlugin(wpConfig.copyFiles));
 
@@ -126,10 +123,10 @@ function debug(config) {
         wpConfig.plugins = optimizations;
     }
 
-    var firstRun = true;
+    let firstRun = true;
 
     // run webpack
-    var compiler = webpack(wpConfig);
+    const compiler = webpack(wpConfig);
     compiler.watch(200, function(err, stats) {
 
         if (err) {
@@ -147,7 +144,7 @@ function debug(config) {
         }
 
     });
-}
+};
 
 debug.deps = ['doctor'];
 

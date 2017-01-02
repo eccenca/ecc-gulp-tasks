@@ -1,7 +1,6 @@
-/* eslint no-var: 0 */
-
-var path = require('path');
-var ConcatSource = require("webpack-core/lib/ConcatSource");
+/* eslint func-style: 0 */
+const path = require('path');
+const ConcatSource = require('webpack-core/lib/ConcatSource');
 
 function BannerPlugin(outputPath, outputFileName, styleSCSS) {
     this.banner = '// This is necessary so that components may use variables in scss\n' +
@@ -14,18 +13,18 @@ function BannerPlugin(outputPath, outputFileName, styleSCSS) {
 module.exports = BannerPlugin;
 
 BannerPlugin.prototype.apply = function(compiler) {
-    var banner = this.banner;
-    var filename = this.filename;
+    const banner = this.banner;
+    const filename = this.filename;
 
-    compiler.plugin("compilation", function(compilation) {
-        compilation.plugin("optimize-chunk-assets", function(chunks, callback) {
+    compiler.plugin('compilation', function(compilation) {
+        compilation.plugin('optimize-chunk-assets', function(chunks, callback) {
             chunks.forEach(function(chunk) {
                 chunk.files
                     .filter(function(file) {
                         return file === filename;
                     })
                     .forEach(function(file) {
-                        compilation.assets[file] = new ConcatSource(banner, "\n", compilation.assets[file]);
+                        compilation.assets[file] = new ConcatSource(banner, '\n', compilation.assets[file]);
                     });
             });
             callback();

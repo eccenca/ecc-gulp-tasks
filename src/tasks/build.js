@@ -1,23 +1,21 @@
-/* eslint no-var: 0 */
+const fs = require('fs');
+const path = require('path');
 
-var fs = require('fs');
-var path = require('path');
-
-var webpack = require('webpack');
-var definePlugin = require('../util/definePlugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
-var webpackBuildCB = require('../util/webpackBuildCB');
-var SCSSBannerPlugin = require('../util/SCSSBannerPlugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
-var _ = require('lodash');
+const webpack = require('webpack');
+const definePlugin = require('../util/definePlugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
+const webpackBuildCB = require('../util/webpackBuildCB');
+const SCSSBannerPlugin = require('../util/SCSSBannerPlugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const _ = require('lodash');
 
 module.exports = function(config, callback) {
 
-    var wpConfig = config.webpackConfig.production;
+    const wpConfig = config.webpackConfig.production;
 
     // use production optimizations
-    var optimizations = [
+    const optimizations = [
         new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
             root: path.dirname(wpConfig.output.path),
             verbose: process.env.NODE_ENV !== 'test',
@@ -32,12 +30,12 @@ module.exports = function(config, callback) {
         optimizations.push(new ExtractTextPlugin('component.css'));
     }
 
-    var styleSCSS = path.join(wpConfig.context, 'style', 'style.scss');
+    const styleSCSS = path.join(wpConfig.context, 'style', 'style.scss');
 
     if (fs.existsSync(styleSCSS)) {
 
-        var outputPath = wpConfig.output.path;
-        var outputFileName = wpConfig.output.filename;
+        const outputPath = wpConfig.output.path;
+        const outputFileName = wpConfig.output.filename;
 
         optimizations.push(
             new SCSSBannerPlugin(outputPath, outputFileName, styleSCSS)

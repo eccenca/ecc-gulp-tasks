@@ -151,8 +151,8 @@ class Doctor {
 
         if (!_.isEmpty(this.deleteCandidates)) {
             let deleteCandidates = 'The following files should be deleted (auto-fixable):';
-            _.map(this.deleteCandidates, (path) => {
-                deleteCandidates += `\n\t${path}`;
+            _.map(this.deleteCandidates, (filePath) => {
+                deleteCandidates += `\n\t${filePath}`;
             });
 
             this.messages.deleteCandidates = deleteCandidates;

@@ -1,4 +1,4 @@
-var _ = require('lodash');
+const _ = require('lodash');
 
 module.exports = function(objValue, srcValue) {
     if (_.isArray(objValue)) {

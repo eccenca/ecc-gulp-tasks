@@ -1,26 +1,25 @@
-/* eslint no-var: 0 */
 /* eslint camelcase: ["error", {properties: "never"}] */
 /*eslint-env node, mocha */
 
-var _ = require('lodash');
-var path = require('path');
-var gutil = require('gulp-util');
-var webpack = require('webpack');
-var definePlugin = require('../util/definePlugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
-var webpackBuildCB = require('../util/webpackBuildCB');
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
+const _ = require('lodash');
+const path = require('path');
+const gutil = require('gulp-util');
+const webpack = require('webpack');
+const definePlugin = require('../util/definePlugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin');
+const webpackBuildCB = require('../util/webpackBuildCB');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(config, callback) {
 
-    var wpConfig = config.webpackConfig.application;
+    const wpConfig = config.webpackConfig.application;
     // use production optimizations
 
-    var compatibleBrowsers = _.get(wpConfig, 'browsers', []);
+    const compatibleBrowsers = _.get(wpConfig, 'browsers', []);
 
-    var optimizations = [
+    const optimizations = [
         new CleanWebpackPlugin([path.basename(wpConfig.output.path)], {
             root: path.dirname(wpConfig.output.path),
             verbose: process.env.NODE_ENV !== 'test',
@@ -64,7 +63,7 @@ module.exports = function(config, callback) {
 
     if (wpConfig.html) {
 
-        var HtmlWebpackPlugin = require('html-webpack-plugin');
+        const HtmlWebpackPlugin = require('html-webpack-plugin');
 
         //@deprecated
         if (wpConfig.html.template && /\.html$/.test(wpConfig.html.template)) {
@@ -74,7 +73,7 @@ module.exports = function(config, callback) {
                 'Please provide an .ejs template for html-webpack plugin and no .html template'
             );
 
-            var HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
+            const HTMLTemplatePlugin = require('../util/HTMLTemplatePlugin');
             wpConfig.html.inject = false;
             optimizations.push(new HTMLTemplatePlugin());
         }
@@ -85,7 +84,7 @@ module.exports = function(config, callback) {
 
     if (wpConfig.copyFiles) {
 
-        var CopyWebpackPlugin = require('copy-webpack-plugin');
+        const CopyWebpackPlugin = require('copy-webpack-plugin');
 
         optimizations.push(new CopyWebpackPlugin(wpConfig.copyFiles));
 

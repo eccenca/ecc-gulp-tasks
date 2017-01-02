@@ -1,17 +1,15 @@
-/* eslint no-var: 0 */
-
-var express = require('express');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var util = require('gulp-util');
+const express = require('express');
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
+const util = require('gulp-util');
 
 // configure server
-var server = express();
-var serverPorts = [8080, 8081, 8082, 8083, 8084, 8085];
-var serverGetInstance = function(portsArray) {
+const server = express();
+const serverPorts = [8080, 8081, 8082, 8083, 8084, 8085];
+const serverGetInstance = function(portsArray) {
 
-    var serverInstance = false;
-    var port = 0;
+    let serverInstance = false;
+    let port = 0;
 
     if ((portsArray.length > 0) && (port = portsArray.shift())) {
         util.log(util.colors.cyan('[serve]'), `Try to start webserver on localhost:${port}`);
@@ -43,7 +41,7 @@ var serverGetInstance = function(portsArray) {
 };
 
 module.exports = function(config) {
-    var path = config.path;
+    const path = config.path;
     // parse request bodies (req.body)
     server.use(bodyParser.json());
     server.use(bodyParser.urlencoded({extended: true}));
