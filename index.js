@@ -1,9 +1,9 @@
 var gulp = require('gulp');
 var fs = require('fs');
 var path = require('path');
-var applyDefaults = require('./src/util/webpack-debug.defaults');
-var applyApplicationDefaults = require('./src/util/webpack-app.defaults');
-var applyProductionDefaults = require('./src/util/webpack-production.defaults');
+var applyDefaults = require('./src/webpack/webpack-debug.defaults.js');
+var applyApplicationDefaults = require('./src/webpack/webpack-app.defaults.js');
+var applyProductionDefaults = require('./src/webpack/webpack-production.defaults.js');
 
 // get all tasks
 var tasksPath = path.join(__dirname, 'src', 'tasks');

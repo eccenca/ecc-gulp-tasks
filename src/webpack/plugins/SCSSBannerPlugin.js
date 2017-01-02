@@ -2,7 +2,7 @@
 const path = require('path');
 const ConcatSource = require('webpack-core/lib/ConcatSource');
 
-function BannerPlugin(outputPath, outputFileName, styleSCSS) {
+function SCSSBannerPlugin(outputPath, outputFileName, styleSCSS) {
     this.banner = '// This is necessary so that components may use variables in scss\n' +
         'if(__WEBPACK__){\n' +
         '  require(\'' + path.relative(outputPath, styleSCSS) + '\');\n' +
@@ -10,9 +10,9 @@ function BannerPlugin(outputPath, outputFileName, styleSCSS) {
     this.filename = path.basename(outputFileName);
 }
 
-module.exports = BannerPlugin;
+module.exports = SCSSBannerPlugin;
 
-BannerPlugin.prototype.apply = function(compiler) {
+SCSSBannerPlugin.prototype.apply = function(compiler) {
     const banner = this.banner;
     const filename = this.filename;
 

@@ -2,7 +2,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const _ = require('lodash');
 const autoprefixer = require('autoprefixer');
-const mergeFunction = require('./mergeFunction');
+const {mergeFunction} = require('./utils');
 
 const ignored = [];
 

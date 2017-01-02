@@ -1,0 +1,5407 @@
+[
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/lib/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\fn\\regexp\\escape.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_a-function.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_a-number-value.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_add-to-unscopables.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_an-instance.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_an-object.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_array-copy-within.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_array-fill.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_array-from-iterable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_array-includes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_array-methods.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_array-reduce.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_array-species-constructor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_array-species-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_bind.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_classof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_cof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_collection-strong.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_collection-to-json.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_collection-weak.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_collection.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_core.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_create-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_ctx.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_date-to-primitive.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_defined.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_descriptors.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_dom-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_enum-bug-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_enum-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_export.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_fails-is-regexp.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_fails.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_fix-re-wks.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_flags.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_for-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_global.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_has.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_hide.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_html.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_ie8-dom-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_inherit-if-required.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_invoke.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_iobject.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_is-array-iter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_is-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_is-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_is-object.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_is-regexp.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_iter-call.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_iter-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_iter-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_iter-detect.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_iter-step.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_iterators.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_keyof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_library.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_math-expm1.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_math-log1p.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_math-sign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_meta.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_microtask.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_object-assign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-dp.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-dps.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-forced-pam.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_object-gopd.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-gopn-ext.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-gopn.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_object-gops.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_object-gpo.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_object-keys-internal.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-pie.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_object-sap.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_object-to-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_own-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_parse-float.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_parse-int.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_partial.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_path.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_property-desc.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_redefine-all.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_redefine.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_replacer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_same-value.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_set-proto.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_set-species.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_set-to-string-tag.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_shared-key.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_shared.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_species-constructor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_strict-method.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_string-at.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_string-context.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_string-html.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_string-pad.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_string-repeat.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_string-trim.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/_string-ws.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_task.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_to-index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_to-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_to-iobject.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_to-length.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_to-object.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_to-primitive.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_typed-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_typed-buffer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_typed.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/_uid.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_wks-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\_wks-ext.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/_wks.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/core.get-iterator-method.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\core.regexp.escape.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.copy-within.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.array.every.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.array.fill.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.filter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.find-index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.find.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.for-each.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.from.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.index-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.array.is-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.join.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.last-index-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.map.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.array.reduce-right.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.reduce.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.array.slice.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.some.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.sort.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.array.species.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.date.now.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.date.to-iso-string.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.date.to-json.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.date.to-primitive.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.date.to-string.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.function.bind.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.function.has-instance.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.function.name.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.map.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.acosh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.asinh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.math.atanh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.cbrt.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.clz32.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.math.cosh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.expm1.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.math.fround.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.hypot.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.imul.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.log10.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.math.log1p.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.log2.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.sign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.sinh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.math.tanh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.math.trunc.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.constructor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.epsilon.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.number.is-finite.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.is-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.is-nan.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.is-safe-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.number.max-safe-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.min-safe-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.parse-float.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.number.parse-int.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.number.to-fixed.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.number.to-precision.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.object.assign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.define-properties.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.define-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.freeze.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.get-own-property-descriptor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.get-own-property-names.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.get-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.is-extensible.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.object.is-frozen.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.is-sealed.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.is.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.prevent-extensions.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.seal.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.object.set-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.object.to-string.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.parse-float.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.parse-int.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.promise.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.reflect.apply.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.reflect.construct.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.reflect.define-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.reflect.delete-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.enumerate.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.get-own-property-descriptor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.get-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.get.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.has.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.is-extensible.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.own-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.prevent-extensions.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.reflect.set-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.reflect.set.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.regexp.constructor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.regexp.flags.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.regexp.match.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.regexp.replace.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.regexp.search.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.regexp.split.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.regexp.to-string.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.set.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.anchor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.big.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.blink.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.bold.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.code-point-at.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.ends-with.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.fixed.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.fontcolor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.fontsize.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.from-code-point.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.includes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.italics.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.link.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.raw.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.repeat.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.small.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.starts-with.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.string.strike.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.sub.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.sup.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.string.trim.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.symbol.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.typed.array-buffer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.data-view.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.float32-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es6.typed.float64-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.int16-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.int32-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.int8-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.uint16-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.uint32-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.uint8-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.typed.uint8-clamped-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.weak-map.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es6.weak-set.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.array.includes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.asap.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.error.is-error.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.map.to-json.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es7.math.iaddh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.math.imulh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es7.math.isubh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.math.umulh.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.define-getter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.define-setter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.entries.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.get-own-property-descriptors.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.lookup-getter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.lookup-setter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.object.values.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.observable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.define-metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.delete-metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es7.reflect.get-metadata-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.get-metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.get-own-metadata-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.get-own-metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.has-metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es7.reflect.has-own-metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.reflect.metadata.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.set.to-json.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.string.at.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.string.match-all.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.string.pad-end.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.string.pad-start.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es7.string.trim-left.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.string.trim-right.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.symbol.async-iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\es7.symbol.observable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/modules/es7.system.global.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-polyfill/node_modules/core-js/modules/web.dom.iterable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\web.immediate.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-polyfill\\node_modules\\core-js\\modules\\web.timers.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-polyfill/node_modules/core-js/shim.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/core-js/json/stringify.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\core-js\\math\\log10.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/core-js/object/assign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/core-js/object/create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/core-js/object/define-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\core-js\\object\\keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\core-js\\object\\set-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/core-js/promise.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/core-js/symbol.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/core-js/symbol/iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/helpers/classCallCheck.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\helpers\\createClass.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/helpers/extends.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\helpers\\inherits.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\helpers\\objectWithoutProperties.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\helpers\\possibleConstructorReturn.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\helpers\\typeof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/fn/json/stringify.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\fn\\math\\log10.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/fn/object/assign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\fn\\object\\create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/fn/object/define-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\fn\\object\\keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/fn/object/set-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/fn/promise.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/fn/symbol/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\fn\\symbol\\iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_a-function.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_add-to-unscopables.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_an-instance.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_an-object.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_array-includes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_classof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_cof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_core.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_ctx.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_defined.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_descriptors.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_dom-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-bug-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_enum-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_export.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_fails.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_for-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_global.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_has.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_hide.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_html.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_ie8-dom-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_invoke.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_iobject.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_is-array-iter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_is-array.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_is-object.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_iter-call.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_iter-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_iter-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_iter-detect.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_iter-step.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_iterators.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_keyof.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_library.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_meta.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_microtask.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-assign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-dp.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-dps.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gopd.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_object-gopn-ext.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_object-gopn.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-gops.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_object-gpo.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-keys-internal.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_object-pie.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_object-sap.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_property-desc.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_redefine-all.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_redefine.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_set-proto.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_set-species.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_set-to-string-tag.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_shared-key.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_shared.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_species-constructor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_string-at.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_task.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_to-index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_to-integer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_to-iobject.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_to-length.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_to-object.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_to-primitive.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\_uid.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_wks-ext.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/_wks.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/core.get-iterator-method.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.array.iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.math.log10.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.assign.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.create.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.define-property.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\es6.object.keys.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.set-prototype-of.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.object.to-string.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.promise.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.string.iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/es6.symbol.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\babel-runtime\\node_modules\\core-js\\library\\modules\\es7.symbol.async-iterator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/babel-runtime/node_modules/core-js/library/modules/es7.symbol.observable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/babel-runtime/node_modules/core-js/library/modules/web.dom.iterable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/base64-js/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\buffer-shims\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\buffer\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\classnames\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/component-emitter/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/core-util-is/lib/util.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/vis.css"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/vis.css"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\index.js?-minimize!C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\vis.css"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/css-loader/index.js?-minimize!/Users/example/node_modules/react-select/dist/react-select.css"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/css-loader/index.js?-minimize!~/example/node_modules/sass-loader/index.js!~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/style/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/sass-loader/index.js!~/ecc-component-example/node_modules/ecc-component-objectview/style/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/sass-loader/index.js!~/ecc-component-example/node_modules/ecc-gui-elements/src/main.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/sass-loader/index.js!~/ecc-component-example/node_modules/ecc-gui-elements/style/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/css-loader/index.js?-minimize!/Users/example/node_modules/sass-loader/index.js!/Users/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/style/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\index.js?-minimize!C:\\\\ecc-component-example\\node_modules\\sass-loader\\index.js!C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\style\\style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/css-loader/index.js?-minimize!/Users/ecc-component-example/node_modules/sass-loader/index.js!/Users/ecc-component-example/node_modules/ecc-uitest-helpers/style.scss"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\index.js?-minimize!C:\\\\ecc-component-example\\node_modules\\sass-loader\\index.js!C:\\\\ecc-component-example\\style\\style.scss"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/css-loader/index.js?-minimize!/Users/example/node_modules/sass-loader/index.js!/Users/example/style/test.scss"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\lib\\css-base.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\d3\\d3.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-component-objectview/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/addNodeIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\backIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/connectIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\cross.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/deleteIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/downArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/editIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\leftArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/minus.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\plus.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/rightArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/upArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/zoomExtends.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\timeline\\delete.png"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/node_modules/lodash/lodash.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/style/style.scss"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\node_modules\\lodash\\index.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\style\\style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.eot"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Bold/Roboto-Bold.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Bold/Roboto-Bold.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Bold\\Roboto-Bold.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/BoldItalic/Roboto-BoldItalic.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-gui-elements/dist/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\BoldItalic\\Roboto-BoldItalic.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-gui-elements/dist/fonts/roboto/Italic/Roboto-Italic.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Italic/Roboto-Italic.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Italic\\Roboto-Italic.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Light/Roboto-Light.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Light/Roboto-Light.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Light/Roboto-Light.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-gui-elements/dist/fonts/roboto/LightItalic/Roboto-LightItalic.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\LightItalic\\Roboto-LightItalic.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/LightItalic/Roboto-LightItalic.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Medium/Roboto-Medium.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Medium\\Roboto-Medium.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Medium/Roboto-Medium.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\MediumItalic\\Roboto-MediumItalic.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\MediumItalic\\Roboto-MediumItalic.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\MediumItalic\\Roboto-MediumItalic.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Regular\\Roboto-Regular.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Regular\\Roboto-Regular.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Regular\\Roboto-Regular.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Thin/Roboto-Thin.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Thin/Roboto-Thin.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Thin\\Roboto-Thin.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-gui-elements/dist/fonts/roboto/ThinItalic/Roboto-ThinItalic.ttf"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff2"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/addNodeIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/backIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\connectIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\cross.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\deleteIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/downArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/editIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/leftArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\minus.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/plus.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/rightArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/upArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/zoomExtends.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\timeline\\delete.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\src\\main.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/style/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-messagebus\\es5\\component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-mixins/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/addNodeIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\backIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/connectIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\cross.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/deleteIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\downArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\editIcon.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\leftArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\minus.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/plus.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/rightArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/upArrow.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/zoomExtends.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/timeline/delete.png"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\style\\style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-mixins/style/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-queryutils/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-resparqler/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ecc-store-auth/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-store-sparql/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-store-titlehelper\\es5\\component.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/ecc-store-titlehelper/node_modules/lodash/index.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-superagent\\es5\\component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-uitest-helpers/index.es5.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/ecc-uitest-helpers/style.scss"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/ecc-utils/es5/component.js"
+    },
+    {
+        "isEccenca": true,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\ecc-validation-helpers\\es5\\component.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/emitter-component/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\entities\\maps\\entities.json"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\es6-promise\\dist\\es6-promise.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/events/events.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\fbjs\\lib\\EventListener.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/fbjs/lib/ExecutionEnvironment.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/fbjs/lib/camelize.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/fbjs/lib/camelizeStyleName.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\fbjs\\lib\\containsNode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\fbjs\\lib\\createArrayFromMixed.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/fbjs/lib/createNodesFromMarkup.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/fbjs/lib/emptyFunction.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/fbjs/lib/emptyObject.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/fbjs/lib/focusNode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/fbjs/lib/getActiveElement.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/fbjs/lib/getMarkupWrap.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\fbjs\\lib\\getUnboundedScrollPosition.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\fbjs\\lib\\hyphenate.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/fbjs/lib/hyphenateStyleName.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\fbjs\\lib\\invariant.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\fbjs\\lib\\isNode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\fbjs\\lib\\isTextNode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\fbjs\\lib\\memoizeStringOnly.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/fbjs/lib/performance.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\fbjs\\lib\\performanceNow.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/fbjs/lib/shallowEqual.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\fbjs\\lib\\warning.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/hammerjs/hammer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/ieee754/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/immutable/dist/immutable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\inherits\\inherits.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/inherits/inherits_browser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/intl-format-cache/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/intl-format-cache/lib/es5.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\intl-format-cache\\lib\\memoizer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/intl-messageformat-parser/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/intl-messageformat-parser/lib/parser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/intl-messageformat/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/intl-messageformat/lib/compiler.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/intl-messageformat/lib/core.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/intl-messageformat/lib/en.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\intl-messageformat\\lib\\es5.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/intl-messageformat/lib/main.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/intl-messageformat/lib/utils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\intl\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\intl\\lib\\core.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/isarray/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/jsonld-lite/jsonld-lite.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/keycharm/keycharm.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/legalize/src/legalize-node.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/legalize/src/legalize.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\linkify-it\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/linkify-it/lib/re.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/lodash/lodash.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/lokijs/src/loki-indexed-adapter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/lokijs/src/lokijs.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\lscache\\lscache.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\common\\entities.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/common/html_blocks.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/common/html_re.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/lib/common/utils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/helpers/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/helpers/parse_link_destination.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/lib/helpers/parse_link_label.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\helpers\\parse_link_title.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\markdown-it\\lib\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/parser_block.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/parser_core.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/parser_inline.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/presets/commonmark.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\markdown-it\\lib\\presets\\default.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\markdown-it\\lib\\presets\\zero.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/renderer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/lib/ruler.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_block/blockquote.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_block/code.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/rules_block/fence.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/rules_block/heading.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/lib/rules_block/hr.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_block/html_block.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_block/lheading.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_block\\list.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_block/paragraph.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/lib/rules_block/reference.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\markdown-it\\lib\\rules_block\\state_block.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_block/table.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_core/block.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_core/inline.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_core/linkify.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/markdown-it/lib/rules_core/normalize.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_core/replacements.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_core/smartquotes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_core\\state_core.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_inline\\autolink.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_inline/backticks.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_inline/balance_pairs.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_inline\\emphasis.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_inline/entity.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/rules_inline/escape.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_inline/html_inline.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_inline\\image.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_inline\\link.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/markdown-it/lib/rules_inline/newline.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\rules_inline\\state_inline.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_inline/strikethrough.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/markdown-it/lib/rules_inline/text.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/markdown-it/lib/rules_inline/text_collapse.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\markdown-it\\lib\\token.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/material-design-lite/compiled/material.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/material-design-lite/src/images/buffer.svg?embed"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/material-design-lite/src/images/tick-mask.svg?embed"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/material-design-lite/src/images/tick.svg?embed"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\mdurl\\decode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/mdurl/encode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/mdurl/format.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\mdurl\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\mdurl\\parse.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/methods/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\moment\\moment.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\n3\\N3.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\n3\\lib\\N3Lexer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/n3/lib/N3Parser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\n3\\lib\\N3Store.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\n3\\lib\\N3StreamParser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/n3/lib/N3StreamWriter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/n3/lib/N3Util.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/n3/lib/N3Writer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/node-libs-browser/mock/empty.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/object-assign/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/process-nextick-args/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/process/browser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/propagating-hammerjs/propagating.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\punycode\\punycode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/ARIADOMPropertyConfig.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/AutoFocusUtils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/BeforeInputEventPlugin.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/CSSProperty.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/CSSPropertyOperations.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\CallbackQueue.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ChangeEventPlugin.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\DOMChildrenOperations.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/DOMLazyTree.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/DOMNamespaces.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\DOMProperty.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\DOMPropertyOperations.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/Danger.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\DefaultEventPluginOrder.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/EnterLeaveEventPlugin.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/EventPluginHub.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\EventPluginRegistry.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\EventPluginUtils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/EventPropagators.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/FallbackCompositionState.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\HTMLDOMPropertyConfig.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/KeyEscapeUtils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/LinkedValueUtils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/PooledClass.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactBrowserEventEmitter.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactChildReconciler.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactComponentBrowserEnvironment.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactComponentEnvironment.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactCompositeComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactDOM.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactDOMComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactDOMComponentFlags.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDOMContainerInfo.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDOMEmptyComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactDOMFeatureFlags.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactDOMIDOperations.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDOMInput.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactDOMInvalidARIAHook.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactDOMNullInputValuePropHook.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactDOMOption.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactDOMSelect.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDOMSelection.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDOMTextComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDOMTextarea.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactDOMTreeTraversal.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/ReactDOMUnknownPropertyHook.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactDebugTool.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDefaultBatchingStrategy.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactDefaultInjection.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactElementSymbol.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactEmptyComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactErrorUtils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactEventEmitterMixin.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactEventListener.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactFeatureFlags.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactHostComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactHostOperationHistoryHook.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactInjection.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactInputSelection.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactInstanceMap.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactInstrumentation.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactInvalidSetStateWarningHook.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/ReactMarkupChecksum.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\ReactMount.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactMultiChild.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactNodeTypes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactOwner.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/ReactPropTypeLocationNames.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactPropTypesSecret.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/ReactReconcileTransaction.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\ReactReconciler.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactRef.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/ReactServerRenderingTransaction.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ReactServerUpdateQueue.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactUpdateQueue.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/ReactUpdates.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/ReactVersion.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/SVGDOMPropertyConfig.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/SelectEventPlugin.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\SimpleEventPlugin.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/SyntheticAnimationEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\SyntheticClipboardEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/SyntheticCompositionEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\SyntheticDragEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\SyntheticEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\SyntheticFocusEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\SyntheticInputEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/SyntheticKeyboardEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/SyntheticMouseEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/SyntheticTouchEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\SyntheticTransitionEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/SyntheticUIEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\SyntheticWheelEvent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/Transaction.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/ViewportMetrics.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/accumulateInto.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/adler32.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\checkReactTypeSpec.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\createMicrosoftUnsafeLocalFunction.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/dangerousStyleValue.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\escapeTextContentForBrowser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\findDOMNode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/flattenChildren.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\forEachAccumulated.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/getEventCharCode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-dom/lib/getEventKey.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/getEventModifierState.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/getEventTarget.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-dom\\lib\\getHostComponentFromComposite.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\getIteratorFn.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/getNextDebugID.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/getNodeForCharacterOffset.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/getTextContentAccessor.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/getVendorPrefixedEventName.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-dom/lib/instantiateReactComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\isEventSupported.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\isTextInputElement.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\quoteAttributeValueForBrowser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/reactProdInvariant.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\renderSubtreeIntoContainer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/setInnerHTML.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\setTextContent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-dom/lib/shouldUpdateReactComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-dom/lib/traverseAllChildren.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-dom\\lib\\validateDOMNesting.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-input-autosize/lib/AutosizeInput.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-mdl\\lib\\Button.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-mdl\\lib\\Checkbox.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-mdl\\lib\\FABButton.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-mdl\\lib\\Menu.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-mdl\\lib\\ProgressBar.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-mdl/lib/Spinner.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-mdl\\lib\\Switch.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react-mdl/lib/Tabs/Tab.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react-mdl/lib/Tabs/TabBar.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-mdl\\lib\\Tabs\\Tabs.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-mdl/lib/Textfield.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-mdl\\lib\\Tooltip.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-mdl/lib/utils/MDLComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-mdl\\lib\\utils\\basicClassCreator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-mdl\\lib\\utils\\mdlUpgrade.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-select/lib/Async.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react-select/lib/AsyncCreatable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-select\\lib\\Creatable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-select/lib/Option.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-select\\lib\\Select.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-select/lib/Value.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react-select\\lib\\utils\\defaultArrowRenderer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react-select/lib/utils/defaultFilterOptions.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-select\\lib\\utils\\defaultMenuRenderer.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-select\\lib\\utils\\stripDiacritics.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react-sparklines\\build\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/lib/KeyEscapeUtils.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/lib/PooledClass.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react/lib/React.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/lib/ReactChildren.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/ReactClass.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/ReactComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react\\lib\\ReactComponentTreeHook.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/lib/ReactCurrentOwner.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/lib/ReactDOMFactories.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\react\\lib\\ReactElement.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/lib/ReactElementSymbol.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/ReactElementValidator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react/lib/ReactNoopUpdateQueue.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react\\lib\\ReactPropTypeLocationNames.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/ReactPropTypes.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/ReactPropTypesSecret.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react/lib/ReactPureComponent.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/ReactVersion.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react/lib/canDefineProperty.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react/lib/checkReactTypeSpec.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/react/lib/getIteratorFn.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/react/lib/onlyChild.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\react\\lib\\reactProdInvariant.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/react/lib/traverseAllChildren.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/react/react.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/reduce-component/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/regenerator-runtime/runtime.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/rx/dist/rx.all.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\rxmq.middleware\\es5\\component.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/rxmq/es5/component.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/setimmediate/setImmediate.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/sparqljs/lib/SparqlGenerator.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/sparqljs/lib/SparqlParser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/sparqljs/sparql.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/stream-browserify/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/duplex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_duplex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_passthrough.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_readable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_transform.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/lib/_stream_writable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/lib/internal/streams/BufferList.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/passthrough.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/readable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/transform.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/stream-browserify/node_modules/readable-stream/writable.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/string_decoder/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\style-loader\\addStyles.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/superagent-rx/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/superagent/lib/client.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/timers-browserify/main.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/uc.micro/categories/Cc/regex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/uc.micro/categories/Cf/regex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\uc.micro\\categories\\P\\regex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/uc.micro/categories/Z/regex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/uc.micro/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/uc.micro/properties/Any/regex.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/urijs/src/IPv6.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\urijs\\src\\SecondLevelDomains.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/example/node_modules/urijs/src/URI.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\urijs\\src\\punycode.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/util-deprecate/node.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/util/node_modules/inherits/inherits.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\util\\support\\isBufferBrowser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/node_modules/util/util.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/ecc-component-example/node_modules/uuid/lib/bytesToUuid.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\uuid\\lib\\rng-browser.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\node_modules\\uuid\\v4.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/webpack/buildin/amd-define.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\node_modules\\webpack\\buildin\\amd-options.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": true,
+        "isNotString": false,
+        "userRequest": "~/example/node_modules/webpack/buildin/module.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\src\\component\\colors.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/src/component/convert.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\ecc-component-example\\src\\component\\index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/example/src/component/template.jsx"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "/Users/ecc-component-example/src/store/index.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/src/widget/index.jsx"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/src/widget/sunburst.js"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\style\\style.scss"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "C:\\\\example\\style\\test.scss"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": false,
+        "userRequest": "~/example/ui-test/ui-test.jsx"
+    },
+    {
+        "isEccenca": false,
+        "isExternal": false,
+        "isNotString": true
+    }
+]

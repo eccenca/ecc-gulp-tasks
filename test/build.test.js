@@ -136,7 +136,7 @@ describe('building', function() {
  */
 function runComponentBuild(indexFile, callback) {
 
-    var applyApplicationDefaults = require('../src/util/webpack-production.defaults');
+    var applyApplicationDefaults = require('../src/webpack/webpack-production.defaults.js');
 
     var config = {};
 
@@ -163,7 +163,7 @@ function runComponentBuild(indexFile, callback) {
  */
 function runAppBuild(indexFile, callback) {
 
-    var applyApplicationDefaults = require('../src/util/webpack-app.defaults');
+    var applyApplicationDefaults = require('../src/webpack/webpack-app.defaults.js');
 
     var config = {};
 

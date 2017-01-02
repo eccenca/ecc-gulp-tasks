@@ -1,6 +1,6 @@
 const path = require('path');
 const _ = require('lodash');
-const mergeFunction = require('./mergeFunction');
+const {mergeFunction} = require('./utils');
 
 const applyDefaults = function(common, cfg) {
 
@@ -28,7 +28,7 @@ const applyDefaults = function(common, cfg) {
         devtool: 'cheap-module-eval-source-map',
         debug: true,
         html: {
-            template: path.join(__dirname, 'component.html.ejs')
+            template: path.join(__dirname, 'assets', 'component.html.ejs')
         },
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
