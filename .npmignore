@@ -39,6 +39,9 @@ gulpfile.js
 # ignore data folders by jetbrains products
 .idea/
 
+# ignore compiled
+.tmp/
+
 #END
 
 # ignore custom install.js and gulpfile
