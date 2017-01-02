@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [3.1.0] 2017-01-02
 
 ### Deprecated
 -   `gulp serve` target. Already removed, as `gulp debug` runs it's own server now.
