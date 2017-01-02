@@ -1,13 +1,16 @@
-/* eslint no-var: 0 */
+const util = require('gulp-util');
+const test = require('./test');
 
-var gulp = require('gulp');
-var mocha = require('gulp-spawn-mocha');
-
+/*
+ * @deprecated
+ */
 module.exports = function(config) {
-    return gulp
-        .src(config.testEntryPoint)
-        .pipe(mocha({
-            R: 'mocha-bamboo-reporter',
-            compilers: 'jsx?:babel-core/register',
-        }));
+
+    util.log(
+        util.colors.yellow('[DEPRECATION WARNING]'),
+        'You used the gulp `bamboo-test` task. Please use `test` instead.'
+    );
+
+    return test(config);
+
 };

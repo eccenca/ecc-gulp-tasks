@@ -1,12 +1,10 @@
-/* eslint no-var: 0 */
-
-var gulp = require('gulp');
-var eslint = require('gulp-eslint');
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
 
 module.exports = function(config) {
-    var files = config.lintingFiles || '';
+    const files = config.lintingFiles || '';
 
-    var stream = gulp
+    let stream = gulp
         .src(files)
         .pipe(eslint());
 

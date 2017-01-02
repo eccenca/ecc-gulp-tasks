@@ -1,9 +1,7 @@
-/* eslint no-var: 0 */
-
-var gulp = require('gulp');
-var change = require('gulp-change');
-var rename = require('gulp-rename');
-var checker = require('ecc-license-checker');
+const gulp = require('gulp');
+const change = require('gulp-change');
+const rename = require('gulp-rename');
+const checker = require('ecc-license-checker');
 
 module.exports = function(config) {
     return gulp

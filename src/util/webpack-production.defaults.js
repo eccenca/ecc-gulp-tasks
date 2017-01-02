@@ -1,35 +1,54 @@
-/* eslint no-var: 0 */
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
+const _ = require('lodash');
+const autoprefixer = require('autoprefixer');
+const mergeFunction = require('./mergeFunction');
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var path = require('path');
-var _ = require('lodash');
-var autoprefixer = require('autoprefixer');
+const ignored = [];
 
-var ignored = [];
+const isExternalPackage = (context, request, callback) => {
+    if (_.includes(ignored, request)) {
+        return callback(null, 'commonjs ' + request);
+    }
 
-var applyDefaults = function(common, cfg) {
+    if (
+        _.startsWith(request, './') ||
+        _.startsWith(request, '../') ||
+        _.startsWith(request, '/') ||
+        _.includes(request, '!')
+    ) {
+        return callback();
 
-    var config = _.mergeWith({}, common, cfg, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    }
+
+    ignored.push(request);
+
+    if (process.env.NODE_ENV !== 'test') {
+        console.log('Not including ' + request + ' in build');
+    }
+
+    return callback(null, 'commonjs ' + request);
+};
+
+const applyDefaults = function(common, cfg) {
+
+    const config = _.mergeWith({}, common, cfg, mergeFunction);
 
     // This ensures that requires like mdl are added at the top of the header
-    var cssInsert = (config.debug) ? 'top' : 'bottom';
+    const cssInsert = (config.debug) ? 'top' : 'bottom';
 
-    var cssLoader = 'css?-minimize!postcss?pack=cleaner';
+    const cssLoader = 'css?-minimize!postcss?pack=cleaner';
 
-    var urlLoader = 'url?limit=10000';
+    const urlLoader = 'url?limit=10000';
 
-    var fileName = '[name].[ext]?[hash:5]';
+    const fileName = '[name].[ext]?[hash:5]';
 
-    var imageLoader = urlLoader + '&name=image/' + fileName;
+    const imageLoader = urlLoader + '&name=image/' + fileName;
 
-    var fontLoader = urlLoader + '&name=fonts/' + fileName;
+    const fontLoader = urlLoader + '&name=fonts/' + fileName;
 
     // extend config
-    return _.mergeWith({}, config, {
+    const defaults = {
         resolveLoader: {
             root: path.join(__dirname, '..', 'node_modules'),
             fallback: path.join(__dirname, '..', 'node_modules'),
@@ -53,30 +72,7 @@ var applyDefaults = function(common, cfg) {
             }
         },
         externals: [
-            function(context, request, callback) {
-                // Every module prefixed with "global-" becomes external
-                // "global-abc" -> abc
-
-                if (_.includes(ignored, request)) {
-                    return callback(null, "commonjs " + request);
-                }
-
-                if (
-                    _.startsWith(request, './') ||
-                    _.startsWith(request, '../') ||
-                    _.startsWith(request, '/') ||
-                    _.includes(request, '!')
-                ) {
-                    return callback();
-
-                }
-                ignored.push(request);
-                if (process.env.NODE_ENV !== 'test') {
-                    console.log("Not including " + request + " in build");
-                }
-                return callback(null, "commonjs " + request);
-
-            },
+            isExternalPackage
         ],
         node: {
             fs: 'empty',
@@ -142,17 +138,15 @@ var applyDefaults = function(common, cfg) {
                 },
             ],
         },
-        postcss: function() {
+        postcss() {
             return {
                 defaults: [autoprefixer],
                 cleaner: [autoprefixer({add: false, browsers: []})],
             };
         },
-    }, function(a, b) {
-        if (_.isArray(a)) {
-            return a.concat(b);
-        }
-    });
+    };
+
+    return _.mergeWith(defaults, config, mergeFunction);
 };
 
 module.exports = applyDefaults;
