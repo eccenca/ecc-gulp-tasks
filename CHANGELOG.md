@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [Unreleased]
+### Fixed
+- upgraded `ecc-license-checker`, whoch fixes bugs in `gulp licenses-yaml2json`
+
 ## [3.1.1] 2017-01-02
 ### Fixed
 - bug with chunk mapping, where modules sometimes were included into the `eccenca` chunk
