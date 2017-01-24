@@ -113,26 +113,9 @@ class Doctor {
     checkEnv() {
         const messages = [];
 
-        const checkCommands = {
-            yarn: {
-                cmd: '--version',
-                version: '0.18.1',
-                resolution: (tool, version) => {
-                    return `Please run \`npm i -g ${tool}@${version}\``
-                },
-            }, npm: {
-                cmd: '--version',
-                version: '3.10.9',
-                resolution: (tool, version) => {
-                    return `Please run \`npm i -g ${tool}@${version}\``
-                },
-            }, node: {
-                cmd: '--version',
-                version: '6.9.1',
-            },
-        };
+        const checkCommands = fs.readJsonSync(path.join(__dirname, '../../env.json'));
 
-        _.forEach(checkCommands, ({cmd, version, resolution}, tool) => {
+        _.forEach(checkCommands, ({cmd, version,}, tool) => {
 
             try {
                 const installedVersion = execSync(
@@ -143,14 +126,10 @@ class Doctor {
                     .toString()
                     .replace(/\r?\n/g, '');
 
-                if (!semver.satisfies(installedVersion, `~${version}`, true)) {
+                if (!semver.satisfies(installedVersion, `${version}`, true)) {
 
                     let m = `You are using ${tool}@${installedVersion}.`
                     m += ` The current recommended version is ${version}.`;
-
-                    if (_.isFunction(resolution)) {
-                        m += ` ${resolution(tool, version)}.`;
-                    }
 
                     messages.push(m);
 
