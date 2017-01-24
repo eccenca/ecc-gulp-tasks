@@ -52,14 +52,28 @@ class Doctor {
 
     }
 
-    static asyncSelfCheck({dir, logger = console.log}) {
+    static asyncSelfCheck({dir, logger = console.log, callback = _.noop}) {
 
         const checkPackages = {
             'ecc-dotfiles': path.join(dir, 'node_modules', 'ecc-dotfiles', 'package.json'),
             'ecc-gulp-tasks': path.join(__dirname, '../../package.json')
         };
 
+        const msg = [];
+
+        let count = _.size(checkPackages);
+
+        const cb = () => {
+            count -= 1;
+            if(count <= 0){
+                logger(`Version checks done. ${_.size(msg)} Dependencies out of date.`);
+                _.forEach(msg, (m) => logger(m));
+                callback();
+            }
+        };
+
         _.forEach(checkPackages, (pjson, dep) => {
+            logger(`Checking if there is a new version of ${dep}...`);
             try {
                 const dfVersion = fs.readJsonSync(pjson).version;
                 cp.exec(`yarn info ${dep} version --json`, function(err, stdout, stderr) {
@@ -71,14 +85,15 @@ class Doctor {
                     try {
                         const latest = JSON.parse(stdout.toString()).data;
                         if (!semver.satisfies(dfVersion, latest)) {
-                            logger(`${dep}@${dfVersion} installed. Newest version is ${latest}. Please run \`yarn upgrade ${dep}\``)
+                            msg.push(`${dep}@${dfVersion} installed. Newest version is ${latest}. Please run \`yarn upgrade ${dep}\``);
                         }
+                        cb();
                     } catch (e) {
-                        // empty catch
+                        cb();
                     }
                 });
             } catch (e) {
-                // empty catch
+                cb();
             }
         });
     };
@@ -146,6 +161,12 @@ class Doctor {
             _.map(messages, (message) => {
                 envMessages += `\n\t${message}`;
             });
+
+            const version = require(path.join(__dirname, '../../package.json')).version;
+
+            const url = 'https://github.com/elds/ecc-gulp-tasks/blob/v' + version + '/README.md#environment';
+
+            envMessages += '\n\n\tPlease refer to ' + url + ' for more information/resolutions.';
 
             this.messages.envMessages = envMessages;
 

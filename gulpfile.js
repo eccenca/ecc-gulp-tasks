@@ -3,6 +3,7 @@ var gulp = require('gulp');
 var mocha = require('gulp-spawn-mocha');
 
 var lint = require('./src/tasks/lint');
+var doctor = require('./src/tasks/doctor');
 
 var _ = require('lodash');
 var fs = require('fs-extra');
@@ -18,6 +19,9 @@ gulp.task('lint', function() {
     return lint({lintingFiles: './src/tasks/*.js'});
 });
 
+gulp.task('doctor', function(callback) {
+    return doctor({}, callback);
+});
 
 gulp.task('updateREADME', function() {
 
