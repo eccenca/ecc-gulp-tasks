@@ -2,6 +2,35 @@
 
 A set of common gulp tasks for front-end development
 
+<!-- ENV -->
+## Environment
+
+Before you follow the instructions below, make sure that `ecc-gulp-tasks` is up to date.
+You may do that by running `gulp doctor --self-check`.
+
+If you are sure, you want to update your environment, you can follow these steps:
+
+1.  Find out which node packages are installed globally
+    ```bash
+    npm ls -g --depth 0
+    yarn global ls
+    ```
+2.  Update env
+    ```bash
+    # update nvmrc and node
+    rm -rf ~/.nvmrc
+    echo "6.9.4" > ~/.nvmrc
+    nvm install
+    # install latest npm and yarn
+    npm install --global npm@3.10.10 yarn@0.19.1
+    ```
+3.  Reinstall you installed with npm/yarn, for example:
+    ```bash
+    yarn global add gulp eslint ecc-license-checker
+    ```
+<!-- ENV:END -->
+
+
 ## Available tasks
 
 - `build` - compiles optimized (minified, deduped) commonjs version of your component with webpack. Uses `config.webpackConfig.production` as basic configuration.
