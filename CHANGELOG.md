@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - Spacing in README around code blocks
 
 ### Changed
-- Updated to `file-loader@0.10.0` 
+- Updated to `file-loader@0.10.0`, `fs-extra@2.0.0`
 - Updated all dependencies (minor and patch updates)
 
 ## [3.2.0] 2017-01-25 
