@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
+## Added
+- `yaml-loader@0.4.0` to enable parsing of yaml files.
+
 ### Fixed
 - Spacing in README around code blocks
 
