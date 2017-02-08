@@ -2,6 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.3.0] 2017-02-08 
+
+## Added
+- `yaml-loader@0.4.0` to enable parsing of yaml files.
+
+### Fixed
+- Spacing in README around code blocks
+
+### Changed
+- Updated to `file-loader@0.10.0`, `fs-extra@2.0.0`
+- Updated all dependencies (minor and patch updates)
+
 ## [3.2.0] 2017-01-25 
 ### Added
 - add `--self-check` option for gulp doctor which checks if `ecc-gulp-tasks` and `ecc-dotfiles` are up to date.
