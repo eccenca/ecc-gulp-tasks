@@ -37,6 +37,7 @@ module.exports = function(config, callback) {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
+            sourceMap: wpConfig.devtool === 'source-map',
             output: {
                 comments: false,
             },
