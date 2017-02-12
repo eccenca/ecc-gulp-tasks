@@ -16,16 +16,16 @@ module.exports =
 
         /******/ 		// Create a new module (and put it into the cache)
         /******/ 		var module = installedModules[moduleId] = {
-            /******/ 			exports: {},
-            /******/ 			id: moduleId,
-            /******/ 			loaded: false
+            /******/ 			i: moduleId,
+            /******/ 			l: false,
+            /******/ 			exports: {}
             /******/ 		};
 
         /******/ 		// Execute the module function
         /******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 
         /******/ 		// Flag the module as loaded
-        /******/ 		module.loaded = true;
+        /******/ 		module.l = true;
 
         /******/ 		// Return the exports of the module
         /******/ 		return module.exports;
@@ -38,18 +38,69 @@ module.exports =
     /******/ 	// expose the module cache
     /******/ 	__webpack_require__.c = installedModules;
 
+    /******/ 	// identity function for calling harmony imports with the correct context
+    /******/ 	__webpack_require__.i = function(value) { return value; };
+
+    /******/ 	// define getter function for harmony exports
+    /******/ 	__webpack_require__.d = function(exports, name, getter) {
+        /******/ 		if(!__webpack_require__.o(exports, name)) {
+            /******/ 			Object.defineProperty(exports, name, {
+                /******/ 				configurable: false,
+                /******/ 				enumerable: true,
+                /******/ 				get: getter
+                /******/ 			});
+            /******/ 		}
+        /******/ 	};
+
+    /******/ 	// getDefaultExport function for compatibility with non-harmony modules
+    /******/ 	__webpack_require__.n = function(module) {
+        /******/ 		var getter = module && module.__esModule ?
+            /******/ 			function getDefault() { return module['default']; } :
+            /******/ 			function getModuleExports() { return module; };
+        /******/ 		__webpack_require__.d(getter, 'a', getter);
+        /******/ 		return getter;
+        /******/ 	};
+
+    /******/ 	// Object.prototype.hasOwnProperty.call
+    /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+
     /******/ 	// __webpack_public_path__
     /******/ 	__webpack_require__.p = "";
 
     /******/ 	// Load entry module and return exports
-    /******/ 	return __webpack_require__(0);
+    /******/ 	return __webpack_require__(__webpack_require__.s = 4);
     /******/ })
 /************************************************************************/
 /******/ ([
     /* 0 */
-    /***/ function(module, exports, __webpack_require__) {
+    /***/ (function(module, exports) {
 
-        'use strict';
+// removed by extract-text-webpack-plugin
+
+        /***/ }),
+    /* 1 */
+    /***/ (function(module, exports) {
+
+        module.exports = require("babel-runtime/core-js/promise");
+
+        /***/ }),
+    /* 2 */
+    /***/ (function(module, exports) {
+
+        module.exports = require("lodash");
+
+        /***/ }),
+    /* 3 */
+    /***/ (function(module, exports) {
+
+        module.exports = require("lodash/camelCase");
+
+        /***/ }),
+    /* 4 */
+    /***/ (function(module, exports, __webpack_require__) {
+
+        "use strict";
+
 
         exports.__esModule = true;
 
@@ -57,19 +108,19 @@ module.exports =
 
         var _promise2 = _interopRequireDefault(_promise);
 
-        var _camelCase = __webpack_require__(2);
+        var _camelCase = __webpack_require__(3);
 
         var _camelCase2 = _interopRequireDefault(_camelCase);
 
         function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
         /* global __WEBPACK__, React*/
-        // only load style when using webpack
+// only load style when using webpack
         if (true) {
-            __webpack_require__(3);
+            __webpack_require__(0);
         }
 
-        var _ = __webpack_require__(7);
+        var _ = __webpack_require__(2);
 
 
         console.log(_, _camelCase2.default, _promise2.default);
@@ -89,32 +140,5 @@ module.exports =
         };
         module.exports = exports['default'];
 
-        /***/ },
-    /* 1 */
-    /***/ function(module, exports) {
-
-        module.exports = require("babel-runtime/core-js/promise");
-
-        /***/ },
-    /* 2 */
-    /***/ function(module, exports) {
-
-        module.exports = require("lodash/camelCase");
-
-        /***/ },
-    /* 3 */
-    /***/ function(module, exports) {
-
-        // removed by extract-text-webpack-plugin
-
-        /***/ },
-    /* 4 */,
-    /* 5 */,
-    /* 6 */,
-    /* 7 */
-    /***/ function(module, exports) {
-
-        module.exports = require("lodash");
-
-        /***/ }
+        /***/ })
     /******/ ]);
