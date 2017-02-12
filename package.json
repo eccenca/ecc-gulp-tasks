@@ -60,6 +60,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^2.2.1",
+    "webpack-sources": "^0.1.4",
     "yaml-loader": "^0.4.0"
   },
   "peerDependencies": {
