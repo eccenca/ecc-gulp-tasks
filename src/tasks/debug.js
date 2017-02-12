@@ -112,6 +112,7 @@ const debug = (config, callback) => {
     delete wpConfig.copyFiles;
     delete wpConfig.html;
     delete wpConfig.browsers;
+    delete wpConfig.debug;
 
     // run webpack
     const compiler = webpack(wpConfig);

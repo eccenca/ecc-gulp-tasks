@@ -59,33 +59,27 @@ module.exports = (config) => {
                 {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
-                    use: {
                         loader: 'babel-loader',
                         options: {
                             plugins: ['transform-runtime'],
                             presets: ['eccenca']
                         }
-                    }
                 },
                 {
                     test: /\.(woff\d?|ttf|eot)(\?.+)?$/,
-                    use: {
                         loader: 'url-loader',
                         options: {
                             limit: 10000,
                             name: 'fonts/[name].[ext]?[hash:5]',
                         }
-                    }
                 },
                 {
                     test: /\.(svg|png|jpe?g|gif|ico)(\?.+)?$/,
-                    use: {
                         loader: 'url-loader',
                         options: {
                             limit: 10000,
                             name: 'image/[name].[ext]?[hash:5]',
                         }
-                    }
                 },
             ]
         }
