@@ -34,14 +34,12 @@ module.exports = function(config, callback) {
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
         new ExtractTextPlugin('style.css?[contenthash:5]'),
         new ForceCaseSensitivityPlugin(),
-        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: wpConfig.devtool === 'source-map',
             output: {
                 comments: false,
             },
             compress: {
-                warnings: false,
                 screw_ie8: true,
             },
             mangle: {

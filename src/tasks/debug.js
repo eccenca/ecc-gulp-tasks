@@ -59,7 +59,6 @@ const debug = (config, callback) => {
         new ExtractTextPlugin('style.css'),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),
-        new webpack.optimize.DedupePlugin(),
     ];
 
     if (_.isString(wpConfig.entry)) {
