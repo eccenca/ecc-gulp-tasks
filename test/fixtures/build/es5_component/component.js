@@ -68,7 +68,7 @@ module.exports =
     /******/ 	__webpack_require__.p = "";
 
     /******/ 	// Load entry module and return exports
-    /******/ 	return __webpack_require__(__webpack_require__.s = 4);
+    /******/ 	return __webpack_require__(__webpack_require__.s = 5);
     /******/ })
 /************************************************************************/
 /******/ ([
@@ -81,22 +81,30 @@ module.exports =
     /* 1 */
     /***/ (function(module, exports) {
 
-        module.exports = require("babel-runtime/core-js/promise");
+        module.exports = {
+            "key": "value"
+        };
 
         /***/ }),
     /* 2 */
     /***/ (function(module, exports) {
 
-        module.exports = require("lodash");
+        module.exports = require("babel-runtime/core-js/promise");
 
         /***/ }),
     /* 3 */
     /***/ (function(module, exports) {
 
-        module.exports = require("lodash/camelCase");
+        module.exports = require("lodash");
 
         /***/ }),
     /* 4 */
+    /***/ (function(module, exports) {
+
+        module.exports = require("lodash/camelCase");
+
+        /***/ }),
+    /* 5 */
     /***/ (function(module, exports, __webpack_require__) {
 
         "use strict";
@@ -104,11 +112,11 @@ module.exports =
 
         exports.__esModule = true;
 
-        var _promise = __webpack_require__(1);
+        var _promise = __webpack_require__(2);
 
         var _promise2 = _interopRequireDefault(_promise);
 
-        var _camelCase = __webpack_require__(3);
+        var _camelCase = __webpack_require__(4);
 
         var _camelCase2 = _interopRequireDefault(_camelCase);
 
@@ -120,10 +128,12 @@ module.exports =
             __webpack_require__(0);
         }
 
-        var _ = __webpack_require__(2);
+        var _ = __webpack_require__(3);
 
 
-        console.log(_, _camelCase2.default, _promise2.default);
+        var json = __webpack_require__(1);
+
+        console.log(_, _camelCase2.default, _promise2.default, json);
 
         if (__DEBUG__) {
             console.log('yeah');

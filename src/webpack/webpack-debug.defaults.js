@@ -71,10 +71,6 @@ const applyDefaults = function(common, cfg) {
                     loader: cssLoaders + '!sass',
                 },
                 {
-                    test: /\.json$/,
-                    loader: 'json',
-                },
-                {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',

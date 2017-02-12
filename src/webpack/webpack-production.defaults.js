@@ -126,10 +126,6 @@ const applyDefaults = function(common, cfg) {
                     }),
                 },
                 {
-                    test: /\.json$/,
-                    loader: 'json',
-                },
-                {
                     test: /\.jsx?$/,
                     exclude: /node_modules/,
                     loader: 'babel',
