@@ -10,9 +10,7 @@ const applyDefaults = function(common, cfg) {
 
     // This ensures that requires like mdl are added at the top of the header
     const cssInsert = (config.debug) ? 'top' : 'bottom';
-
-    const cssLoader = 'css?-minimize!postcss?pack=cleaner';
-
+    
     const urlLoader = 'url?limit=10000';
 
     const fileName = '[name].[ext]?[hash:5]';
@@ -50,18 +48,53 @@ const applyDefaults = function(common, cfg) {
             fs: 'empty',
         },
         module: {
-            loaders: [
+            rules: [
                 {
                     test: /\.css$/,
-                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader),
-                },
-                {
-                    test: /\.less$/,
-                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader + '!less'),
+                    use: ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: [
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    insertAt: cssInsert
+                                }
+                            },
+                            {
+                                loader: 'postcss-loader',
+                                options: {
+                                    plugins: function() {
+                                        return [autoprefixer({add: false, browsers: []})]
+                                    }
+                                }
+                            }
+                        ]
+                    }),
                 },
                 {
                     test: /\.scss$/,
-                    loader: ExtractTextPlugin.extract('style?insertAt=' + cssInsert, cssLoader + '!sass'),
+                    use: ExtractTextPlugin.extract({
+                        fallback: 'style-loader',
+                        use: [
+                            {
+                                loader: 'css-loader',
+                                options: {
+                                    insertAt: cssInsert
+                                }
+                            },
+                            {
+                                loader: 'postcss-loader',
+                                options: {
+                                    plugins: function() {
+                                        return [autoprefixer({add: false, browsers: []})]
+                                    }
+                                }
+                            },
+                            {
+                                loader: 'sass-loader'
+                            }
+                        ]
+                    }),
                 },
                 {
                     test: /\.json$/,
@@ -109,12 +142,6 @@ const applyDefaults = function(common, cfg) {
                     loader: imageLoader + '&mimetype=image/x-icon',
                 },
             ],
-        },
-        postcss() {
-            return {
-                defaults: [autoprefixer],
-                cleaner: [autoprefixer({add: false, browsers: []})],
-            };
         },
     };
 

@@ -57,7 +57,7 @@ const applyDefaults = function(common, cfg) {
             fs: 'empty',
         },
         module: {
-            loaders: [
+            rules: [
                 {
                     test: /\.css$/,
                     loader: cssLoaders,
