@@ -51,6 +51,11 @@ module.exports = function(config, callback) {
     // remove linting
     delete wpConfig.module.preLoaders;
 
+    // remove custom parameters
+    delete wpConfig.copyFiles;
+    delete wpConfig.html;
+    delete wpConfig.browsers;
+
     // run webpack
     webpack(wpConfig, webpackBuildCB.bind(undefined, callback));
 };

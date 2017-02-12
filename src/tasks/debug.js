@@ -109,6 +109,11 @@ const debug = (config, callback) => {
 
     let firstRun = true;
 
+    // remove custom parameters
+    delete wpConfig.copyFiles;
+    delete wpConfig.html;
+    delete wpConfig.browsers;
+
     // run webpack
     const compiler = webpack(wpConfig);
     compiler.watch(200, function(err, stats) {

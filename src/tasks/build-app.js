@@ -34,7 +34,6 @@ module.exports = function(config, callback) {
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
         new ExtractTextPlugin('style.css?[contenthash:5]'),
         new ForceCaseSensitivityPlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: wpConfig.devtool === 'source-map',
@@ -98,6 +97,11 @@ module.exports = function(config, callback) {
     }
     // remove linting
     delete wpConfig.module.preLoaders;
+
+    // remove custom parameters
+    delete wpConfig.copyFiles;
+    delete wpConfig.html;
+    delete wpConfig.browsers;
 
     // run webpack
     webpack(wpConfig, webpackBuildCB.bind(undefined, callback));
