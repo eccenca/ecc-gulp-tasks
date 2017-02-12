@@ -50,21 +50,22 @@ const applyDefaults = function(common, cfg) {
     // extend config
     const defaults = {
         resolveLoader: {
-            root: path.join(__dirname, '..', 'node_modules'),
-            fallback: path.join(__dirname, '..', 'node_modules'),
+            moduleExtensions: ["-loader"]
         },
         resolve: {
-            root: config.context,
-            packageMains: [
+            mainFields: [
                 'style',
                 'es5',
                 'webpack',
                 'browserify',
                 'main'
             ],
-            extensions: ['', '.js', '.jsx'],
-            modulesDirectories: ['node_modules'],
-            fallback: path.join(config.context, 'node_modules'),
+            extensions: ['.js', '.jsx'],
+            modules: [
+                config.context,
+                path.join(config.context, 'node_modules'),
+                'node_modules'
+            ],
             alias: {
                 // fix for broken RxJS requiring by webpack
                 // TODO: remove once fixed in webpack
