@@ -3386,12 +3386,6 @@ lcid@^1.0.0:
   dependencies:
     invert-kv "^1.0.0"
 
-less-loader@^2.2.3:
-  version "2.2.3"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/less-loader/-/less-loader-2.2.3.tgz#b6d8f8139c8493df09d992a93a00734b08f84528"
-  dependencies:
-    loader-utils "^0.2.5"
-
 less@^2.7.1:
   version "2.7.2"
   resolved "https://artifactory.eccenca.com/api/npm/npm/less/-/less-2.7.2.tgz#368d6cc73e1fb03981183280918743c5dcf9b3df"
@@ -3452,7 +3446,7 @@ loader-runner@^2.3.0:
   version "2.3.0"
   resolved "https://artifactory.eccenca.com/api/npm/npm/loader-runner/-/loader-runner-2.3.0.tgz#f482aea82d543e07921700d5a46ef26fdac6b8a2"
 
-loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@^0.2.5, loader-utils@~0.2.2:
+loader-utils@^0.2.15, loader-utils@^0.2.16, loader-utils@~0.2.2:
   version "0.2.17"
   resolved "https://artifactory.eccenca.com/api/npm/npm/loader-utils/-/loader-utils-0.2.17.tgz#f86e6374d43205a6e6c60e9196f17c0299bfb348"
   dependencies:
