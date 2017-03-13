@@ -11,7 +11,6 @@ const applyDefaults = function(common, cfg) {
     // extend config
     const defaults = {
         devtool: 'cheap-module-eval-source-map',
-        debug: true,
         html: {
             template: path.join(__dirname, 'assets', 'component.html.ejs')
         },

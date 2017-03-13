@@ -59,6 +59,11 @@ const debug = (config, callback) => {
         new ExtractTextPlugin('style.css'),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),
+        // Old debug option. Should be removed in webpack 3
+        // FIXME: Check if necessary
+        new webpack.LoaderOptionsPlugin({
+            debug: true
+        })
     ];
 
     if (_.isString(wpConfig.entry)) {
