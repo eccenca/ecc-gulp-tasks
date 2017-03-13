@@ -6,9 +6,6 @@ const {cssLoader, postCssLoader, styleLoader} = require('./webpack-loaderSetting
 
 module.exports = (config) => {
 
-    // This ensures that requires like mdl are added at the top of the header
-    const cssInsert = (config.debug) ? 'top' : 'bottom';
-
     return {
         resolve: {
             mainFields: [
@@ -38,7 +35,7 @@ module.exports = (config) => {
                 {
                     test: /\.css$/,
                     use: ExtractTextPlugin.extract({
-                        fallback: styleLoader(cssInsert),
+                        fallback: styleLoader(),
                         use: [
                             cssLoader(),
                             postCssLoader()
@@ -48,7 +45,7 @@ module.exports = (config) => {
                 {
                     test: /\.scss$/,
                     use: ExtractTextPlugin.extract({
-                        fallback: styleLoader(cssInsert),
+                        fallback: styleLoader(),
                         use: [
                             cssLoader(),
                             postCssLoader(),

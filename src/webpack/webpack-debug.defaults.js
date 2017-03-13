@@ -12,7 +12,8 @@ const applyDefaults = function(common, cfg) {
     const defaults = {
         devtool: 'cheap-module-eval-source-map',
         html: {
-            template: path.join(__dirname, 'assets', 'component.html.ejs')
+            template: path.join(__dirname, 'assets', 'component.html.ejs'),
+            chunksSortMode: 'id',
         },
     };
 
