@@ -56,10 +56,6 @@ const debug = (config, callback) => {
             __DEBUG__: true
         }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
-        new ExtractTextPlugin({
-            filename: 'style.css',
-            allChunks: true,
-        }),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),
         // Old debug option. Should be removed in webpack 3
@@ -97,6 +93,14 @@ const debug = (config, callback) => {
             })
         );
     }
+
+    optimizations.push(
+        new ExtractTextPlugin({
+            filename: 'style.css',
+            allChunks: true,
+            disable: false,
+        })
+    );
 
     if (wpConfig.copyFiles) {
 

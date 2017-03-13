@@ -35,6 +35,7 @@ module.exports = function(config, callback) {
         new ExtractTextPlugin({
             filename: 'style.css?[contenthash:5]',
             allChunks: true,
+            disable: false,
         }),
         new ForceCaseSensitivityPlugin(),
         new webpack.optimize.UglifyJsPlugin({
