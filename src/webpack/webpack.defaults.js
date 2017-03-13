@@ -21,8 +21,8 @@ module.exports = (config) => {
             extensions: ['.js', '.jsx'],
             modules: [
                 config.context,
+                'node_modules',
                 path.join(config.context, 'node_modules'),
-                'node_modules'
             ],
             alias: {
                 // fix for broken RxJS requiring by webpack
