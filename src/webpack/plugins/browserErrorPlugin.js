@@ -8,7 +8,8 @@ BrowserErrorPlugin.prototype.apply = function(compiler) {
                 return err &&
                     err.module &&
                     err.module.issuer &&
-                    err.module.issuer.indexOf('eslint-loader') === -1;
+                    err.module.issuer.request &&
+                    err.module.issuer.request.indexOf('eslint-loader') === -1;
             });
             if (nonLinterErrors.length) {
                 const outputFileSystem = compiler.outputFileSystem;
