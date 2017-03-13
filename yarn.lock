@@ -813,9 +813,9 @@ babel-plugin-transform-strict-mode@^6.22.0:
     babel-runtime "^6.22.0"
     babel-types "^6.22.0"
 
-babel-preset-eccenca@^2.0.0:
-  version "2.0.0"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/babel-preset-eccenca/-/babel-preset-eccenca-2.0.0.tgz#1e73aa279d6698abaadacc046af8b2d84ce137f7"
+babel-preset-eccenca@^2.0.1:
+  version "2.0.1"
+  resolved "https://artifactory.eccenca.com/api/npm/npm/babel-preset-eccenca/-/babel-preset-eccenca-2.0.1.tgz#500fc714bd1a13d7fe662643309a283143c81b20"
   dependencies:
     babel-plugin-add-module-exports "^0.2.1"
     babel-plugin-transform-builtin-extend "^1.1.2"
