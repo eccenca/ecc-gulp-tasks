@@ -32,7 +32,10 @@ module.exports = function(config, callback) {
             '__DEBUG__': false
         }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
-        new ExtractTextPlugin('style.css?[contenthash:5]'),
+        new ExtractTextPlugin({
+            filename: 'style.css?[contenthash:5]',
+            allChunks: true,
+        }),
         new ForceCaseSensitivityPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: wpConfig.devtool === 'source-map',
