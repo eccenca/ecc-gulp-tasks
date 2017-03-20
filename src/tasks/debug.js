@@ -56,10 +56,13 @@ const debug = (config, callback) => {
             __DEBUG__: true
         }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
-        new ExtractTextPlugin('style.css'),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),
-        new webpack.optimize.DedupePlugin(),
+        // Old debug option. Should be removed in webpack 3
+        // FIXME: Check if necessary
+        new webpack.LoaderOptionsPlugin({
+            debug: true
+        })
     ];
 
     if (_.isString(wpConfig.entry)) {
@@ -91,6 +94,14 @@ const debug = (config, callback) => {
         );
     }
 
+    optimizations.push(
+        new ExtractTextPlugin({
+            filename: 'style.css',
+            allChunks: true,
+            disable: false,
+        })
+    );
+
     if (wpConfig.copyFiles) {
 
         const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -108,6 +119,12 @@ const debug = (config, callback) => {
     }
 
     let firstRun = true;
+
+    // remove custom parameters
+    delete wpConfig.copyFiles;
+    delete wpConfig.html;
+    delete wpConfig.browsers;
+    delete wpConfig.debug;
 
     // run webpack
     const compiler = webpack(wpConfig);

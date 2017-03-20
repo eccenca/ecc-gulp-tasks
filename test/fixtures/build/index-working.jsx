@@ -4,10 +4,12 @@ if (__WEBPACK__) {
     require('./style/style.scss');
 }
 
-var _ = require('lodash');
+const _ = require('lodash');
 import camelCase from 'lodash/camelCase';
 
-console.log(_, camelCase, Promise);
+const json = require('./example.json');
+
+console.log(_, camelCase, Promise, json);
 
 if (__DEBUG__) {
     console.log('yeah');
