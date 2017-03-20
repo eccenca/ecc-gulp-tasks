@@ -2490,80 +2490,80 @@
         "userRequest": "~/example/node_modules/core-util-is/lib/util.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/vis.css"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/vis.css"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\index.js?-minimize!C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\vis.css"
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/css-loader/index.js?-minimize!/Users/example/node_modules/react-select/dist/react-select.css"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/css-loader/index.js?-minimize!~/example/node_modules/sass-loader/index.js!~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/style/style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/sass-loader/index.js!~/ecc-component-example/node_modules/ecc-component-objectview/style/style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/sass-loader/index.js!~/ecc-component-example/node_modules/ecc-gui-elements/src/main.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/css-loader/index.js?-minimize!~/ecc-component-example/node_modules/sass-loader/index.js!~/ecc-component-example/node_modules/ecc-gui-elements/style/style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/css-loader/index.js?-minimize!/Users/example/node_modules/sass-loader/index.js!/Users/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/style/style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\index.js?-minimize!C:\\\\ecc-component-example\\node_modules\\sass-loader\\index.js!C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\style\\style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/css-loader/index.js?-minimize!/Users/ecc-component-example/node_modules/sass-loader/index.js!/Users/ecc-component-example/node_modules/ecc-uitest-helpers/style.scss"
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\css-loader\\index.js?-minimize!C:\\\\ecc-component-example\\node_modules\\sass-loader\\index.js!C:\\\\ecc-component-example\\style\\style.scss"
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/css-loader/index.js?-minimize!/Users/example/node_modules/sass-loader/index.js!/Users/example/style/test.scss"
     },
@@ -2592,85 +2592,85 @@
         "userRequest": "~/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/es5/component.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/addNodeIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\backIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/connectIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\cross.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/deleteIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/downArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/editIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\leftArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/minus.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\plus.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/rightArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/upArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/lib/vis/dist/img/network/zoomExtends.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-component-objectview\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\timeline\\delete.png"
@@ -2682,7 +2682,7 @@
         "userRequest": "~/example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/node_modules/lodash/lodash.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-component-objectview/node_modules/ecc-gui-elements/style/style.scss"
@@ -2694,211 +2694,211 @@
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\node_modules\\lodash\\index.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-component-objectview\\style\\style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.eot"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-gui-elements/dist/fonts/iconfont/MaterialIcons-Regular.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Bold/Roboto-Bold.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Bold/Roboto-Bold.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Bold\\Roboto-Bold.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/BoldItalic/Roboto-BoldItalic.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-gui-elements/dist/fonts/roboto/BoldItalic/Roboto-BoldItalic.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\BoldItalic\\Roboto-BoldItalic.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-gui-elements/dist/fonts/roboto/Italic/Roboto-Italic.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Italic/Roboto-Italic.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Italic\\Roboto-Italic.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Light/Roboto-Light.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Light/Roboto-Light.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Light/Roboto-Light.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-gui-elements/dist/fonts/roboto/LightItalic/Roboto-LightItalic.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\LightItalic\\Roboto-LightItalic.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/LightItalic/Roboto-LightItalic.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Medium/Roboto-Medium.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Medium\\Roboto-Medium.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Medium/Roboto-Medium.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\MediumItalic\\Roboto-MediumItalic.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\MediumItalic\\Roboto-MediumItalic.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\MediumItalic\\Roboto-MediumItalic.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Regular\\Roboto-Regular.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Regular\\Roboto-Regular.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Regular\\Roboto-Regular.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Thin/Roboto-Thin.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/Thin/Roboto-Thin.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\dist\\fonts\\roboto\\Thin\\Roboto-Thin.woff2"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-gui-elements/dist/fonts/roboto/ThinItalic/Roboto-ThinItalic.ttf"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/dist/fonts/roboto/ThinItalic/Roboto-ThinItalic.woff2"
@@ -2910,97 +2910,97 @@
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/es5/component.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/addNodeIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/backIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\connectIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\cross.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\deleteIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/downArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/editIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/leftArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\minus.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/plus.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/rightArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/upArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-gui-elements/lib/vis/dist/img/network/zoomExtends.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\timeline\\delete.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-gui-elements\\src\\main.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-gui-elements/style/style.scss"
@@ -3024,97 +3024,97 @@
         "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/es5/component.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/addNodeIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\backIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/connectIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\cross.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/deleteIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\downArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\editIcon.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\leftArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\lib\\vis\\dist\\img\\network\\minus.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/plus.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/rightArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/upArrow.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/network/zoomExtends.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "/Users/ecc-component-example/node_modules/ecc-mixins/node_modules/ecc-gui-elements/lib/vis/dist/img/timeline/delete.png"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\example\\node_modules\\ecc-mixins\\node_modules\\ecc-gui-elements\\style\\style.scss"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-mixins/style/style.scss"
@@ -3168,7 +3168,7 @@
         "userRequest": "~/example/node_modules/ecc-uitest-helpers/index.es5.js"
     },
     {
-        "isEccenca": true,
+        "isEccenca": false,
         "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/ecc-uitest-helpers/style.scss"
@@ -3193,7 +3193,7 @@
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "C:\\\\ecc-component-example\\node_modules\\entities\\maps\\entities.json"
     },
@@ -3847,19 +3847,19 @@
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "~/ecc-component-example/node_modules/material-design-lite/src/images/buffer.svg?embed"
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/material-design-lite/src/images/tick-mask.svg?embed"
     },
     {
         "isEccenca": false,
-        "isExternal": true,
+        "isExternal": false,
         "isNotString": false,
         "userRequest": "~/example/node_modules/material-design-lite/src/images/tick.svg?embed"
     },
