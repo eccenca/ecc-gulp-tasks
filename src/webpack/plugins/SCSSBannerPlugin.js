@@ -1,6 +1,6 @@
 /* eslint func-style: 0 */
 const path = require('path');
-const ConcatSource = require('webpack-core/lib/ConcatSource');
+const ConcatSource = require('webpack-sources').ConcatSource;
 
 function SCSSBannerPlugin(outputPath, outputFileName, styleSCSS) {
     this.banner = '// This is necessary so that components may use variables in scss\n' +

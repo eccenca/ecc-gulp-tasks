@@ -7,10 +7,14 @@ function mergeFunction(objValue, srcValue) {
     }
 }
 
+const isJS = (userRequest) => {
+    return _.endsWith(userRequest, '.js') || _.endsWith(userRequest, '.jsx');
+}
+
 const isEccenca = (module) => {
     let userRequest = module.userRequest;
 
-    if (!_.isString(userRequest)) {
+    if (!_.isString(userRequest) || !(isJS(userRequest))) {
         return false;
     }
 
@@ -23,7 +27,7 @@ const isEccenca = (module) => {
 const isExternal = (module) => {
     let userRequest = module.userRequest;
 
-    if (!_.isString(userRequest) || isEccenca(module)) {
+    if (!_.isString(userRequest) || !(isJS(userRequest)) || isEccenca(module)) {
         return false;
     }
 

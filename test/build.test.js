@@ -60,8 +60,8 @@ describe('building', function() {
 
             it('the correct copied html (copy/index.html)', function(done) {
 
-                var assertionFile = path.join(appFixturesPath, 'copy/index.html');
-                var generatedFile = path.join(outputPath, 'copy/index.html');
+                var assertionFile = path.join(appFixturesPath, 'copy/index.html.ejs');
+                var generatedFile = path.join(outputPath, 'copy/index.html.ejs');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });
@@ -188,10 +188,10 @@ function runAppBuild(indexFile, callback) {
             'ie >= 9'
         ],
         html: {
-            template: 'index.html'
+            template: 'index.html.ejs'
         },
         copyFiles: [
-            { from: './index.html', to: './copy' }
+            { from: './index.html.ejs', to: './copy' }
         ]
     }));
 

@@ -32,17 +32,18 @@ module.exports = function(config, callback) {
             '__DEBUG__': false
         }),
         new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
-        new ExtractTextPlugin('style.css?[contenthash:5]'),
+        new ExtractTextPlugin({
+            filename: 'style.css?[contenthash:5]',
+            allChunks: true,
+            disable: false,
+        }),
         new ForceCaseSensitivityPlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: wpConfig.devtool === 'source-map',
             output: {
                 comments: false,
             },
             compress: {
-                warnings: false,
                 screw_ie8: true,
             },
             mangle: {
@@ -96,8 +97,12 @@ module.exports = function(config, callback) {
     } else {
         wpConfig.plugins = optimizations;
     }
-    // remove linting
-    delete wpConfig.module.preLoaders;
+
+    // remove custom parameters
+    delete wpConfig.copyFiles;
+    delete wpConfig.html;
+    delete wpConfig.browsers;
+    delete wpConfig.debug;
 
     // run webpack
     webpack(wpConfig, webpackBuildCB.bind(undefined, callback));
