@@ -5048,6 +5048,10 @@ sass-loader@^6.0.3:
     lodash.tail "^4.1.1"
     pify "^2.3.0"
 
+sassyjson@^1.1.8:
+  version "1.1.8"
+  resolved "https://artifactory.eccenca.com/api/npm/npm/sassyjson/-/sassyjson-1.1.8.tgz#05fcc2f86a2499e67e89247901db8e0aec4e65a4"
+
 sax@~1.2.1:
   version "1.2.2"
   resolved "https://artifactory.eccenca.com/api/npm/npm/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"

@@ -3,8 +3,13 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
+### Added
+- `sassyjson` dependency, so that it may be used in our sass workflows
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- Updated dependencies
+    - `case-sensitive-paths-webpack-plugin`\
+    - `file-loader`
 
 ## [3.5.0] 2017-03-27
 ### Changed
