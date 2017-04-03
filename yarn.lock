@@ -1191,9 +1191,9 @@ caniuse-db@^1.0.30000346, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
   version "1.0.30000649"
   resolved "https://artifactory.eccenca.com/api/npm/npm/caniuse-db/-/caniuse-db-1.0.30000649.tgz#1ee1754a6df235450c8b7cd15e0ebf507221a86a"
 
-case-sensitive-paths-webpack-plugin@^1.1.4:
-  version "1.1.4"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-1.1.4.tgz#8aaedd5699a86cac2b34cf40d9b4145758978472"
+case-sensitive-paths-webpack-plugin@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.eccenca.com/api/npm/npm/case-sensitive-paths-webpack-plugin/-/case-sensitive-paths-webpack-plugin-2.0.0.tgz#60142d7d0beabdb35676ef0aeace3027da0578ba"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -2287,9 +2287,9 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
-file-loader@^0.10.0:
-  version "0.10.1"
-  resolved "https://artifactory.eccenca.com/api/npm/npm/file-loader/-/file-loader-0.10.1.tgz#815034119891fc6441fb5a64c11bc93c22ddd842"
+file-loader@^0.11.1:
+  version "0.11.1"
+  resolved "https://artifactory.eccenca.com/api/npm/npm/file-loader/-/file-loader-0.11.1.tgz#6b328ee1234a729e4e47d36375dd6d35c0e1db84"
   dependencies:
     loader-utils "^1.0.2"
 
