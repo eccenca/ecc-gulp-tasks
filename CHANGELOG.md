@@ -8,8 +8,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Changed
 - Updated dependencies
-    - `case-sensitive-paths-webpack-plugin`\
-    - `file-loader`
+    - `case-sensitive-paths-webpack-plugin@^2.0.0`
+    - `file-loader@^0.11.1`
+    - `babel-core@^6.24.1` and `babel-runtime@^6.23.0`
 
 ### Removed
 - unused `less` dependency
