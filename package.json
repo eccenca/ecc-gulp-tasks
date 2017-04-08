@@ -45,7 +45,6 @@
     "html-webpack-plugin": "^2.25.0",
     "istanbul": "^0.4.5",
     "json-loader": "^0.5.2",
-    "less": "^2.7.1",
     "lodash": "^4.17.4",
     "method-override": "^2.3.8",
     "mocha": "^3.0.2",

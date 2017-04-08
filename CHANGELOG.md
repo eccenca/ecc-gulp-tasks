@@ -4,12 +4,15 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 ### Added
-- `sassyjson` dependency, so that it may be used in our sass workflows
+- `sassyjson` dependency, so that it can be used in our sass workflows
 
 ### Changed
 - Updated dependencies
     - `case-sensitive-paths-webpack-plugin`\
     - `file-loader`
+
+### Removed
+- unused `less` dependency
 
 ## [3.5.0] 2017-03-27
 ### Changed
