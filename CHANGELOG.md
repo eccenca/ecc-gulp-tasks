@@ -2,6 +2,24 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.6.0] 2017-05-09
+### Added
+- `sassyjson` dependency, so that it can be used in our sass workflows
+- `webpackConfig.application.minify` option which defaults to ture. Can be set to false, to get a unminified source code version, where only the comments are stripped.  
+
+### Changed
+- Updated dependencies
+    - `webpack@^2.5.1`
+    - `case-sensitive-paths-webpack-plugin@^2.0.0`
+    - `file-loader@^0.11.1`
+    - `style-loader@^0.17.0`
+    - `babel-core@^6.24.1`, `babel-loader@^7.0.0` and `babel-runtime@^6.23.0`
+    -  `mocha@^3.3.0` and `gulp-spawn-mocha@^3.3.0`
+    - `optimize-css-assets-webpack-plugin@^1.3.1`
+
+### Removed
+- unused `less` dependency
+
 ## [3.5.0] 2017-03-27
 ### Changed
 - Update `babel-loader` and `style-loader` to new versions

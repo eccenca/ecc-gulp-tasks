@@ -38,7 +38,20 @@ module.exports = function(config, callback) {
             disable: false,
         }),
         new ForceCaseSensitivityPlugin(),
-        new webpack.optimize.UglifyJsPlugin({
+    ];
+
+    let uglifyOptions;
+
+    if (wpConfig.minify === false) {
+        uglifyOptions = {
+            compress: false,
+            output: {
+                beautify: true,
+            },
+            mangle: false,
+        };
+    } else {
+        uglifyOptions = {
             sourceMap: wpConfig.devtool === 'source-map',
             output: {
                 comments: false,
@@ -49,19 +62,23 @@ module.exports = function(config, callback) {
             mangle: {
                 screw_ie8: true,
             },
-        }),
-        new OptimizeCssAssetsPlugin({
-            assetNameRegExp: /\.css(\?.+)?$/g,
-            cssProcessor: require('cssnano'),
-            cssProcessorOptions: {
-                autoprefixer: {add: true, browsers: compatibleBrowsers},
-                discardComments: {
-                    removeAll: true
-                }
-            },
-            canPrint: process.env.NODE_ENV !== 'test'
-        }),
-    ];
+        };
+        optimizations.push(
+            new OptimizeCssAssetsPlugin({
+                assetNameRegExp: /\.css(\?.+)?$/g,
+                cssProcessor: require('cssnano'),
+                cssProcessorOptions: {
+                    autoprefixer: {add: true, browsers: compatibleBrowsers},
+                    discardComments: {
+                        removeAll: true
+                    }
+                },
+                canPrint: process.env.NODE_ENV !== 'test'
+            })
+        );
+    }
+
+    optimizations.push(new webpack.optimize.UglifyJsPlugin(uglifyOptions));
 
     if (wpConfig.html) {
 
@@ -103,6 +120,7 @@ module.exports = function(config, callback) {
     delete wpConfig.html;
     delete wpConfig.browsers;
     delete wpConfig.debug;
+    delete wpConfig.minify;
 
     // run webpack
     webpack(wpConfig, webpackBuildCB.bind(undefined, callback));
