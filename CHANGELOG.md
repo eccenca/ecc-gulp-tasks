@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 ### Added
 - `sassyjson` dependency, so that it can be used in our sass workflows
+- `webpackConfig.application.minify` option which defaults to ture. Can be set to false, to get a unminified source code version, where only the comments are stripped.  
 
 ### Changed
 - Updated dependencies
