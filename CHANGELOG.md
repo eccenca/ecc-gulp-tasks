@@ -8,9 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Changed
 - Updated dependencies
-    - `webpack@^2.4.1`
+    - `webpack@^2.5.1`
     - `case-sensitive-paths-webpack-plugin@^2.0.0`
     - `file-loader@^0.11.1`
+    - `style-loader@^0.17.0`
     - `babel-core@^6.24.1`, `babel-loader@^7.0.0` and `babel-runtime@^6.23.0`
     -  `mocha@^3.3.0` and `gulp-spawn-mocha@^3.3.0`
     - `optimize-css-assets-webpack-plugin@^1.3.1`
