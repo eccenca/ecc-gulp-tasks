@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [3.6.0] 2017-05-09
 ### Added
 - `sassyjson` dependency, so that it can be used in our sass workflows
 - `webpackConfig.application.minify` option which defaults to ture. Can be set to false, to get a unminified source code version, where only the comments are stripped.  
