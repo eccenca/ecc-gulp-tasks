@@ -7,7 +7,7 @@
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elds/ecc-gulp-tasks.git"
+    "url": "https://github.com/eccenca/ecc-gulp-tasks.git"
   },
   "scripts": {
     "init": "ecc-link-dotfiles",

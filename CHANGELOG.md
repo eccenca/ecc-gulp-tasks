@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Fixed
+- Update git url in package.json
 
 ## [3.6.0] 2017-05-09
 ### Added
