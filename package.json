@@ -1,13 +1,13 @@
 {
   "name": "ecc-gulp-tasks",
-  "version": "3.6.0",
+  "version": "3.6.1",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "eccenca GmbH <opensource@eccenca.com> (http://eccenca.com)",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/elds/ecc-gulp-tasks.git"
+    "url": "https://github.com/eccenca/ecc-gulp-tasks.git"
   },
   "scripts": {
     "init": "ecc-link-dotfiles",

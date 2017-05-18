@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.6.1] 2017-05-18
+
+### Fixed
+- Update git url in package.json
+
 ## [3.6.0] 2017-05-09
 ### Added
 - `sassyjson` dependency, so that it can be used in our sass workflows
