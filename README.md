@@ -24,7 +24,7 @@ If you are sure, you want to update your environment, you can follow these steps
     bash -c "echo "6.9.4" > ~/.nvmrc"
     nvm install
     # install latest npm and yarn
-    npm install --global npm@3.10.10 yarn@0.19.1
+    npm install --global npm@3.10.10 yarn@0.24.5
     ```
 
 3.  Reinstall you installed with npm/yarn, for example:
