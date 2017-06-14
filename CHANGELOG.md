@@ -8,10 +8,9 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 
 ## [3.6.2] 2017-05-18
 ### Fixed
-- adjust version
+- adjust versions for environment check
 
 ## [3.6.1] 2017-05-18
-
 ### Fixed
 - Update git url in package.json
 
