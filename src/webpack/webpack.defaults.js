@@ -2,7 +2,26 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const path = require('path');
 
+const _ = require('lodash');
+
 const {cssLoader, postCssLoader, styleLoader} = require('./webpack-loaderSettings');
+
+const shouldExcludeFromCompile = (filePath) => {
+  if(_.includes(filePath, '/node_modules/')){
+
+      // We need to run babel on files of the 'vis' module, as it is not properly written
+      // See: https://github.com/almende/vis/issues/2934
+      if(_.includes(filePath, '/node_modules/vis/')){
+          return false;
+      }
+
+      return true;
+
+  }
+
+  return false;
+
+};
 
 module.exports = (config) => {
 
@@ -55,7 +74,7 @@ module.exports = (config) => {
                 },
                 {
                     test: /\.jsx?$/,
-                    exclude: /node_modules/,
+                    exclude: shouldExcludeFromCompile,
                         loader: 'babel-loader',
                         options: {
                             plugins: ['transform-runtime'],
