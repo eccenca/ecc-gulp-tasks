@@ -3,6 +3,11 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
+
+### Added
+- Added a better exclusion function for the babel loader.
+  It will now run babel on [`almende/vis`](https://github.com/almende/vis) as the package is not providing good webpack/babel support by itself.
+
 ### Changed
 - Updated dependencies
     - `webpack@^2.6.1`
