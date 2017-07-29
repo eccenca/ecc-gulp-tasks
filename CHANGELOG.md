@@ -4,7 +4,20 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- Updated dependencies
+    - `webpack@^3.4.1`
+        - `html-webpack-plugin@^2.29.0`
+        - `json-loader@^0.5.7`
+        - `sass-loader@^6.0.6`
+        - `optimize-css-assets-webpack-plugin@^3.0.0`
+        - `postcss-loader@^2.0.6`
+        - `style-loader@^0.18.2`
+        - `webpack-sources@^1.0.1`
+        - `yaml-loader@^0.5.0`
+    - `babel-loader@^7.1.1`
+    - `babel-runtime@^6.25.0`
+    - `gulp-spawn-mocha@^3.3.1`
 
 ## [3.7.0] 2017-06-15
 
@@ -22,7 +35,6 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
         - `postcss-loader@^2.0.6`
         - `url-loader@^0.5.9`
         - `style-loader@^0.18.2`
-        - `webpack-sources@^1.0.1`
     - `babel-core@^6.25.0`
     - `fs-extra@^3.0.1`
     - `method-override@^2.3.9`

@@ -169,6 +169,7 @@ function runAppBuild(indexFile, callback) {
 
     // Get Config Object for a component
     _.set(config, 'webpackConfig.application', applyApplicationDefaults({
+        minify: false,
         context: componentPath,
         entry: {
             main: path.join(componentPath, indexFile)
