@@ -1,4 +1,3 @@
-const path = require('path');
 const _ = require('lodash');
 const {mergeFunction} = require('./utils');
 
@@ -8,7 +7,7 @@ const ignored = [];
 
 const isExternalPackage = (context, request, callback) => {
     if (_.includes(ignored, request)) {
-        return callback(null, 'commonjs ' + request);
+        return callback(null, `commonjs ${request}`);
     }
 
     if (
@@ -23,24 +22,26 @@ const isExternalPackage = (context, request, callback) => {
     ignored.push(request);
 
     if (process.env.NODE_ENV !== 'test') {
-        console.log('Not including ' + request + ' in build');
+        console.log(`Not including ${request} in build`);
     }
 
-    return callback(null, 'commonjs ' + request);
+    return callback(null, `commonjs ${request}`);
 };
 
 const applyDefaults = function(common, cfg) {
-
     const config = _.mergeWith({}, common, cfg, mergeFunction);
 
     // extend config
     const defaults = {
-        externals: [
-            isExternalPackage
-        ],
+        externals: [isExternalPackage],
     };
 
-    return _.mergeWith(webpackDefaults(config), defaults, config, mergeFunction);
+    return _.mergeWith(
+        webpackDefaults(config),
+        defaults,
+        config,
+        mergeFunction
+    );
 };
 
 module.exports = applyDefaults;

@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 
 ### Changed
+- Update eslint and add prettier
 - Updated dependencies
     - `webpack@^3.4.1`
         - `html-webpack-plugin@^2.29.0`

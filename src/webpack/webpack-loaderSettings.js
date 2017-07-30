@@ -1,35 +1,27 @@
 const autoprefixer = require('autoprefixer');
 
-const styleLoader = (insertAt) => {
-  return   {
-      loader: 'style-loader',
-      options: {
-          insertAt: insertAt,
-      }
-  }
-};
+const styleLoader = insertAt => ({
+    loader: 'style-loader',
+    options: {
+        insertAt,
+    },
+});
 
-const cssLoader = () => {
-    return {
-        loader: 'css-loader',
-        options: {
-            minimize: false
-        }
-    };
-};
+const cssLoader = () => ({
+    loader: 'css-loader',
+    options: {
+        minimize: false,
+    },
+});
 
-const postCssLoader = () => {
-    return {
-        loader: 'postcss-loader',
-        options: {
-            plugins: function() {
-                return [autoprefixer({add: false, browsers: []})]
-            }
-        }
-    };
-};
-
-
+const postCssLoader = () => ({
+    loader: 'postcss-loader',
+    options: {
+        plugins() {
+            return [autoprefixer({add: false, browsers: []})];
+        },
+    },
+});
 
 module.exports = {
     cssLoader,

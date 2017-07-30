@@ -7,14 +7,16 @@ const chalk = require('gulp-util').colors;
 const server = express();
 const serverPorts = [8080, 8081, 8082, 8083, 8084, 8085];
 const serverGetInstance = (portsArray, logger) => {
-
     let serverInstance = false;
-    let port = 0;
+    const port = portsArray.shift();
 
-    if ((portsArray.length > 0) && (port = portsArray.shift())) {
-        logger(chalk.cyan('[serve]'), `Try to start webserver on localhost:${port}`);
+    if (port) {
+        logger(
+            chalk.cyan('[serve]'),
+            `Trying to start webserver on localhost:${port}`
+        );
         serverInstance = server.listen(port);
-        serverInstance.on('error', function(err) {
+        serverInstance.on('error', err => {
             logger(
                 chalk.red('[serve]'),
                 `Error while starting webserver on localhost:${port}.`,
@@ -22,13 +24,12 @@ const serverGetInstance = (portsArray, logger) => {
             );
             if (portsArray.length > 0) {
                 serverInstance = serverGetInstance(portsArray, logger);
-            }
-            else {
+            } else {
                 serverInstance.close();
                 throw err; // no next port to start webserver
             }
         });
-        serverInstance.on('listening', function() {
+        serverInstance.on('listening', () => {
             logger(
                 chalk.cyan('[serve]'),
                 'Started webserver on',
@@ -50,7 +51,7 @@ module.exports = ({path, logger = console.log}) => {
     server.use(express.static(path));
 
     // server rest as default
-    server.get('*', function(req, res) {
+    server.get('*', (req, res) => {
         res.sendFile('/index.html', {root: path});
     });
 

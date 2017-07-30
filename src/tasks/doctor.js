@@ -13,9 +13,8 @@ module.exports = function(config, callback) {
     gutil.log(doctor.toString());
 
     if (gutil.env['self-check']) {
-        Doctor.asyncSelfCheck({dir: dir, callback: callback, logger: gutil.log});
+        Doctor.asyncSelfCheck({dir, callback, logger: gutil.log});
     } else {
         callback();
     }
-
 };
