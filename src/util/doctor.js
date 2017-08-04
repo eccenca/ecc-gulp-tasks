@@ -357,13 +357,13 @@ class Doctor {
                     _.set(fixedPJSON, ['peerDependencies', 'react'], '*');
                 }
 
-                if (_.has(originalPJSON, ['scripts', 'prepackage'])) {
+                if (_.has(originalPJSON, ['scripts', 'prepublish'])) {
                     _.set(
                         fixedPJSON,
                         ['scripts', 'prepare'],
-                        _.get(originalPJSON, ['scripts', 'prepackage'])
+                        _.get(originalPJSON, ['scripts', 'prepublish'])
                     );
-                    _.set(fixedPJSON, ['scripts', 'prepackage'], undefined);
+                    _.set(fixedPJSON, ['scripts', 'prepublish'], undefined);
                 }
             }
 
