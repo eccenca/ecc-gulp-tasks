@@ -1,29 +1,23 @@
-var should = require('should');
-var {isEccenca, isExternal} = require('../src/webpack/utils');
-var _ = require('lodash')
+const should = require('should');
+const {isEccenca, isExternal} = require('../src/webpack/utils');
+const _ = require('lodash');
 
-describe('webpack.utils', function() {
-
+describe('webpack.utils', () => {
     it('should categorize external and eccenca packages correctly', () => {
+        const modules = require('./fixtures/modules.json');
 
-        var modules = require('./fixtures/modules.json');
-
-        _.forEach(modules, (data) => {
-
+        _.forEach(modules, data => {
             const comparison = {
                 isEccenca: isEccenca(data),
                 isExternal: isExternal(data),
                 isNotString: !_.isString(data.userRequest),
             };
 
-            if(data.userRequest){
+            if (data.userRequest) {
                 comparison.userRequest = data.userRequest;
             }
 
             should(data).eql(comparison);
-
         });
-
     });
-
 });

@@ -11,7 +11,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const _ = require('lodash');
 
 module.exports = function(config, callback) {
-
     const wpConfig = config.webpackConfig.production;
 
     // use production optimizations
@@ -33,7 +32,6 @@ module.exports = function(config, callback) {
     const styleSCSS = path.join(wpConfig.context, 'style', 'style.scss');
 
     if (fs.existsSync(styleSCSS)) {
-
         const outputPath = wpConfig.output.path;
         const outputFileName = wpConfig.output.filename;
 

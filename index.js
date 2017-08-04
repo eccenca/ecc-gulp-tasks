@@ -1,39 +1,50 @@
-var gulp = require('gulp');
-var fs = require('fs');
-var path = require('path');
-var applyDefaults = require('./src/webpack/webpack-debug.defaults.js');
-var applyApplicationDefaults = require('./src/webpack/webpack-app.defaults.js');
-var applyProductionDefaults = require('./src/webpack/webpack-production.defaults.js');
+const gulp = require('gulp');
+const fs = require('fs');
+const path = require('path');
+const applyDefaults = require('./src/webpack/webpack-debug.defaults.js');
+const applyApplicationDefaults = require('./src/webpack/webpack-app.defaults.js');
+const applyProductionDefaults = require('./src/webpack/webpack-production.defaults.js');
 
 // get all tasks
-var tasksPath = path.join(__dirname, 'src', 'tasks');
-var allTasks = fs.readdirSync(tasksPath).map(function(file) { return file.replace('.js', ''); });
+const tasksPath = path.join(__dirname, 'src', 'tasks');
+const allTasks = fs.readdirSync(tasksPath).map(file => file.replace('.js', ''));
 
 // logic
-module.exports = function(config) {
+module.exports = function createBuildConfig(config) {
     // default config to object
-    config = config || {};
-    var common = config.webpackConfig.common || {};
+    const currentConfig = config || {};
+    const common = currentConfig.webpackConfig.common || {};
 
     // extend config
-    if (config.webpackConfig) {
-        if (config.webpackConfig.debug) {
-            config.webpackConfig.debug = applyDefaults(common, config.webpackConfig.debug);
+    if (currentConfig.webpackConfig) {
+        if (currentConfig.webpackConfig.debug) {
+            currentConfig.webpackConfig.debug = applyDefaults(
+                common,
+                currentConfig.webpackConfig.debug
+            );
         }
-        if (config.webpackConfig.production) {
-            config.webpackConfig.production = applyProductionDefaults(common, config.webpackConfig.production);
+        if (currentConfig.webpackConfig.production) {
+            currentConfig.webpackConfig.production = applyProductionDefaults(
+                common,
+                currentConfig.webpackConfig.production
+            );
         }
-        if (config.webpackConfig.application) {
-            config.webpackConfig.application = applyApplicationDefaults(common, config.webpackConfig.application);
+        if (currentConfig.webpackConfig.application) {
+            currentConfig.webpackConfig.application = applyApplicationDefaults(
+                common,
+                currentConfig.webpackConfig.application
+            );
         }
     }
+
     // process tasks
-    allTasks.forEach(function(name) {
-        var task = require(path.join(tasksPath, name));
+    allTasks.forEach(function getTask(name) {
+        // eslint-disable-next-line
+        const task = require(path.join(tasksPath, name));
         if (task.deps) {
-            gulp.task(name, task.deps, task.bind(this, config));
+            gulp.task(name, task.deps, task.bind(this, currentConfig));
         } else {
-            gulp.task(name, task.bind(this, config));
+            gulp.task(name, task.bind(this, currentConfig));
         }
     });
 

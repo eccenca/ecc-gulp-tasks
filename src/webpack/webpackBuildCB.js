@@ -1,7 +1,6 @@
 const gutil = require('gulp-util');
 
 module.exports = function webpackBuildCB(gulpCallback, err, stats) {
-
     if (err) {
         gulpCallback(new gutil.PluginError('webpack', err));
         return;

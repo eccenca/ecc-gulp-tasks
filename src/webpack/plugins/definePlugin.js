@@ -4,12 +4,12 @@ let branch = 'BRANCH';
 
 if (process.env.GT_BUILD_BRANCH) {
     branch = process.env.GT_BUILD_BRANCH;
-    console.log('BRANCH: ' + branch);
+    console.log(`BRANCH: ${branch}`);
 } else {
     try {
         const execSync = require('child_process').execSync;
         branch = execSync('git rev-parse --abbrev-ref HEAD').toString();
-        console.log('BRANCH: ' + branch);
+        console.log(`BRANCH: ${branch}`);
     } catch (e) {
         // we die gracefully, as git errored, or something
     }
@@ -19,12 +19,12 @@ let version = 'VERSION';
 
 if (process.env.GT_BUILD_VERSION) {
     version = process.env.GT_BUILD_VERSION;
-    console.log('VERSION: ' + version);
+    console.log(`VERSION: ${version}`);
 } else {
     try {
         const execSync = require('child_process').execSync;
         version = execSync('git describe --always --dirty').toString();
-        console.log('VERSION: ' + version);
+        console.log(`VERSION: ${version}`);
     } catch (e) {
         // we die gracefully, as git errored, or something
     }

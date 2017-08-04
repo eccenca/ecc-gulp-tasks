@@ -6,6 +6,7 @@ const ForceCaseSensitivityPlugin = require('case-sensitive-paths-webpack-plugin'
 const BrowserErrorPlugin = require('../webpack/plugins/browserErrorPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const _ = require('lodash');
+
 const chalk = gutil.colors;
 const webpackStatsToString = require('webpack/lib/Stats').jsonToString;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -15,22 +16,24 @@ const Doctor = require('../util/doctor');
 const {isEccenca, isExternal} = require('../webpack/utils');
 
 const statsToString = (stats, firstRun) => {
+    const statsJson = stats.toJson(
+        {
+            hash: false,
+            version: firstRun,
+            timings: true,
+            assets: true,
+            chunks: false,
+            children: false,
+        },
+        true
+    );
 
-    const statsJson = stats.toJson({
-        hash: false,
-        version: firstRun,
-        timings: true,
-        assets: true,
-        chunks: false,
-        children: false,
-    }, true);
+    statsJson.assets = _.filter(
+        statsJson.assets,
+        asset => asset.emitted || /\.(js|html)/.test(asset.name)
+    );
 
-    statsJson.assets = _.filter(statsJson.assets, (asset) => {
-        return asset.emitted || /\.(js|html)/.test(asset.name);
-    });
-
-    return (webpackStatsToString(statsJson, true));
-
+    return webpackStatsToString(statsJson, true);
 };
 
 const debug = (config, callback) => {
@@ -43,7 +46,10 @@ const debug = (config, callback) => {
 
     wpConfig.output.path = path.join(wpConfig.context, '.tmp');
 
-    gutil.log(chalk.cyan('[webpack]'), 'Started initial build (this make some time)');
+    gutil.log(
+        chalk.cyan('[webpack]'),
+        'Started initial build (this make some time)'
+    );
 
     // use production optimizations
     const optimizations = [
@@ -53,16 +59,16 @@ const debug = (config, callback) => {
         }),
         definePlugin,
         new webpack.DefinePlugin({
-            __DEBUG__: true
+            __DEBUG__: true,
         }),
-        new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /~$/),
+        new webpack.ContextReplacementPlugin(/moment[/\\]locale$/, /~$/),
         new BrowserErrorPlugin(),
         new ForceCaseSensitivityPlugin(),
         // Old debug option. Should be removed in webpack 3
         // FIXME: Check if necessary
         new webpack.LoaderOptionsPlugin({
-            debug: true
-        })
+            debug: true,
+        }),
     ];
 
     if (_.isString(wpConfig.entry)) {
@@ -79,7 +85,7 @@ const debug = (config, callback) => {
                 chunks: ['main'],
                 minChunks(module) {
                     return isEccenca(module);
-                }
+                },
             })
         );
         optimizations.push(
@@ -89,7 +95,7 @@ const debug = (config, callback) => {
                 chunks: ['main', 'eccenca'],
                 minChunks(module) {
                     return isExternal(module);
-                }
+                },
             })
         );
     }
@@ -103,11 +109,9 @@ const debug = (config, callback) => {
     );
 
     if (wpConfig.copyFiles) {
-
         const CopyWebpackPlugin = require('copy-webpack-plugin');
 
         optimizations.push(new CopyWebpackPlugin(wpConfig.copyFiles));
-
     }
 
     optimizations.push(new HtmlWebpackPlugin(wpConfig.html));
@@ -128,8 +132,7 @@ const debug = (config, callback) => {
 
     // run webpack
     const compiler = webpack(wpConfig);
-    compiler.watch(200, function(err, stats) {
-
+    compiler.watch(200, (err, stats) => {
         if (err) {
             gutil.log(chalk.red('[webpack-error]'), err.toString());
             return;
@@ -143,7 +146,6 @@ const debug = (config, callback) => {
             firstRun = false;
             callback();
         }
-
     });
 };
 

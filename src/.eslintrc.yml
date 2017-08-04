@@ -1,5 +1,7 @@
 rules:
-  no-console: 0
-  max-nested-callbacks: [2, 4]
-  max-params: [2, 3]
-  complexity: [1, 5]
+  global-require: off
+  func-names: off
+  no-console: off
+env:
+  browser: false
+  node: true
