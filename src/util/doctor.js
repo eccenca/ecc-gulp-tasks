@@ -6,6 +6,134 @@ const semver = require('semver');
 const cp = require('child_process');
 
 const execSync = cp.execSync;
+const textTable = require('text-table');
+
+const Ajv = require('ajv');
+
+const ajv = new Ajv({allErrors: true});
+ajv.addFormat('semver', value => semver.valid(value) !== null);
+ajv.addFormat('prepackage', () => false);
+ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
+ajv.addSchema(require('./schema/package.eccenca.js'), 'package.eccenca');
+
+function isEccencaPackage(p) {
+    const search = _.chain(p)
+        .pick(['name', 'bugs', 'repository'])
+        .map(v => (_.isString(v) ? v : _.values(v).join('|')))
+        .join('|')
+        .value();
+
+    return /(eccenca|elds)/.test(search);
+}
+
+function validatorFn(
+    schemaValue,
+    dataValue,
+    parentSchema,
+    dataPath,
+    dataParent,
+    dataField,
+    data
+) {
+    const templates = _.isArray(schemaValue) ? schemaValue : [schemaValue];
+
+    const anyOf = _.map(templates, t => _.template(t)(data));
+
+    if (_.some(anyOf, templateValue => templateValue === dataValue)) {
+        return true;
+    }
+
+    const error = {
+        keyword: 'template',
+        params: {
+            template: anyOf,
+        },
+    };
+
+    error.message =
+        _.size(anyOf) > 1
+            ? `should be one of "${anyOf.join('", "')}"`
+            : `should be "${anyOf[0]}"`;
+
+    validatorFn.errors = [error];
+
+    return false;
+}
+
+ajv.addKeyword('template', {
+    validate: validatorFn,
+    errors: true,
+});
+
+ajv.addSchema(
+    fs.readJSONSync(path.join(__dirname, 'schema', 'package.json')),
+    'package'
+);
+
+function customizer(objValue, srcValue) {
+    if (_.isArray(objValue)) {
+        return objValue.concat(srcValue);
+    }
+    if (_.isPlainObject(objValue)) {
+        return _.mergeWith({}, objValue, srcValue, (a, b) =>
+            _.compact(_.flatten([a, b]))
+        );
+    }
+    return undefined;
+}
+
+function ajvToMessages(errors, fileName, data) {
+    let reduced = _.reduce(
+        errors,
+        (result, current) => {
+            const dataPath = current.dataPath.replace(/^\./, '');
+            const key = `${current.keyword}:${dataPath}:${current.schemaPath}`;
+            let merged;
+            if (_.has(result, key)) {
+                merged = _.mergeWith({}, result[key], current, customizer);
+            } else {
+                merged = _.clone(current);
+            }
+            _.set(result, [key], merged);
+            _.set(result, [key, 'dataPath'], dataPath);
+            return result;
+        },
+        {}
+    );
+
+    reduced = _.sortBy(reduced, 'schemaPath');
+
+    const table = [['message', 'value', 'details']];
+
+    _.forEach(reduced, entry => {
+        let dataPath = entry.dataPath;
+        const value = JSON.stringify(_.get(data, dataPath, ''));
+        if (dataPath === '') {
+            dataPath = fileName;
+        }
+
+        let message = '';
+
+        switch (dataPath) {
+            case '/scripts/prepackage':
+                message = `${dataPath} should be renamed to '/scripts/prepare'`;
+                break;
+            default:
+                message = `${dataPath} ${entry.message}`;
+        }
+
+        const details = _.chain(entry.params)
+            .values()
+            .flattenDeep()
+            .uniq()
+            .join(', ')
+            .value();
+
+        return table.push([message, value, details]);
+    });
+
+    return textTable(table).split(/\r?\n/);
+}
 
 class Doctor {
     constructor(dir, config) {
@@ -182,9 +310,9 @@ class Doctor {
     checkGulpConfig() {
         const messages = [];
 
-        const deprectatedValues = ['path', 'serverStart', 'serverOverrides'];
+        const deprecatedValues = ['path', 'serverStart', 'serverOverrides'];
 
-        _.forEach(deprectatedValues, key => {
+        _.forEach(deprecatedValues, key => {
             const value = _.get(this.config, key, false);
 
             if (value) {
@@ -213,17 +341,30 @@ class Doctor {
 
             let messages = [];
 
+            if (isEccencaPackage(originalPJSON)) {
+                const valid = ajv.validate('package.eccenca', originalPJSON);
 
-            const reactPeer = _.get(originalPJSON, [
-                'peerDependencies',
-                'react',
-            ]);
-            if (_.isString(reactPeer) && reactPeer !== '*') {
-                _.set(fixedPJSON, ['peerDependencies', 'react'], '*');
+                if (!valid) {
+                    messages = messages.concat(
+                        ajvToMessages(ajv.errors, 'package.json', originalPJSON)
+                    );
+                }
 
-                messages.push(
-                    "React peer dependency should be '*' and not '{reactPeer}' (auto-fixable)"
-                );
+                if (
+                    _.has(originalPJSON, ['devDependencies', 'react']) ||
+                    _.has(originalPJSON, ['peerDependencies', 'react'])
+                ) {
+                    _.set(fixedPJSON, ['peerDependencies', 'react'], '*');
+                }
+
+                if (_.has(originalPJSON, ['scripts', 'prepackage'])) {
+                    _.set(
+                        fixedPJSON,
+                        ['scripts', 'prepare'],
+                        _.get(originalPJSON, ['scripts', 'prepackage'])
+                    );
+                    _.set(fixedPJSON, ['scripts', 'prepackage'], undefined);
+                }
             }
 
             if (!_.isEmpty(messages)) {

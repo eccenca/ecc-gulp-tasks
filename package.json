@@ -15,9 +15,11 @@
     "prepare": "npm run init && gulp updateREADME",
     "eslint-check": "eslint --print-config .eslintrc.yml && eslint --print-config .eslintrc.yml | eslint-config-prettier-check",
     "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix",
+    "precommit": "lint-staged",
     "start": "echo ''"
   },
   "dependencies": {
+    "ajv": "^5.2.2",
     "autoprefixer": "^6.6.0",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -53,8 +55,10 @@
     "gulp-spawn-mocha": "^3.3.1",
     "gulp-util": "^3.0.8",
     "html-webpack-plugin": "^2.29.0",
+    "husky": "^0.14.3",
     "istanbul": "^0.4.5",
     "json-loader": "^0.5.7",
+    "lint-staged": "^4.0.2",
     "lodash": "^4.17.4",
     "method-override": "^2.3.9",
     "mocha": "^3.4.2",
@@ -68,6 +72,7 @@
     "semver": "^5.4.1",
     "slash": "^1.0.0",
     "style-loader": "^0.18.2",
+    "text-table": "^0.2.0",
     "url-loader": "^0.5.9",
     "webpack": "^3.4.1",
     "webpack-sources": "^1.0.1",
@@ -86,6 +91,9 @@
     "url": "https://github.com/eccenca/ecc-gulp-tasks/issues"
   },
   "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint"
   }
 }

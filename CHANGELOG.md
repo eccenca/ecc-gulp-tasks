@@ -4,6 +4,9 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
+### Added
+- better checks for package.json correctness via `gulp doctor`
+
 ### Changed
 - Update eslint and add prettier
 - Updated dependencies
