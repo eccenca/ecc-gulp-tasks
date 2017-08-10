@@ -37,6 +37,15 @@ module.exports = config => ({
             // fix for broken RxJS requiring by webpack
             // TODO: remove once fixed in webpack
             rx: 'rx/dist/rx.all.js',
+            // Fix for broken material design lite colors (needs gui elements >= v2.16.0):
+            'material-design-lite/src/_color-definitions.scss':
+                'ecc-gui-elements/src/scss/patched/_color-definitions.scss',
+            'material-design-lite/src/_variables.scss':
+                'ecc-gui-elements/src/scss/patched/_variables.scss',
+            'material-design-lite/src/data-table/_data-table.scss':
+                'ecc-gui-elements/src/scss/patched/data-table/_data-table.scss',
+            'material-design-lite/src/palette/_palette.scss':
+                'ecc-gui-elements/src/scss/patched/palette/_palette.scss',
         },
     },
     node: {
