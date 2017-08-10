@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.9.0] 2017-08-10
+
+### Added
+- Aliases for mdl fixes in the gui elements
+
 ## [3.8.1] 2017-08-04
 ### Fixed
 - replace 'prepublish' in package.json
