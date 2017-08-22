@@ -73,6 +73,7 @@
     "slash": "^1.0.0",
     "style-loader": "^0.18.2",
     "text-table": "^0.2.0",
+    "through2": "^2.0.3",
     "url-loader": "^0.5.9",
     "webpack": "^3.4.1",
     "webpack-sources": "^1.0.1",
