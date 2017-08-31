@@ -4,6 +4,7 @@ const mocha = require('gulp-spawn-mocha');
 
 const doctor = require('./src/tasks/doctor');
 const badmdl = require('./src/tasks/bad-mdl');
+const docs = require('./src/tasks/docs-react');
 const _ = require('lodash');
 const fs = require('fs-extra');
 
@@ -18,6 +19,18 @@ gulp.task('test', () =>
 );
 
 gulp.task('bad-mdl', callback => badmdl({}, callback));
+
+gulp.task('docs-react', callback =>
+    docs(
+        {
+            docPath: 'test/fixtures/docs/**.{js,jsx}',
+        },
+        callback
+    )
+);
+
+gulp.task('docs', ['docs-react']);
+
 gulp.task('doctor', ['bad-mdl'], callback => doctor({}, callback));
 
 gulp.task('updateREADME', () => {
