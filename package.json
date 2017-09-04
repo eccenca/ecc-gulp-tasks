@@ -17,7 +17,8 @@
     "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix",
     "precommit": "lint-staged",
     "start": "echo ''",
-    "docs": "gulp docs"
+    "docs": "gulp docs",
+    "docsTest": "jsdoc2md test/fixtures/docs/Store.jsx --helper src/util/ChannelRender.js --template src/util/ChannelTemplate.hbs"
   },
   "dependencies": {
     "ajv": "^5.2.2",
@@ -59,6 +60,7 @@
     "html-webpack-plugin": "^2.29.0",
     "husky": "^0.14.3",
     "istanbul": "^0.4.5",
+    "jsdoc-to-markdown": "^3.0.0",
     "json-loader": "^0.5.7",
     "lint-staged": "^4.0.2",
     "lodash": "^4.17.4",
