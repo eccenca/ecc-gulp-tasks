@@ -17,8 +17,7 @@
     "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix",
     "precommit": "lint-staged",
     "start": "echo ''",
-    "docs": "gulp docs",
-    "docsTest": "jsdoc2md test/fixtures/docs/Store.jsx --helper src/util/ChannelRender.js --template src/util/ChannelTemplate.hbs"
+    "docs": "gulp docs"
   },
   "dependencies": {
     "ajv": "^5.2.2",
