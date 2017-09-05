@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 
 const mocha = require('gulp-spawn-mocha');
+const concat = require('gulp-concat');
 
 const doctor = require('./src/tasks/doctor');
 const badmdl = require('./src/tasks/bad-mdl');
@@ -38,7 +39,12 @@ gulp.task('docs-channels', callback =>
     )
 );
 
-gulp.task('docs', ['docs-react', 'docs-channels']);
+gulp.task('docs', ['docs-react', 'docs-channels'], () => {
+    gulp
+        .src(['.tmp/Components.md', '.tmp/Store.md'])
+        .pipe(concat('README.md'))
+        .pipe(gulp.dest('.tmp'));
+});
 
 gulp.task('doctor', ['bad-mdl'], callback => doctor({}, callback));
 
