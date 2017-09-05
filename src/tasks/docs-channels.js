@@ -5,7 +5,7 @@ const fs = require('fs');
 const docStyle = `## Channels
 {{#ChannelRender functions}}{{this}}{{/ChannelRender}}`;
 
-module.exports = function(config) {
+module.exports = function(config, callback) {
     const glob = config.docPath || 'src/**/*.{js,jsx}';
     const helper = 'src/util/ChannelRender.js';
     const output = jsdoc2md.renderSync({
@@ -14,4 +14,5 @@ module.exports = function(config) {
         helper,
     });
     fs.writeFile('.tmp/Store.md', output);
+    callback(null, null);
 };
