@@ -15,6 +15,9 @@ var Component = React.createClass({
         bar: function(props, propName, componentName) {
             // ...
         },
+        /**
+         * Description of union
+         */
         baz: React.PropTypes.oneOfType([
             React.PropTypes.number,
             React.PropTypes.string
@@ -24,8 +27,16 @@ var Component = React.createClass({
     getDefaultProps: function() {
         return {
             foo: 42,
-            bar: 21
+            baz: 21
         };
+    },
+
+    /**
+     * Example method
+     * @param id {string} - identifier of something
+     */
+    event(id) {
+    this.setState({id});
     },
 
     render: function() {

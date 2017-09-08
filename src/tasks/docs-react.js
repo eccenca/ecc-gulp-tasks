@@ -5,30 +5,41 @@ const reactDocs = require('react-docgen');
 const path = require('path');
 const gutil = require('gulp-util');
 const concat = require('gulp-concat');
-
 const _ = require('lodash');
 
-const template = _.template(
-    `
-### <%- name %>
+const template = json => {
+    const {name, description, props} = json;
+    const propTypes = [];
+    _.forEach(props, (prop, propName) => {
+        const propRequired = prop.required ? ', *required*' : '';
+        let propType = _.get(prop, 'type.name', '');
+        if (_.get(prop, 'type.value', '')) {
+            propType = _.join(
+                _.map(prop.type.value, (type = {}) => type.name),
+                '|'
+            );
+        }
+        const propDescription = _.get(prop, 'description', '').replace(
+            /\n[\t ]+/gm,
+            '\n    '
+        );
+        let defaultValue = _.get(prop, 'defaultValue.value', '');
+        if (defaultValue !== '') {
+            defaultValue = `, default: ${defaultValue}`;
+        }
+        propTypes.push(
+            `- **${propName}** (${propType}${propRequired}${defaultValue}) - ${propDescription}`
+        );
+    });
 
-<%= description %>
-<% _.forEach(props, function(prop, propName) {
+    return `# ${name}
 
-const required = prop.required ? ', *required*' : '';
-const type = _.get(prop, 'type.name', '');
-const description = _.get(prop, 'description', '').replace(/\\n[\\t ]+/gm,'\\n    ');
-let defaultValue = _.get(prop, 'defaultValue.value', '');
-if(defaultValue !== ''){
-defaultValue = ', default: ' + defaultValue;
-}
+${description}
 
-
-%>
-  - **<%- propName %>** (<%- type %><%- required %><%- defaultValue %>): <%- description %><% });%>
-
-    `
-);
+Properties
+${_.join(propTypes, '\n')}
+`;
+};
 
 const reactDocs2Markdown = json => template(json);
 
@@ -57,9 +68,11 @@ function convert2Docs() {
 
             converted = reactDocs2Markdown(parsed);
 
+            /*
             converted += '```json\n';
             converted += JSON.stringify(parsed, null, 2);
             converted += '```';
+            */
         } catch (e) {
             gutil.log(`${file.path} contains no React Component`);
         }
