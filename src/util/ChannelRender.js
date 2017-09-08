@@ -45,7 +45,7 @@ const template = json => {
                     `Documentation: The description of ${inputParam.name} for "${name}" is undefined.`
                 );
             }
-            return `**${inputParam.name}** ${_.join(
+            return `- **${inputParam.name}** ${_.join(
                 inputParam.type.names
             )} - ${inputParam.description}`;
         })
@@ -68,26 +68,26 @@ const template = json => {
             const descriptionParam = returnParam.description
                 ? returnParam.description
                 : '';
-            return typeParam + descriptionParam;
+            return `- ${typeParam} ${descriptionParam}`;
         })
         .join('\n')
         .value();
     const usedParams = _.isEmpty(param)
         ? ''
         : `
-Parameter:
+Parameter
 ${param}
 `;
     const usedReturns = _.isEmpty(param)
         ? ''
-        : `Return:
+        : `Return
 ${returning}`;
 
     return `
 ### ${name}
 ${description}
 
-Channel: ${channel}
+Channel: ${channel}<br />
 Subject: ${subject}
 ${usedParams}
 ${usedReturns}`;
