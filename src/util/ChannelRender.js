@@ -45,9 +45,10 @@ const template = json => {
                     `Documentation: The description of ${inputParam.name} for "${name}" is undefined.`
                 );
             }
-            return `- **${inputParam.name}** ${_.join(
-                inputParam.type.names
-            )} - ${inputParam.description}`;
+
+            const paramType = _.join(inputParam.type.names, ', ');
+
+            return `- **${inputParam.name}** (${paramType}) - ${inputParam.description}`;
         })
         .join('\n')
         .value();
@@ -60,15 +61,12 @@ const template = json => {
                 _.has(returnParam, 'type.names') &&
                 _.isArray(returnParam.type.names)
             ) {
-                typeParam = _.join(returnParam.type.names);
-                typeParam = _.isEmpty(typeParam)
-                    ? typeParam
-                    : `{${typeParam}} `;
+                typeParam = `(${_.join(returnParam.type.names)}) `;
             }
             const descriptionParam = returnParam.description
                 ? returnParam.description
                 : '';
-            return `- ${typeParam} ${descriptionParam}`;
+            return `- ${typeParam}${descriptionParam}`;
         })
         .join('\n')
         .value();
