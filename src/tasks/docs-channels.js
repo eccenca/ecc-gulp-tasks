@@ -2,7 +2,7 @@ const jsdoc2md = require('jsdoc-to-markdown');
 const fs = require('fs');
 
 // define which parts of whole jsdoc2md docu should be rendered
-const docStyle = `## Channels
+const docStyle = `# Channels
 {{#ChannelRender functions}}{{this}}{{/ChannelRender}}`;
 
 module.exports = function(config, callback) {
