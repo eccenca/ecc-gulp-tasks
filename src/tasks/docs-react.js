@@ -87,10 +87,10 @@ function convert2Docs() {
 }
 
 module.exports = function(config) {
-    const glob = config.docPath || 'src/**/*.{sass,scss,js,jsx}';
+    const glob = config.docPath || './src/**/*.{sass,scss,js,jsx}';
     return gulp
         .src(glob)
         .pipe(convert2Docs())
         .pipe(concat('Components.md'))
-        .pipe(gulp.dest('.tmp/'));
+        .pipe(gulp.dest(config.docTarget || './docs/'));
 };
