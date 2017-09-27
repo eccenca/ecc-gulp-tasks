@@ -38,6 +38,7 @@ If you are sure, you want to update your environment, you can follow these steps
 
 ## Available tasks
 
+- `bad-mdl` - finds several bad mdl classes. We want to use the ecc-gui-elements instead of using those bad classes directly.
 - `build` - compiles optimized (minified, deduped) commonjs version of your component with webpack. Uses `config.webpackConfig.production` as basic configuration.
 - `build-app` - compiles optimized (minified, deduped) application with webpack. Uses `config.webpackConfig.application` as basic configuration.
 - `debug` - compiles debug version of your component with webpack, watches for changes and re-compiles when needed (until interrupted). Uses `config.webpackConfig.debug` as basic configuration.
@@ -123,7 +124,7 @@ Exported parameters are as follows:
     -  `browsers`: a [browserslist](https://github.com/ai/browserslist) definition which is used for css autoprefixing
     -  `copyFiles`: a list of [copy-webpack-plugin patterns](https://github.com/kevlened/copy-webpack-plugin#usage)  which is used for copying files to the output folder
     -  `html`: a [html template](https://github.com/ampedandwired/html-webpack-plugin/blob/master/docs/template-option.md) for the [html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin#configuration)
-- `webpackConfig.common` - may webpack config that `webpackConfig.debug`, `webpackConfig.production` and `webpackConfig.application` have in common 
+- `webpackConfig.common` - may webpack config that `webpackConfig.debug`, `webpackConfig.production` and `webpackConfig.application` have in common
 - `licenseReport` - should point to a license yaml file and contain parameters for the generated license report
 
 ### Javascript flags

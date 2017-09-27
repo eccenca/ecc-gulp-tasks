@@ -1,7 +1,7 @@
 const gutil = require('gulp-util');
 const Doctor = require('../util/doctor');
 
-module.exports = function(config, callback) {
+function gulpDoctor(config, callback) {
     const dir = process.env.INIT_CWD;
 
     const doctor = new Doctor(dir, config);
@@ -17,4 +17,8 @@ module.exports = function(config, callback) {
     } else {
         callback();
     }
-};
+}
+
+gulpDoctor.deps = ['bad-mdl'];
+
+module.exports = gulpDoctor;
