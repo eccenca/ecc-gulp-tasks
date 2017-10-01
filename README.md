@@ -1,4 +1,6 @@
 # Eccenca common gulp tasks (ecc-gulp-tasks)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feccenca%2Fecc-gulp-tasks.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feccenca%2Fecc-gulp-tasks?ref=badge_shield)
+
 
 A set of common gulp tasks for front-end development
 
@@ -35,6 +37,9 @@ If you are sure, you want to update your environment, you can follow these steps
 
 <!-- ENV:END -->
 
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feccenca%2Fecc-gulp-tasks.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Feccenca%2Fecc-gulp-tasks?ref=badge_large)
 
 ## Available tasks
 
