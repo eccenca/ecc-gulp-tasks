@@ -33,7 +33,7 @@
     "case-sensitive-paths-webpack-plugin": "^2.1.1",
     "clean-webpack-plugin": "^0.1.17",
     "copy-webpack-plugin": "^4.2.0",
-    "css-loader": "^0.14.0",
+    "css-loader": "^0.28.7",
     "cssnano": "^3.7.5",
     "ecc-license-checker": "^2.6.2",
     "eslint": "^3.19.0",
