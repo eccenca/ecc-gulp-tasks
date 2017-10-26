@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.12.0] 2017-10-26
+
+### Changed
+-   Updated css-loader from `0.14.0` to `0.28.7`.
+     We held back css-loader updates due to performance issues.
+     A short test revealed that there are no performance regressions with the new version.
+-   Several minor & patch updates of dependencies
+-   Major updates of:
+        - `file-loader`: `^0.11.2` -> `^1.1.5`
+        - `fs-extra`: `^2.1.2` -> `^4.0.2`
+
 ## [3.11.0] 2017-09-27
 
 ### Added
