@@ -354,16 +354,38 @@ class Doctor {
                     _.has(originalPJSON, ['devDependencies', 'react']) ||
                     _.has(originalPJSON, ['peerDependencies', 'react'])
                 ) {
+                    messages.push(
+                        'Still uses react in a fixed peer dependency (fixable)'
+                    );
                     _.set(fixedPJSON, ['peerDependencies', 'react'], '*');
                 }
 
                 if (_.has(originalPJSON, ['scripts', 'prepublish'])) {
+                    messages.push(
+                        'Still uses prepublish instead of prepare (fixable)'
+                    );
                     _.set(
                         fixedPJSON,
                         ['scripts', 'prepare'],
                         _.get(originalPJSON, ['scripts', 'prepublish'])
                     );
                     _.set(fixedPJSON, ['scripts', 'prepublish'], undefined);
+                }
+
+                if (!_.has(originalPJSON, ['scripts', 'docs'])) {
+                    messages.push('Missing docs script (fixable)');
+                    _.set(fixedPJSON, ['scripts', 'docs'], 'gulp docs');
+                }
+
+                if (!_.has(originalPJSON, ['lint-staged'])) {
+                    messages.push('Missing linting (fixable)');
+                    _.set(fixedPJSON, ['scripts', 'precommit'], 'lint-staged');
+                    _.set(
+                        fixedPJSON,
+                        ['scripts', 'lint'],
+                        "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix"
+                    );
+                    _.set(fixedPJSON, ['lint-staged', '*.{js,jsx}'], 'eslint');
                 }
             }
 
