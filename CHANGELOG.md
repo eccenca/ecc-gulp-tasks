@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+-   Updated css-loader from `0.14.0` to `0.28.7`.
+     We held back css-loader updates due to performance issues.
+     A short test revealed that there are no performance regressions with the new version.
+-   Several minor & patch updates of dependencies
 
 ## [3.11.0] 2017-09-27
 
