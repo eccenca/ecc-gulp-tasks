@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [3.12.0] 2017-10-26
 
 ### Changed
 -   Updated css-loader from `0.14.0` to `0.28.7`.
