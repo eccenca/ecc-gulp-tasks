@@ -89,12 +89,12 @@
     "yaml-loader": "^0.5.0"
   },
   "peerDependencies": {
-    "ecc-dotfiles": "^2.1.0"
+    "@eccenca/dotfiles": "^2.2.0"
   },
   "devDependencies": {
     "del": "^3.0.0",
     "diff": "^3.4.0",
-    "ecc-dotfiles": "^2.1.0",
+    "@eccenca/dotfiles": "^2.2.0",
     "should": "^11.1.0"
   },
   "bugs": {

@@ -195,10 +195,11 @@ class Doctor {
 
     static asyncSelfCheck({dir, logger = console.log, callback = _.noop}) {
         const checkPackages = {
-            'ecc-dotfiles': path.join(
+            '@eccenca/dotfiles': path.join(
                 dir,
                 'node_modules',
-                'ecc-dotfiles',
+                '@eccenca',
+                'dotfiles',
                 'package.json'
             ),
             '@eccenca/gulp-tasks': path.join(__dirname, '../../package.json'),
@@ -226,7 +227,7 @@ class Doctor {
             try {
                 const dfVersion = fs.readJsonSync(pjson).version;
                 cp.exec(
-                    `yarn info ${dep} version --json`,
+                    `yarn info "${dep}" version --json`,
                     (err, stdout, stderr) => {
                         if (err || !_.isEmpty(stderr.toString())) {
                             return;

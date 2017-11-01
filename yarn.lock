@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@eccenca/dotfiles@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/@eccenca/dotfiles/-/dotfiles-2.2.0.tgz#b076203391b4338b80c1f2e40d1412c51d4757c4"
+  dependencies:
+    fs-extra "^4.0.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -2203,12 +2209,6 @@ duplexer2@0.0.2:
 duplexer@~0.1.1:
   version "0.1.1"
   resolved "https://registry.npmjs.org/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
-
-ecc-dotfiles@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/ecc-dotfiles/-/ecc-dotfiles-2.1.0.tgz#bf97d93b85ded1aaaa354224bd63d5d973fa6a91"
-  dependencies:
-    fs-extra "^4.0.0"
 
 ecc-jsbn@~0.1.1:
   version "0.1.1"
