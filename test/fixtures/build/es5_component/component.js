@@ -137,7 +137,7 @@ module.exports = require("lodash/camelCase");
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = require("lodash");
+module.exports = require("ecc-test");
 
 /***/ }),
 /* 5 */

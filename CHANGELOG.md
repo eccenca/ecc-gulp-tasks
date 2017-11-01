@@ -4,7 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Added
+- Added a webpack resolver which maps old eccenca names to new ones, e.g. ecc-superagent to @eccenca/superagent.
+- Added renaming of package to `gulp doctor --heal`
+
+### Changed
+
+- Renamed package to '@eccenca/gulp-tasks'
+- Environment checks now rely on https://download.eccenca.com/js/versions.json instead of a static file.
 
 ## [3.12.0] 2017-10-26
 
