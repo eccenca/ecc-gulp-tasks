@@ -4,7 +4,7 @@ if (__WEBPACK__) {
     require('./style/style.scss');
 }
 
-const _ = require('lodash');
+const _ = require('ecc-test');
 import camelCase from 'lodash/camelCase';
 
 const json = require('./example.json');

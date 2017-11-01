@@ -6,10 +6,6 @@ const doctor = require('./src/tasks/doctor');
 const badmdl = require('./src/tasks/bad-mdl');
 const docsReact = require('./src/tasks/docs-react');
 const docsChannels = require('./src/tasks/docs-channels');
-const _ = require('lodash');
-const fs = require('fs-extra');
-
-const versions = require('./env.json');
 
 gulp.task('test', () =>
     gulp.src(['test/*.test.js'], {read: false}).pipe(
@@ -43,18 +39,3 @@ gulp.task('docs-channels', callback =>
 gulp.task('docs', ['docs-react', 'docs-channels']);
 
 gulp.task('doctor', ['bad-mdl'], callback => doctor({}, callback));
-
-gulp.task('updateREADME', () => {
-    let README = fs.readFileSync('./README.md', 'utf8');
-
-    const envTemplate = _.template(
-        fs.readFileSync('./ENV.md.template', 'utf8')
-    );
-
-    README = README.replace(
-        /<!-- ENV -->[\S\s]+<!-- ENV:END -->\n/gim,
-        envTemplate(versions)
-    );
-
-    fs.writeFileSync('./README.md', README);
-});

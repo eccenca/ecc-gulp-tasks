@@ -94,15 +94,20 @@ module.exports = {
                 repository: {
                     url: {
                         type: 'string',
-                        template: 'https://github.com/eccenca/<%= name %>.git',
+                        template: [
+                            'https://github.com/eccenca/<%= name %>.git',
+                            'https://github.com/eccenca/<%= name.replace("@eccenca/","ecc-") %>.git',
+                        ],
                     },
                 },
                 bugs: {
                     properties: {
                         url: {
                             type: 'string',
-                            template:
+                            template: [
                                 'https://github.com/eccenca/<%= name %>/issues',
+                                'https://github.com/eccenca/<%= name.replace("@eccenca/","ecc-") %>/issues',
+                            ],
                         },
                     },
                 },
@@ -128,6 +133,9 @@ module.exports = {
                                 'https://gitlab.eccenca.com/elds-ui/<%= name %>',
                                 'https://gitlab.eccenca.com/elds-ui/<%= name %>.git',
                                 'https://github.com/eccenca/<%= name %>.git',
+                                'https://gitlab.eccenca.com/elds-ui/<%= name.replace("@eccenca/","ecc-") %>',
+                                'https://gitlab.eccenca.com/elds-ui/<%= name.replace("@eccenca/","ecc-") %>.git',
+                                'https://github.com/eccenca/<%= name.replace("@eccenca/","ecc-") %>.git',
                             ],
                         },
                     },

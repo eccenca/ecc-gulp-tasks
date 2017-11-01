@@ -93,5 +93,8 @@ module.exports = function(config, callback) {
     const glob =
         config.checkForBadMDL || '{src,ui-test,test}/**/*.{sass,scss,js,jsx}';
 
-    gulp.src(glob).pipe(containsBadMDL(callback)).on('data', _.noop);
+    gulp
+        .src(glob)
+        .pipe(containsBadMDL(callback))
+        .on('data', _.noop);
 };
