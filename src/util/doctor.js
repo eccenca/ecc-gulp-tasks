@@ -16,6 +16,8 @@ ajv.addFormat('prepackage', () => false);
 ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
 ajv.addSchema(require('./schema/package.eccenca.js'), 'package.eccenca');
 
+const nameMap = require('../nameMap');
+
 function isEccencaPackage(p) {
     const search = _.chain(p)
         .pick(['name', 'bugs', 'repository'])
@@ -348,6 +350,13 @@ class Doctor {
                     messages = messages.concat(
                         ajvToMessages(ajv.errors, 'package.json', originalPJSON)
                     );
+                }
+
+                const newName = nameMap[originalPJSON.name];
+
+                if (newName) {
+                    messages.push(`Package should have new name ${newName}`);
+                    _.set(fixedPJSON, 'name', newName);
                 }
 
                 if (
