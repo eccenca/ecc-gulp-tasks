@@ -8,6 +8,19 @@ const cp = require('child_process');
 const execSync = cp.execSync;
 const textTable = require('text-table');
 
+const CacheService = require('cache-service');
+const FileCacheService = require('cache-service-file-cache');
+
+const fileCache = new FileCacheService({
+    key: 'crypto-currencies',
+    maxRetries: 8,
+    defaultExpiration: 200 * 60,
+    verbose: false,
+});
+const cache = new CacheService({verbose: false}, [fileCache]);
+const superagentCache = require('superagent-cache-plugin')(cache);
+const superagent = require('superagent');
+
 const Ajv = require('ajv');
 
 const ajv = new Ajv({allErrors: true});
@@ -138,12 +151,12 @@ function ajvToMessages(errors, fileName, data) {
 }
 
 class Doctor {
-    constructor(dir, config) {
+    constructor(dir, config, wait) {
         this.basedir = dir;
         this.pjsonFile = path.join(this.basedir, 'package.json');
         this.config = config || {};
 
-        this.check();
+        this.check(wait);
     }
 
     heal() {
@@ -238,7 +251,7 @@ class Doctor {
         });
     }
 
-    check() {
+    check(wait) {
         this.messages = {};
         this.deleteCandidates = [];
         this.fixedPJSON = null;
@@ -261,52 +274,78 @@ class Doctor {
 
         this.checkGulpConfig();
 
-        this.checkEnv();
+        this.checkEnv(wait);
     }
 
-    checkEnv() {
-        const messages = [];
-
-        const checkCommands = fs.readJsonSync(
-            path.join(__dirname, '../../env.json')
-        );
-
-        _.forEach(checkCommands, ({cmd, version}, tool) => {
-            try {
-                const installedVersion = execSync(`${tool} ${cmd}`, {
-                    cwd: this.basedir,
-                })
-                    .toString()
-                    .replace(/\r?\n/g, '');
-
-                if (!semver.satisfies(installedVersion, `${version}`, true)) {
-                    let m = `You are using ${tool}@${installedVersion}.`;
-                    m += ` The current recommended version is ${version}.`;
-
-                    messages.push(m);
-                }
-            } catch (e) {
-                // we die gracefully, as the check errored, or something
-            }
-        });
-
-        if (!_.isEmpty(messages)) {
-            let envMessages =
-                'The following problems have been found with your environment:';
-            _.map(messages, message => {
-                envMessages += `\n\t${message}`;
-            });
-
-            // eslint-disable-next-line
-            const version = require(path.join(__dirname, '../../package.json'))
-                .version;
-
-            const url = `https://github.com/elds/ecc-gulp-tasks/blob/v${version}/README.md#environment`;
-
-            envMessages += `\n\n\tPlease refer to ${url} for more information/resolutions.`;
-
-            this.messages.envMessages = envMessages;
+    printEnv({logger = console.log, callback = _.noop}) {
+        if (!this.messages.envMessages) {
+            logger('Your environment is perfectly set up');
+            return callback();
         }
+
+        const envInstructions = _.template(
+            fs.readFileSync(
+                path.join(__dirname, '../../ENV.md.template'),
+                'utf8'
+            )
+        )(this.versions);
+
+        logger(envInstructions);
+
+        return callback();
+    }
+
+    checkEnv(wait) {
+        superagent
+            .get('https://download.eccenca.com/js/versions.json')
+            .use(superagentCache)
+            .then(ret => {
+                const messages = [];
+
+                const checkCommands = ret.body;
+                this.versions = ret.body;
+
+                _.forEach(checkCommands, (version, tool) => {
+                    try {
+                        const installedVersion = execSync(`${tool} --version`, {
+                            cwd: this.basedir,
+                        })
+                            .toString()
+                            .replace(/\r?\n/g, '');
+
+                        if (
+                            !semver.satisfies(
+                                installedVersion,
+                                `${version}`,
+                                true
+                            )
+                        ) {
+                            let m = `You are using ${tool}@${installedVersion}.`;
+                            m += ` The current recommended version is ${version}.`;
+
+                            messages.push(m);
+                        }
+                    } catch (e) {
+                        // we die gracefully, as the check errored, or something
+                    }
+                });
+
+                if (!_.isEmpty(messages)) {
+                    let envMessages =
+                        'The following problems have been found with your environment:';
+                    _.map(messages, message => {
+                        envMessages += `\n\t${message}`;
+                    });
+
+                    envMessages += `\n\n\tPlease run 'gulp doctor --env' for more information/resolutions.`;
+
+                    this.messages.envMessages = envMessages;
+                }
+
+                if (wait) {
+                    wait();
+                }
+            });
     }
 
     checkGulpConfig() {
