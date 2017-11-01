@@ -1,4 +1,4 @@
-# Eccenca common gulp tasks (ecc-gulp-tasks)
+# Eccenca common gulp tasks (@eccenca/gulp-tasks)
 
 A set of common gulp tasks for front-end development
 
@@ -21,11 +21,11 @@ Simply run `gulp doctor --env` to check whether your environment matches the rec
 
 ## Usage
 
-- Include into your project using `npm i --save-dev ecc-gulp-tasks`
+- Include into your project using `npm i --save-dev @eccenca/gulp-tasks`
 - Create `gulpfile.js` looks like this:
 
 ```js
-var gulp = require('ecc-gulp-tasks')(require('./buildConfig.js'));
+var gulp = require('@eccenca/gulp-tasks')(require('./buildConfig.js'));
 
 gulp.task('default', ['debug', 'serve']);
 ```
@@ -39,7 +39,7 @@ The second one is your build config (described below).
 If you need to use your custom gulp tasks after including common ones, you can do it like so:
 
 ```js
-var gulp = require('ecc-gulp-tasks')(/* ... */);
+var gulp = require('@eccenca/gulp-tasks')(/* ... */);
 // define task inline
 gulp.task('my-task', function() {
     // ...
@@ -57,7 +57,7 @@ To do that, you can use [gulp-sequence](https://github.com/teambition/gulp-seque
 
 ```js
 var gulpSequence = require('gulp-sequence');
-var gulp = require('ecc-gulp-tasks')(/* ... */);
+var gulp = require('@eccenca/gulp-tasks')(/* ... */);
 // ....
 gulp.task('deploy', gulpSequence('test', 'build-app'));
 ```

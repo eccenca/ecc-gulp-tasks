@@ -201,7 +201,7 @@ class Doctor {
                 'ecc-dotfiles',
                 'package.json'
             ),
-            'ecc-gulp-tasks': path.join(__dirname, '../../package.json'),
+            '@eccenca/gulp-tasks': path.join(__dirname, '../../package.json'),
         };
 
         const msg = [];

@@ -1,5 +1,5 @@
 {
-  "name": "ecc-gulp-tasks",
+  "name": "@eccenca/gulp-tasks",
   "version": "3.12.0",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
