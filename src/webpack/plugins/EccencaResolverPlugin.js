@@ -5,7 +5,9 @@
 const createInnerCallback = require('enhanced-resolve/lib/createInnerCallback');
 const _ = require('lodash');
 
-const aliases = require('../../nameMap');
+let aliases = require('../../nameMap');
+
+aliases = {'ecc-test': 'lodash'};
 
 const mappedPackages = _.keys(aliases);
 
