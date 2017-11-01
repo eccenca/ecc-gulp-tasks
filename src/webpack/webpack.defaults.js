@@ -4,6 +4,8 @@ const path = require('path');
 
 const _ = require('lodash');
 
+const EccencaResolverPlugin = require('./plugins/EccencaResolverPlugin');
+
 const {
     cssLoader,
     postCssLoader,
@@ -39,6 +41,7 @@ module.exports = config => ({
             rx: 'rx/dist/rx.all.js',
             'ecc-superagent': '@eccenca/superagent',
         },
+        plugins: [new EccencaResolverPlugin()],
     },
     node: {
         fs: 'empty',

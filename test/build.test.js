@@ -216,8 +216,8 @@ describe('building', () => {
                 runComponentBuild(
                     './index-case-sensitivity-require.js',
                     err => {
-                        should(err).be.an
-                            .Error(err)
+                        should(err)
+                            .be.an.Error(err)
                             .and.have.property('message')
                             .which.is.a.String()
                             .and.match(
@@ -235,8 +235,8 @@ describe('building', () => {
                 runComponentBuild(
                     './index-case-sensitivity-require.js',
                     err => {
-                        should(err).be.an
-                            .Error(err)
+                        should(err)
+                            .be.an.Error(err)
                             .and.have.property('message')
                             .which.is.a.String()
                             .and.match(
