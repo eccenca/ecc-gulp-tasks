@@ -12,7 +12,7 @@
   "scripts": {
     "init": "ecc-link-dotfiles",
     "test": "gulp test",
-    "prepare": "npm run init && gulp updateREADME",
+    "prepare": "npm run init",
     "eslint-check": "eslint --print-config .eslintrc.yml && eslint --print-config .eslintrc.yml | eslint-config-prettier-check",
     "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix",
     "precommit": "lint-staged",
