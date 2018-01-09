@@ -14,6 +14,6 @@ module.exports = function(config, callback) {
         template: docStyle,
         helper,
     });
-    fs.writeFile(config.docTarget || './docs/Store.md', output);
+    fs.writeFileSync(config.docTarget || './docs/Store.md', output);
     callback(null, null);
 };

@@ -5,7 +5,6 @@ const concat = require('gulp-concat');
 const _ = require('lodash');
 
 module.exports = function(config) {
-    console.warn('debug config', config);
     // template path
     const templateFile = config.docTemplatePath || 'docs/docTemplate.md';
     // react components path
