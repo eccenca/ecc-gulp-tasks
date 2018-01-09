@@ -4,9 +4,14 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
+### Added
+- task `gulp docs` for automatically create README.md
+- check for existing README.md template file in `gulp doctor` and add auto fix to `gulp doctor --heal`
+
 TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
 
 ## [3.14.0] 2017-12-05
+
 ### Added
 - base ref for nested routing
 
