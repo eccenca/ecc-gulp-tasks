@@ -442,9 +442,28 @@ class Doctor {
                     _.set(
                         fixedPJSON,
                         ['scripts', 'prepare'],
-                        _.get(originalPJSON, ['scripts', 'prepublish'])
+                        `${_.get(originalPJSON, [
+                            'scripts',
+                            'prepublish',
+                        ])} && npm run docs`
                     );
                     _.set(fixedPJSON, ['scripts', 'prepublish'], undefined);
+                    //  when prepare is already used check for docs argument within
+                } else if (
+                    !_.includes(
+                        _.get(originalPJSON, ['scripts', 'prepare']),
+                        'gulp docs'
+                    )
+                ) {
+                    messages.push('Still not auto generate docs (fixable)');
+                    _.set(
+                        fixedPJSON,
+                        ['scripts', 'prepare'],
+                        `${_.get(originalPJSON, [
+                            'scripts',
+                            'prepare',
+                        ])} && npm run docs`
+                    );
                 }
 
                 if (!_.has(originalPJSON, ['scripts', 'docs'])) {
