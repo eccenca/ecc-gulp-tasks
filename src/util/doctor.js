@@ -452,7 +452,7 @@ class Doctor {
                 } else if (
                     !_.includes(
                         _.get(originalPJSON, ['scripts', 'prepare']),
-                        'gulp docs'
+                        'npm run docs'
                     )
                 ) {
                     messages.push('Still not auto generate docs (fixable)');
