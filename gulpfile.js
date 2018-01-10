@@ -4,6 +4,7 @@ const mocha = require('gulp-spawn-mocha');
 
 const doctor = require('./src/tasks/doctor');
 const badmdl = require('./src/tasks/bad-mdl');
+const docs = require('./src/tasks/docs');
 const docsReact = require('./src/tasks/docs-react');
 const docsChannels = require('./src/tasks/docs-channels');
 
@@ -36,6 +37,14 @@ gulp.task('docs-channels', callback =>
     )
 );
 
-gulp.task('docs', ['docs-react', 'docs-channels']);
+gulp.task('docs', ['docs-react', 'docs-channels'], callback =>
+    docs(
+        {
+            docTemplatePath: '.tmp/docTemplate.md',
+            docTemplateTarget: '.tmp/',
+        },
+        callback
+    )
+);
 
 gulp.task('doctor', ['bad-mdl'], callback => doctor({}, callback));
