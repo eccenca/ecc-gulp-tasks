@@ -36,9 +36,8 @@ const template = json => {
 
 ${description}
 
-Properties
-${_.join(propTypes, '\n')}
-`;
+# Properties
+${_.join(propTypes, '\n')}`;
 };
 
 const reactDocs2Markdown = json => template(json);

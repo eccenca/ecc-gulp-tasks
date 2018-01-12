@@ -2,7 +2,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.15.0] 2018-01-12
+
+### Added
+- task `gulp docs` for automatically create README.md and at it to `prepare` script
+- check for existing README.md template file in `gulp doctor` and add auto fix to `gulp doctor --heal`
+
+### Fixed
+- removed `style` from `resolve.mainFields` as it broke dependency resolution of projects like codemirror
+  and was not used in a useful way anyhow
+
 ## [3.14.0] 2017-12-05
+
 ### Added
 - base ref for nested routing
 
@@ -50,6 +61,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - Aliases for mdl fixes in the gui elements
 
 ## [3.8.1] 2017-08-04
+
 ### Fixed
 - replace 'prepublish' in package.json
 

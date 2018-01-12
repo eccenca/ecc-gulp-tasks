@@ -177,6 +177,30 @@ class Doctor {
             }
         });
 
+        if (!_.isEmpty(this.addDocTemplate)) {
+            const docDir = path.dirname(this.addDocTemplate);
+            const template = `<!-- <<Component_Head>> ->
+
+<!-- <<Component_Store>> ->
+`;
+
+            messages += `\nTrying to add doc template at ${this
+                .addDocTemplate} ... `;
+
+            // create directory if not exist
+            if (!fs.existsSync(docDir)) {
+                fs.mkdirSync(docDir);
+            }
+
+            try {
+                fs.writeFileSync(this.addDocTemplate, template);
+                messages += 'Success.';
+            } catch (e) {
+                messages += 'Failed.';
+                messages += `\n${e.toString()}\n`;
+            }
+        }
+
         if (!_.isNull(this.fixedPJSON)) {
             messages += `\nTrying to fix ${this.pjsonFile} ... `;
             try {
@@ -269,6 +293,8 @@ class Doctor {
             'ui-test/**/*.svg',
             'version.json',
         ]);
+
+        this.checkDocTemplateExists('docs/docTemplate.md');
 
         // Check package.json
         this.checkPackageJson();
@@ -416,9 +442,28 @@ class Doctor {
                     _.set(
                         fixedPJSON,
                         ['scripts', 'prepare'],
-                        _.get(originalPJSON, ['scripts', 'prepublish'])
+                        `${_.get(originalPJSON, [
+                            'scripts',
+                            'prepublish',
+                        ])} && npm run docs`
                     );
                     _.set(fixedPJSON, ['scripts', 'prepublish'], undefined);
+                    //  when prepare is already used check for docs argument within
+                } else if (
+                    !_.includes(
+                        _.get(originalPJSON, ['scripts', 'prepare']),
+                        'npm run docs'
+                    )
+                ) {
+                    messages.push('Still not auto generate docs (fixable)');
+                    _.set(
+                        fixedPJSON,
+                        ['scripts', 'prepare'],
+                        `${_.get(originalPJSON, [
+                            'scripts',
+                            'prepare',
+                        ])} && npm run docs`
+                    );
                 }
 
                 if (!_.has(originalPJSON, ['scripts', 'docs'])) {
@@ -475,8 +520,26 @@ class Doctor {
         }
     }
 
+    checkDocTemplateExists(docTemplatePath) {
+        this.addDocTemplate = globby.sync(docTemplatePath, {
+            cwd: this.basedir,
+            absolute: true,
+        });
+        // if template file was found remove it from array, else insert path to add
+        if (_.isEmpty(this.addDocTemplate)) {
+            this.addDocTemplate = docTemplatePath;
+            this.messages.addDocTemplate = `The following files should be added (auto-fixable): \n\t${docTemplatePath}`;
+        } else {
+            this.addDocTemplate = [];
+        }
+    }
+
     hasFixableProblems() {
-        return !_.isEmpty(this.deleteCandidates) || !_.isNull(this.fixedPJSON);
+        return (
+            !_.isEmpty(this.deleteCandidates) ||
+            !_.isEmpty(this.addDocTemplate) ||
+            !_.isNull(this.fixedPJSON)
+        );
     }
 
     hasProblems() {

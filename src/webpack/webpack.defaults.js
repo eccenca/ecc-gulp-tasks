@@ -28,7 +28,7 @@ const shouldExcludeFromCompile = filePath => {
 
 module.exports = config => ({
     resolve: {
-        mainFields: ['style', 'es5', 'webpack', 'browserify', 'main'],
+        mainFields: ['es5', 'webpack', 'browserify', 'main'],
         extensions: ['.js', '.jsx'],
         modules: [
             config.context,
