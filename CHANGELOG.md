@@ -8,6 +8,10 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - task `gulp docs` for automatically create README.md and at it to `prepare` script
 - check for existing README.md template file in `gulp doctor` and add auto fix to `gulp doctor --heal`
 
+### Fixed
+- removed `style` from `resolve.mainFields` as it broke dependency resolution of projects like codemirror
+  and was not used in a useful way anyhow
+
 ## [3.14.0] 2017-12-05
 
 ### Added
