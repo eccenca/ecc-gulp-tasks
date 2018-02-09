@@ -20,8 +20,8 @@
     "docs": "gulp docs"
   },
   "dependencies": {
-    "ajv": "^5.3.0",
-    "autoprefixer": "^6.6.0",
+    "ajv": "^6.1.1",
+    "autoprefixer": "^6.7.7",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
@@ -57,17 +57,17 @@
     "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
-    "gulp-spawn-mocha": "^3.3.1",
+    "gulp-spawn-mocha": "^5.0.0",
     "gulp-util": "^3.0.8",
     "html-webpack-plugin": "^2.30.1",
     "husky": "^0.14.3",
     "istanbul": "^0.4.5",
     "jsdoc-to-markdown": "^4.0.1",
     "json-loader": "^0.5.7",
-    "lint-staged": "^4.3.0",
+    "lint-staged": "^6.1.0",
     "lodash": "^4.17.4",
     "method-override": "^2.3.10",
-    "mocha": "^3.4.2",
+    "mocha": "^5.0.0",
     "node-sass": "^4.5.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "postcss-loader": "^2.0.8",
@@ -78,7 +78,7 @@
     "sassyjson": "^1.1.8",
     "semver": "^5.4.1",
     "slash": "^1.0.0",
-    "style-loader": "^0.19.0",
+    "style-loader": "^0.20.1",
     "superagent": "^3.8.0",
     "superagent-cache-plugin": "^2.0.0",
     "text-table": "^0.2.0",
@@ -95,7 +95,7 @@
     "@eccenca/dotfiles": "^2.4.0",
     "del": "^3.0.0",
     "diff": "^3.4.0",
-    "should": "^11.1.0"
+    "should": "^13.2.1"
   },
   "bugs": {
     "url": "https://github.com/eccenca/ecc-gulp-tasks/issues"

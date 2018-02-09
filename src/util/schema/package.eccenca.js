@@ -1,5 +1,5 @@
 module.exports = {
-    $schema: 'http://json-schema.org/draft-06/schema#',
+    $schema: 'http://json-schema.org/draft-07/schema#',
     title: 'JSON schema for NPM package.json files',
     definitions: {
         package: {

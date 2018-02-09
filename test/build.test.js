@@ -209,15 +209,13 @@ describe('building', () => {
         });
 
         describe('should fail', () => {
-            it('if case sensitivity does not match on import', function test(
-                done
-            ) {
+            it('if case sensitivity does not match on import', function test(done) {
                 this.timeout(10000);
                 runComponentBuild(
                     './index-case-sensitivity-require.js',
                     err => {
                         should(err)
-                            .be.an.Error(err)
+                            .be.an.Error()
                             .and.have.property('message')
                             .which.is.a.String()
                             .and.match(
@@ -228,15 +226,13 @@ describe('building', () => {
                 );
             });
 
-            it('if case sensitivity does not match on require', function test(
-                done
-            ) {
+            it('if case sensitivity does not match on require', function test(done) {
                 this.timeout(10000);
                 runComponentBuild(
                     './index-case-sensitivity-require.js',
                     err => {
                         should(err)
-                            .be.an.Error(err)
+                            .be.an.Error()
                             .and.have.property('message')
                             .which.is.a.String()
                             .and.match(

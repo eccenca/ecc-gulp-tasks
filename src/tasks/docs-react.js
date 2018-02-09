@@ -78,7 +78,7 @@ function convert2Docs() {
 
         const newFile = file;
 
-        newFile.contents = new Buffer(converted);
+        newFile.contents = Buffer.from(converted, 'utf-8');
         newFile.path = gutil.replaceExtension(file.path, '.md');
 
         cb(null, newFile);
