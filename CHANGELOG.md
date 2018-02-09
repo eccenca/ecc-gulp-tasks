@@ -12,7 +12,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - `start` was not possible when version check from `gulp doctor` failed.
 
 ### Removed
-- Deprecated `gulp lint` task
+- Deprecated `lint`, `bamboo-test` and `serve` gulp tasks
 
 ## [3.15.0] 2018-01-12
 
