@@ -1,9 +1,8 @@
 const gulp = require('gulp');
-
-const through = require('through2');
-const gutil = require('gulp-util');
-
 const _ = require('lodash');
+const through = require('through2');
+
+const helpers = require('../util/helpers');
 
 const badItems = [
     'mdl-button',
@@ -36,7 +35,7 @@ function containsBadMDL(callback) {
 
             if (file.isStream()) {
                 cb(
-                    new gutil.PluginError(
+                    new helpers.PluginError(
                         'gulp-bad-mdl',
                         'Streaming not supported'
                     )
@@ -76,14 +75,14 @@ function containsBadMDL(callback) {
             );
 
             if (resultString !== '') {
-                resultString = `${gutil.colors.yellow(
+                resultString = `${helpers.colors.yellow(
                     '[WARN]'
                 )} bad mdl patterns found:\n${resultString}`;
             } else {
                 resultString = '[INFO] no bad mdl patterns found.';
             }
 
-            gutil.log(resultString);
+            helpers.log(resultString);
 
             callback(null, result);
         });

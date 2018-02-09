@@ -1,4 +1,4 @@
-const gutil = require('gulp-util');
+const helpers = require('../util/helpers');
 const Doctor = require('../util/doctor');
 
 function gulpDoctor(config, callback) {
@@ -7,16 +7,16 @@ function gulpDoctor(config, callback) {
     let doctor;
 
     const wait = () => {
-        if (gutil.env.heal) {
-            gutil.log(doctor.heal());
+        if (process.argv.includes('--heal')) {
+            helpers.log(doctor.heal());
         }
 
-        gutil.log(doctor.toString());
+        helpers.log(doctor.toString());
 
-        if (gutil.env['self-check']) {
-            Doctor.asyncSelfCheck({dir, callback, logger: gutil.log});
-        } else if (gutil.env.env) {
-            doctor.printEnv({callback, logger: gutil.log});
+        if (process.argv.includes('--self-check')) {
+            Doctor.asyncSelfCheck({dir, callback, logger: helpers.log});
+        } else if (process.argv.includes('--env')) {
+            doctor.printEnv({callback, logger: helpers.log});
         } else {
             callback();
         }

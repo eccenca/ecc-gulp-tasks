@@ -37,18 +37,24 @@ const template = json => {
                 _.isEmpty(inputParam.type.names[0])
             ) {
                 throw new Error(
-                    `Documentation: The param type of ${inputParam.name} for "${name}" is undefined.`
+                    `Documentation: The param type of ${
+                        inputParam.name
+                    } for "${name}" is undefined.`
                 );
             }
             if (_.isUndefined(inputParam.description)) {
                 throw new Error(
-                    `Documentation: The description of ${inputParam.name} for "${name}" is undefined.`
+                    `Documentation: The description of ${
+                        inputParam.name
+                    } for "${name}" is undefined.`
                 );
             }
 
             const paramType = _.join(inputParam.type.names, ', ');
 
-            return `- **${inputParam.name}** (${paramType}) - ${inputParam.description}`;
+            return `- **${inputParam.name}** (${paramType}) - ${
+                inputParam.description
+            }`;
         })
         .join('\n')
         .value();

@@ -3,8 +3,16 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
+
+### Changed
+- Updated eslint to `4.x`
+- Require newest version of ecc-dotfiles as peer dependency
+
 ### Fixed
 - `start` was not possible when version check from `gulp doctor` failed.
+
+### Removed
+- Deprecated `lint`, `bamboo-test` and `serve` gulp tasks
 
 ## [3.15.0] 2018-01-12
 

@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const chalk = require('gulp-util').colors;
+const chalk = require('ansi-colors');
 
 // configure server
 const server = express();
