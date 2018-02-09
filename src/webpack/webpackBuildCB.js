@@ -1,8 +1,8 @@
-const gutil = require('gulp-util');
+const helpers = require('../util/helpers');
 
 module.exports = function webpackBuildCB(gulpCallback, err, stats) {
     if (err) {
-        gulpCallback(new gutil.PluginError('webpack', err));
+        gulpCallback(new helpers.PluginError('webpack', err));
         return;
     }
 
@@ -15,11 +15,11 @@ module.exports = function webpackBuildCB(gulpCallback, err, stats) {
     });
 
     if (stats.hasErrors()) {
-        gulpCallback(new gutil.PluginError('webpack', ret));
+        gulpCallback(new helpers.PluginError('webpack', ret));
         return;
     }
     if (process.env.NODE_ENV !== 'test') {
-        gutil.log('[webpack]: ', ret);
+        helpers.log('[webpack]: ', ret);
     }
     gulpCallback();
 };
