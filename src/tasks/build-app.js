@@ -3,7 +3,7 @@
 
 const _ = require('lodash');
 const path = require('path');
-const gutil = require('gulp-util');
+const helpers = require('../util/helpers');
 const webpack = require('webpack');
 const definePlugin = require('../webpack/plugins/definePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -84,8 +84,8 @@ module.exports = function(config, callback) {
 
         // @deprecated
         if (wpConfig.html.template && /\.html$/.test(wpConfig.html.template)) {
-            gutil.log(
-                gutil.colors.yellow('[DEPRECATION]'),
+            helpers.log(
+                helpers.colors.yellow('[DEPRECATION]'),
                 'Please provide an .ejs template for html-webpack plugin and no .html template'
             );
 

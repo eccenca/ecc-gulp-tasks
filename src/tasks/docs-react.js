@@ -3,7 +3,8 @@ const gulp = require('gulp');
 const through = require('through2');
 const reactDocs = require('react-docgen');
 const path = require('path');
-const gutil = require('gulp-util');
+const helpers = require('../util/helpers');
+
 const concat = require('gulp-concat');
 const _ = require('lodash');
 
@@ -51,7 +52,7 @@ function convert2Docs() {
 
         if (file.isStream()) {
             cb(
-                new gutil.PluginError('gulp-bad-mdl', 'Streaming not supported')
+                new helpers.PluginError('docs-react', 'Streaming not supported')
             );
             return;
         }
@@ -63,7 +64,7 @@ function convert2Docs() {
         try {
             const parsed = reactDocs.parse(fileContent);
 
-            parsed.name = parsed.displayName || path.basename(file.path);
+            helpers.name = parsed.displayName || path.basename(file.path);
 
             converted = reactDocs2Markdown(parsed);
 
@@ -73,13 +74,15 @@ function convert2Docs() {
             converted += '```';
             */
         } catch (e) {
-            gutil.log(`${file.path} contains no React Component`);
+            helpers.log(`${file.path} contains no React Component`);
         }
 
         const newFile = file;
 
-        newFile.contents = new Buffer(converted);
-        newFile.path = gutil.replaceExtension(file.path, '.md');
+        newFile.contents = Buffer.from(converted, 'utf-8');
+        const newPath = path.parse(file.path);
+        newPath.ext = '.md';
+        newFile.path = path.format(newPath);
 
         cb(null, newFile);
     });

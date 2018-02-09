@@ -1,4 +1,4 @@
-const gutil = require('gulp-util');
+const helpers = require('../util/helpers');
 const webpack = require('webpack');
 const definePlugin = require('../webpack/plugins/definePlugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -7,7 +7,7 @@ const BrowserErrorPlugin = require('../webpack/plugins/browserErrorPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const _ = require('lodash');
 
-const chalk = gutil.colors;
+const chalk = helpers.colors;
 const webpackStatsToString = require('webpack/lib/Stats').jsonToString;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const serve = require('../util/serve');
@@ -41,12 +41,12 @@ const debug = (config, callback) => {
 
     Doctor.asyncSelfCheck({
         dir: wpConfig.context,
-        logger: gutil.log.bind(null, gutil.colors.yellow('[WARNING]:')),
+        logger: helpers.log.bind(null, helpers.colors.yellow('[WARNING]:')),
     });
 
     wpConfig.output.path = path.join(wpConfig.context, '.tmp');
 
-    gutil.log(
+    helpers.log(
         chalk.cyan('[webpack]'),
         'Started initial build (this make some time)'
     );
@@ -134,15 +134,15 @@ const debug = (config, callback) => {
     const compiler = webpack(wpConfig);
     compiler.watch(200, (err, stats) => {
         if (err) {
-            gutil.log(chalk.red('[webpack-error]'), err.toString());
+            helpers.log(chalk.red('[webpack-error]'), err.toString());
             return;
         }
 
-        gutil.log(chalk.cyan('[webpack]'), statsToString(stats, firstRun));
+        helpers.log(chalk.cyan('[webpack]'), statsToString(stats, firstRun));
 
         if (firstRun) {
-            gutil.log(chalk.cyan('[webpack]'), 'Finished initial build');
-            serve({path: wpConfig.output.path, logger: gutil.log});
+            helpers.log(chalk.cyan('[webpack]'), 'Finished initial build');
+            serve({path: wpConfig.output.path, logger: helpers.log});
             firstRun = false;
             callback();
         }

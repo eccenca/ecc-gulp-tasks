@@ -3,9 +3,8 @@ const path = require('path');
 const _ = require('lodash');
 const fs = require('fs-extra');
 const semver = require('semver');
-const cp = require('child_process');
+const {execSync, exec} = require('child_process');
 
-const execSync = cp.execSync;
 const textTable = require('text-table');
 
 const CacheService = require('cache-service');
@@ -26,7 +25,6 @@ const Ajv = require('ajv');
 const ajv = new Ajv({allErrors: true});
 ajv.addFormat('semver', value => semver.valid(value) !== null);
 ajv.addFormat('prepackage', () => false);
-ajv.addMetaSchema(require('ajv/lib/refs/json-schema-draft-04.json'));
 ajv.addSchema(require('./schema/package.eccenca.js'), 'package.eccenca');
 
 const nameMap = require('../nameMap');
@@ -121,7 +119,7 @@ function ajvToMessages(errors, fileName, data) {
     const table = [['message', 'value', 'details']];
 
     _.forEach(reduced, entry => {
-        let dataPath = entry.dataPath;
+        let {dataPath} = entry;
         const value = JSON.stringify(_.get(data, dataPath, ''));
         if (dataPath === '') {
             dataPath = fileName;
@@ -184,8 +182,9 @@ class Doctor {
 <!-- <<Component_Store>> ->
 `;
 
-            messages += `\nTrying to add doc template at ${this
-                .addDocTemplate} ... `;
+            messages += `\nTrying to add doc template at ${
+                this.addDocTemplate
+            } ... `;
 
             // create directory if not exist
             if (!fs.existsSync(docDir)) {
@@ -250,7 +249,7 @@ class Doctor {
             logger(`Checking if there is a new version of ${dep}...`);
             try {
                 const dfVersion = fs.readJsonSync(pjson).version;
-                cp.exec(
+                exec(
                     `yarn info "${dep}" version --json`,
                     (err, stdout, stderr) => {
                         if (err || !_.isEmpty(stderr.toString())) {
@@ -326,53 +325,66 @@ class Doctor {
         superagent
             .get('https://download.eccenca.com/js/versions.json')
             .use(superagentCache)
-            .then(ret => {
-                const messages = [];
+            .then(
+                ret => {
+                    const messages = [];
 
-                const checkCommands = ret.body;
-                this.versions = ret.body;
+                    const checkCommands = ret.body;
+                    this.versions = ret.body;
 
-                _.forEach(checkCommands, (version, tool) => {
-                    try {
-                        const installedVersion = execSync(`${tool} --version`, {
-                            cwd: this.basedir,
-                        })
-                            .toString()
-                            .replace(/\r?\n/g, '');
-
-                        if (
-                            !semver.satisfies(
-                                installedVersion,
-                                `${version}`,
-                                true
+                    _.forEach(checkCommands, (version, tool) => {
+                        try {
+                            const installedVersion = execSync(
+                                `${tool} --version`,
+                                {
+                                    cwd: this.basedir,
+                                }
                             )
-                        ) {
-                            let m = `You are using ${tool}@${installedVersion}.`;
-                            m += ` The current recommended version is ${version}.`;
+                                .toString()
+                                .replace(/\r?\n/g, '');
 
-                            messages.push(m);
+                            if (
+                                !semver.satisfies(
+                                    installedVersion,
+                                    `${version}`,
+                                    true
+                                )
+                            ) {
+                                let m = `You are using ${tool}@${installedVersion}.`;
+                                m += ` The current recommended version is ${version}.`;
+
+                                messages.push(m);
+                            }
+                        } catch (e) {
+                            // we die gracefully, as the check errored, or something
                         }
-                    } catch (e) {
-                        // we die gracefully, as the check errored, or something
-                    }
-                });
-
-                if (!_.isEmpty(messages)) {
-                    let envMessages =
-                        'The following problems have been found with your environment:';
-                    _.map(messages, message => {
-                        envMessages += `\n\t${message}`;
                     });
 
-                    envMessages += `\n\n\tPlease run 'gulp doctor --env' for more information/resolutions.`;
+                    if (!_.isEmpty(messages)) {
+                        let envMessages =
+                            'The following problems have been found with your environment:';
+                        _.map(messages, message => {
+                            envMessages += `\n\t${message}`;
+                        });
 
-                    this.messages.envMessages = envMessages;
-                }
+                        envMessages += `\n\n\tPlease run 'gulp doctor --env' for more information/resolutions.`;
 
-                if (wait) {
-                    wait();
+                        this.messages.envMessages = envMessages;
+                    }
+
+                    if (wait) {
+                        wait();
+                    }
+                },
+                e => {
+                    this.messages.envMessages = `Skipping version checks from ${
+                        e.host
+                    }: "${e.code}".`;
+                    if (wait) {
+                        wait();
+                    }
                 }
-            });
+            );
     }
 
     checkGulpConfig() {
