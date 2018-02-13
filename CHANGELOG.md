@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.16.1] 2018-02-13
+
+### Changed
+- Use `upath` instead of `slash` and `path` library, as it is more powerful
+
+### Fixed
+- `isExternalPackage` is now Windows compatible
+- `shouldExcludeFromCompile` is now Windows compatible
+
 ## [3.16.0] 2018-02-09
 
 ### Changed

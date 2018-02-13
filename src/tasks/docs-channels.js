@@ -1,6 +1,6 @@
 const jsdoc2md = require('jsdoc-to-markdown');
 const fs = require('fs');
-const path = require('path');
+const path = require('upath');
 
 // define which parts of whole jsdoc2md docu should be rendered
 const docStyle = `# Channels
@@ -8,7 +8,7 @@ const docStyle = `# Channels
 
 module.exports = function(config, callback) {
     const glob = config.docPath || './src/**/*.{js,jsx}';
-    const helper = path.join(__dirname, '../util/ChannelRender.js');
+    const helper = path.joinSafe(__dirname, '../util/ChannelRender.js');
     const output = jsdoc2md.renderSync({
         files: glob,
         template: docStyle,

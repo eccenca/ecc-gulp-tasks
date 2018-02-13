@@ -1,5 +1,5 @@
 const should = require('should');
-const path = require('path');
+const path = require('upath');
 const badmdl = require('../src/tasks/bad-mdl');
 
 describe('bad-mdl', () => {
@@ -17,7 +17,7 @@ describe('bad-mdl', () => {
 
         badmdl(
             {
-                checkForBadMDL: path.join(
+                checkForBadMDL: path.joinSafe(
                     __dirname,
                     'fixtures/bad-mdl/*.{js,jsx,scss}'
                 ),
@@ -36,7 +36,7 @@ describe('bad-mdl', () => {
 
         badmdl(
             {
-                checkForBadMDL: path.join(__dirname, '../gulpfile.js'),
+                checkForBadMDL: path.joinSafe(__dirname, '../gulpfile.js'),
             },
             callback
         );

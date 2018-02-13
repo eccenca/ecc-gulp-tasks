@@ -1,13 +1,14 @@
 /* eslint func-style: 0 */
-const path = require('path');
+const upath = require('upath');
 const ConcatSource = require('webpack-sources').ConcatSource;
 
 function SCSSBannerPlugin(outputPath, outputFileName, styleSCSS) {
+    this.path = upath.toUnix(upath.relative(outputPath, styleSCSS));
     this.banner = `// This is necessary so that components may use variables in scss
 if(__WEBPACK__){
-  require('${path.relative(outputPath, styleSCSS)}');
+  require('${this.path}');
 }`;
-    this.filename = path.basename(outputFileName);
+    this.filename = upath.basename(outputFileName);
 }
 
 module.exports = SCSSBannerPlugin;

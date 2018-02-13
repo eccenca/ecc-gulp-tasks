@@ -1,3 +1,6 @@
+const fs = require('fs-extra');
+const path = require('upath');
+
 const _ = require('lodash');
 const {mergeFunction} = require('./utils');
 
@@ -10,12 +13,11 @@ const isExternalPackage = (context, request, callback) => {
         return callback(null, `commonjs ${request}`);
     }
 
-    if (
-        _.startsWith(request, './') ||
-        _.startsWith(request, '../') ||
-        _.startsWith(request, '/') ||
-        _.includes(request, '!')
-    ) {
+    const fullPath = path.isAbsolute(request)
+        ? request
+        : path.joinSafe(context, request);
+
+    if (fs.existsSync(fullPath) || _.includes(request, '!')) {
         return callback();
     }
 

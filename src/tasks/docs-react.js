@@ -2,7 +2,7 @@ const gulp = require('gulp');
 
 const through = require('through2');
 const reactDocs = require('react-docgen');
-const path = require('path');
+const path = require('upath');
 const helpers = require('../util/helpers');
 
 const concat = require('gulp-concat');

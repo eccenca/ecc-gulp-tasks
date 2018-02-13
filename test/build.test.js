@@ -98,7 +98,9 @@ function runAppBuild(indexFile, callback) {
  */
 function compareFiles(assertionFile, generatedFile) {
     const oldFileContent = fs.readFileSync(assertionFile).toString();
-    const newFileContent = fs.readFileSync(generatedFile).toString();
+    let newFileContent = fs.readFileSync(generatedFile).toString();
+
+    newFileContent = newFileContent.replace(/\r\n/g, '\n').replace(/\r/, '\n');
 
     let diff = jsdiff.diffLines(oldFileContent, newFileContent, {
         ignoreWhitespace: true,
