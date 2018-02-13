@@ -1,6 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const path = require('path');
+const upath = require('upath');
 
 const _ = require('lodash');
 
@@ -33,7 +33,7 @@ module.exports = config => ({
         modules: [
             config.context,
             'node_modules',
-            path.join(config.context, 'node_modules'),
+            upath.joinSafe(config.context, 'node_modules'),
         ],
         alias: {
             // fix for broken RxJS requiring by webpack

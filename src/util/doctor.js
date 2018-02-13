@@ -1,5 +1,5 @@
 const globby = require('globby');
-const path = require('path');
+const path = require('upath');
 const _ = require('lodash');
 const fs = require('fs-extra');
 const semver = require('semver');
@@ -79,7 +79,7 @@ ajv.addKeyword('template', {
 });
 
 ajv.addSchema(
-    fs.readJSONSync(path.join(__dirname, 'schema', 'package.json')),
+    fs.readJSONSync(path.joinSafe(__dirname, 'schema', 'package.json')),
     'package'
 );
 
@@ -151,7 +151,7 @@ function ajvToMessages(errors, fileName, data) {
 class Doctor {
     constructor(dir, config, wait) {
         this.basedir = dir;
-        this.pjsonFile = path.join(this.basedir, 'package.json');
+        this.pjsonFile = path.joinSafe(this.basedir, 'package.json');
         this.config = config || {};
 
         this.check(wait);
@@ -218,14 +218,17 @@ class Doctor {
 
     static asyncSelfCheck({dir, logger = console.log, callback = _.noop}) {
         const checkPackages = {
-            '@eccenca/dotfiles': path.join(
+            '@eccenca/dotfiles': path.joinSafe(
                 dir,
                 'node_modules',
                 '@eccenca',
                 'dotfiles',
                 'package.json'
             ),
-            '@eccenca/gulp-tasks': path.join(__dirname, '../../package.json'),
+            '@eccenca/gulp-tasks': path.joinSafe(
+                __dirname,
+                '../../package.json'
+            ),
         };
 
         const msg = [];
@@ -311,7 +314,7 @@ class Doctor {
 
         const envInstructions = _.template(
             fs.readFileSync(
-                path.join(__dirname, '../../ENV.md.template'),
+                path.joinSafe(__dirname, '../../ENV.md.template'),
                 'utf8'
             )
         )(this.versions);

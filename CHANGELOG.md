@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- Use `upath` instead of `slash` and `path` library, as it is more powerful
 
 ## [3.16.0] 2018-02-09
 

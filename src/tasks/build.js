@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = require('path');
+const path = require('upath');
 
 const webpack = require('webpack');
 const definePlugin = require('../webpack/plugins/definePlugin');
@@ -29,7 +29,7 @@ module.exports = function(config, callback) {
         optimizations.push(new ExtractTextPlugin('component.css'));
     }
 
-    const styleSCSS = path.join(wpConfig.context, 'style', 'style.scss');
+    const styleSCSS = path.joinSafe(wpConfig.context, 'style', 'style.scss');
 
     if (fs.existsSync(styleSCSS)) {
         const outputPath = wpConfig.output.path;

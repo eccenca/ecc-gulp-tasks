@@ -11,7 +11,7 @@ const chalk = helpers.colors;
 const webpackStatsToString = require('webpack/lib/Stats').jsonToString;
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const serve = require('../util/serve');
-const path = require('path');
+const path = require('upath');
 const Doctor = require('../util/doctor');
 const {isEccenca, isExternal} = require('../webpack/utils');
 
@@ -44,7 +44,7 @@ const debug = (config, callback) => {
         logger: helpers.log.bind(null, helpers.colors.yellow('[WARNING]:')),
     });
 
-    wpConfig.output.path = path.join(wpConfig.context, '.tmp');
+    wpConfig.output.path = path.joinSafe(wpConfig.context, '.tmp');
 
     helpers.log(
         chalk.cyan('[webpack]'),
