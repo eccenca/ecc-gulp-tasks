@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('upath');
 
 const BrowserErrorPlugin = function() {};
 BrowserErrorPlugin.prototype.apply = function(compiler) {
@@ -15,7 +15,7 @@ BrowserErrorPlugin.prototype.apply = function(compiler) {
             if (nonLinterErrors.length) {
                 const outputFileSystem = compiler.outputFileSystem;
                 const outputOptions = compiler.options.output;
-                const main = path.join(
+                const main = path.joinSafe(
                     outputOptions.path,
                     outputOptions.filename
                 );

@@ -2,7 +2,7 @@
 /* eslint-env node, mocha */
 
 const _ = require('lodash');
-const path = require('path');
+const path = require('upath');
 const helpers = require('../util/helpers');
 const webpack = require('webpack');
 const definePlugin = require('../webpack/plugins/definePlugin');
