@@ -2,7 +2,7 @@ const build = require('../src/tasks/build');
 const buildApp = require('../src/tasks/build-app');
 
 const fs = require('fs');
-const path = require('upath');
+const path = require('path');
 
 const should = require('should');
 const jsdiff = require('diff');
@@ -10,13 +10,11 @@ const del = require('del');
 
 const _ = require('lodash');
 
-const componentPath = path.resolve(
-    path.joinSafe(__dirname, './fixtures/build')
-);
-const outputPath = path.joinSafe(componentPath, 'es5');
-const fixturesPath = path.joinSafe(componentPath, 'es5_component');
+const componentPath = path.resolve(path.join(__dirname, './fixtures/build'));
+const outputPath = path.join(componentPath, 'es5');
+const fixturesPath = path.join(componentPath, 'es5_component');
 
-const appFixturesPath = path.joinSafe(componentPath, 'es5_app');
+const appFixturesPath = path.join(componentPath, 'es5_app');
 
 /**
  *
@@ -36,7 +34,7 @@ function runComponentBuild(indexFile, callback) {
         'webpackConfig.production',
         applyApplicationDefaults({
             context: componentPath,
-            entry: path.joinSafe(componentPath, indexFile),
+            entry: path.join(componentPath, indexFile),
             output: {
                 path: outputPath,
                 filename: 'component.js',
@@ -68,7 +66,7 @@ function runAppBuild(indexFile, callback) {
             minify: false,
             context: componentPath,
             entry: {
-                main: path.joinSafe(componentPath, indexFile),
+                main: path.join(componentPath, indexFile),
             },
             output: {
                 path: outputPath,
@@ -126,7 +124,7 @@ function compareFiles(assertionFile, generatedFile) {
         );
         console.warn(diff);
         fs.writeFileSync(
-            path.joinSafe(
+            path.join(
                 path.dirname(assertionFile),
                 `failed-${new Date().getTime().toString()}-${path.basename(
                     assertionFile
@@ -140,7 +138,7 @@ function compareFiles(assertionFile, generatedFile) {
 
 describe('building', () => {
     afterEach(done => {
-        del([path.joinSafe(outputPath, '**')]).then(() => {
+        del([path.join(outputPath, '**')]).then(() => {
             done();
         });
     });
@@ -154,38 +152,32 @@ describe('building', () => {
             });
 
             it('the correct javascript (main.js)', done => {
-                const assertionFile = path.joinSafe(appFixturesPath, 'main.js');
-                const generatedFile = path.joinSafe(outputPath, 'main.js');
+                const assertionFile = path.join(appFixturesPath, 'main.js');
+                const generatedFile = path.join(outputPath, 'main.js');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });
 
             it('the correct styles (style.css)', done => {
-                const assertionFile = path.joinSafe(
-                    appFixturesPath,
-                    'style.css'
-                );
-                const generatedFile = path.joinSafe(outputPath, 'style.css');
+                const assertionFile = path.join(appFixturesPath, 'style.css');
+                const generatedFile = path.join(outputPath, 'style.css');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });
 
             it('the correct html (index.html)', done => {
-                const assertionFile = path.joinSafe(
-                    appFixturesPath,
-                    'index.html'
-                );
-                const generatedFile = path.joinSafe(outputPath, 'index.html');
+                const assertionFile = path.join(appFixturesPath, 'index.html');
+                const generatedFile = path.join(outputPath, 'index.html');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });
 
             it('the correct copied html (copy/index.html)', done => {
-                const assertionFile = path.joinSafe(
+                const assertionFile = path.join(
                     appFixturesPath,
                     'copy/index.html.ejs'
                 );
-                const generatedFile = path.joinSafe(
+                const generatedFile = path.join(
                     outputPath,
                     'copy/index.html.ejs'
                 );
@@ -204,24 +196,15 @@ describe('building', () => {
             });
 
             it('the correct javascript (component.js)', done => {
-                const assertionFile = path.joinSafe(
-                    fixturesPath,
-                    'component.js'
-                );
-                const generatedFile = path.joinSafe(outputPath, 'component.js');
+                const assertionFile = path.join(fixturesPath, 'component.js');
+                const generatedFile = path.join(outputPath, 'component.js');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });
 
             it('the correct styles (component.css)', done => {
-                const assertionFile = path.joinSafe(
-                    fixturesPath,
-                    'component.css'
-                );
-                const generatedFile = path.joinSafe(
-                    outputPath,
-                    'component.css'
-                );
+                const assertionFile = path.join(fixturesPath, 'component.css');
+                const generatedFile = path.join(outputPath, 'component.css');
                 compareFiles(assertionFile, generatedFile);
                 done();
             });

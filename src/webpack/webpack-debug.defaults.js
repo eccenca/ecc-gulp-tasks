@@ -1,4 +1,4 @@
-const path = require('upath');
+const path = require('path');
 const _ = require('lodash');
 const {mergeFunction} = require('./utils');
 
@@ -11,7 +11,7 @@ const applyDefaults = function(common, cfg) {
     const defaults = {
         devtool: 'cheap-module-eval-source-map',
         html: {
-            template: path.joinSafe(__dirname, 'assets', 'component.html.ejs'),
+            template: path.join(__dirname, 'assets', 'component.html.ejs'),
             chunksSortMode: 'id',
         },
     };

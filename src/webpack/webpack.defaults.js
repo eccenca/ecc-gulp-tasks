@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-const upath = require('upath');
+const path = require('path');
+const {toUnix} = require('upath');
 
 const _ = require('lodash');
 
@@ -13,7 +14,7 @@ const {
 } = require('./webpack-loaderSettings');
 
 const shouldExcludeFromCompile = filePath => {
-    const normalizedFilePath = upath.toUnix(filePath);
+    const normalizedFilePath = toUnix(filePath);
 
     if (_.includes(normalizedFilePath, '/node_modules/')) {
         // We need to run babel on files of the 'vis' module, as it is not properly written
@@ -35,7 +36,7 @@ module.exports = config => ({
         modules: [
             config.context,
             'node_modules',
-            upath.joinSafe(config.context, 'node_modules'),
+            path.join(config.context, 'node_modules'),
         ],
         alias: {
             // fix for broken RxJS requiring by webpack
