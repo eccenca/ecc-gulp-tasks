@@ -9,6 +9,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ### Fixed
 - `isExternalPackage` is now Windows compatible
+- `shouldExcludeFromCompile` is now Windows compatible
+
 ## [3.16.0] 2018-02-09
 
 ### Changed
