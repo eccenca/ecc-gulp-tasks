@@ -13,11 +13,13 @@ const isExternalPackage = (context, request, callback) => {
         return callback(null, `commonjs ${request}`);
     }
 
-    const fullPath = path.isAbsolute(request)
-        ? request
-        : path.joinSafe(context, request);
-
-    if (fs.existsSync(fullPath) || _.includes(request, '!')) {
+    if (
+        _.startsWith(request, './') ||
+        _.startsWith(request, '../') ||
+        _.includes(request, '!') ||
+        path.isAbsolute(request) ||
+        fs.existsSync(path.joinSafe(context, request))
+    ) {
         return callback();
     }
 
