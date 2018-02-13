@@ -7,6 +7,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Changed
 - Use `upath` instead of `slash` and `path` library, as it is more powerful
 
+### Fixed
+- `isExternalPackage` is now Windows compatible
 ## [3.16.0] 2018-02-09
 
 ### Changed
