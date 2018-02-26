@@ -1,6 +1,6 @@
 {
   "name": "@eccenca/gulp-tasks",
-  "version": "3.16.2",
+  "version": "3.16.3",
   "description": "A set of common gulp tasks for front-end development.",
   "main": "index.js",
   "author": "eccenca GmbH <opensource@eccenca.com> (http://eccenca.com)",
