@@ -4,7 +4,7 @@ const replace = require('gulp-replace');
 const concat = require('gulp-concat');
 const _ = require('lodash');
 
-module.exports = function(config) {
+function docs(config) {
     // template path
     const templateFile = config.docTemplatePath || 'docs/docTemplate.md';
     // react components path
@@ -31,4 +31,8 @@ module.exports = function(config) {
             .pipe(concat('README.md'))
             .pipe(gulp.dest(config.docTemplateTarget || 'docs/'))
     );
-};
+}
+
+docs.deps = ['docs-react', 'docs-channels'];
+
+module.exports = docs;

@@ -91,7 +91,7 @@ ${returning}`;
 ### ${name}
 ${description}
 
-Channel: ${channel}<br />
+Channel: ${channel}
 Subject: ${subject}
 ${usedParams}
 ${usedReturns}`;
