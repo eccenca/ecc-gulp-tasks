@@ -94,5 +94,5 @@ module.exports = function(config) {
         .src(glob)
         .pipe(convert2Docs())
         .pipe(concat('Components.md'))
-        .pipe(gulp.dest(config.docTarget || './docs/'));
+        .pipe(gulp.dest(config.docTarget || './.tmp/'));
 };
