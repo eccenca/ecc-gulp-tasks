@@ -18,6 +18,7 @@ Simply run `gulp doctor --env` to check whether your environment matches the rec
 - `lint` - runs eslint on files specified at `config.lintingFiles`.
 - `licenses-yaml2json` - generates a `licenses.json` from a `licenses.yaml` file.
 - `doctor` - runs several checks in the project. Some of them are fixable by running `gulp doctor --heal`
+- `docs` creates a README.md from react code and template file
 
 ## Usage
 
