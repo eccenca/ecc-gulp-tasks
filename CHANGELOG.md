@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [3.16.4] 2018-03-13
 ### Fixed
 - component names for `gulp docs`
 - order of channels for `gulp docs`
