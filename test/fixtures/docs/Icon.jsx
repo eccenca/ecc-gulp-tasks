@@ -23,6 +23,7 @@ const Page = React.createClass({
 ```
 */
 const Icon = React.createClass({
+    displayName: 'Icon',
     mixins: [PerformanceMixin],
 
     // define property types

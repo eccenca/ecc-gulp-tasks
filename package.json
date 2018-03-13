@@ -97,6 +97,7 @@
     "@eccenca/dotfiles": "^2.4.0",
     "del": "^3.0.0",
     "diff": "^3.4.0",
+    "prop-types": "^15.6.1",
     "should": "^13.2.1"
   },
   "bugs": {

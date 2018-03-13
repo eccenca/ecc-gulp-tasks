@@ -110,21 +110,21 @@ exports.ChannelRender = function(args, {data}) {
         filterChannelType(fnDocs, 'publicsubject')
     );
 
-    const docPrivat = _.chain(privateChannels)
+    const docPublic = _.chain(publicChannels)
         .map(json => template(json))
         .join('\n')
         .value();
-    const docPublic = _.chain(publicChannels)
+    const docPrivat = _.chain(privateChannels)
         .map(json => template(json))
         .join('\n')
         .value();
 
     let channelsDoc = '';
-    if (!_.isEmpty(docPrivat)) {
-        channelsDoc += `\n## Privat channels ${docPrivat}`;
-    }
     if (!_.isEmpty(docPublic)) {
         channelsDoc += `\n\n## Public channels ${docPublic}`;
+    }
+    if (!_.isEmpty(docPrivat)) {
+        channelsDoc += `\n## Privat channels ${docPrivat}`;
     }
 
     return channelsDoc;

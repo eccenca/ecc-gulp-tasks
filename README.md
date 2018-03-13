@@ -18,6 +18,7 @@ Simply run `gulp doctor --env` to check whether your environment matches the rec
 - `lint` - runs eslint on files specified at `config.lintingFiles`.
 - `licenses-yaml2json` - generates a `licenses.json` from a `licenses.yaml` file.
 - `doctor` - runs several checks in the project. Some of them are fixable by running `gulp doctor --heal`
+- `docs` creates a README.md from react code and template file
 
 ## Usage
 
@@ -34,7 +35,7 @@ As you can see, you need to provide two arguments while requiring the package.
 First one is an array of string names of available tasks you wish to use.
 The second one is your build config (described below).
 
-### Adding custom gulp tassk
+### Adding custom gulp task
 
 If you need to use your custom gulp tasks after including common ones, you can do it like so:
 
@@ -49,7 +50,7 @@ require('./gulp/my-other-task.js')(gulp);
 // ...
 ```
 
-### How to run things synchonously?
+### How to run things synchronously?
 
 Normally gulp runs everything asynchronously, but sometimes you might want to run tasks in sync.
 That is useful for example if you want to run tests and then build a component.
@@ -132,3 +133,13 @@ Usage:
 ```jsx
 const version = (<div>{__VERSION__}</div>);
 ```
+
+### Automated documentation
+
+To use `docs` following rules must be minded:
+
+- Only react components and channels will be generated for now
+- Components name must be set explicit with 'displayName'
+- channels are ordered by '@publicSubject' and '@privateSubject' which is mandatory
+
+For examples look at `test/fixtures/docs/Store.jsx`

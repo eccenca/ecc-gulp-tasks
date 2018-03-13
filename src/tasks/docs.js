@@ -22,7 +22,7 @@ function docs(config) {
             // replace Component Store
             .pipe(
                 replace(
-                    '<!-- <<Component_Store>> ->',
+                    '<!-- <<Component_Channels>> ->',
                     _.trimEnd(storeFile, '\n')
                 )
             )
