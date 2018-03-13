@@ -179,7 +179,7 @@ class Doctor {
             const docDir = path.dirname(this.addDocTemplate);
             const template = `<!-- <<Component_Head>> ->
 
-<!-- <<Component_Store>> ->
+<!-- <<Component_Channels>> ->
 `;
 
             messages += `\nTrying to add doc template at ${

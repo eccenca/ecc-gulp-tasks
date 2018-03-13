@@ -5,6 +5,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 ### Fixed
 - component names for `gulp docs`
+- order of channels for `gulp docs`
 
 ## [3.16.3] 2018-02-26
 ### Fixed
