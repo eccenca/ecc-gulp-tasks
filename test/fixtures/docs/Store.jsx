@@ -44,7 +44,6 @@ const furtherPrivateFunction = (data) => {
  * This is a privat function.
  * @param bar {object} - example
  * @returns current endpoint config
- * @privateSubject ChannelName - config.get
  */
 const shouldNotInDocu = ({replySubject}) => {
     replySubject.onNext(storedAuth['DEFAULT_CONTEXT']);
