@@ -9,7 +9,7 @@ const concat = require('gulp-concat');
 const _ = require('lodash');
 
 const template = json => {
-    const {name, description, props} = json;
+    const {displayName, description, props} = json;
     const propTypes = [];
     _.forEach(props, (prop, propName) => {
         const propRequired = prop.required ? ', *required*' : '';
@@ -33,12 +33,13 @@ const template = json => {
         );
     });
 
-    return `# ${name}
+    return `# ${displayName}
 
 ${description}
 
-# Properties
-${_.join(propTypes, '\n')}`;
+## Properties
+${_.join(propTypes, '\n')}
+`;
 };
 
 const reactDocs2Markdown = json => template(json);
