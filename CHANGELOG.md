@@ -3,8 +3,8 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
-
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Fixed
+- `gulp docs` auto adding of `#` in README.md
 
 ## [3.16.4] 2018-03-13
 ### Fixed

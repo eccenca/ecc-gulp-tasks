@@ -7,10 +7,14 @@ const _ = require('lodash');
 function docs(config) {
     // template path
     const templateFile = config.docTemplatePath || 'docs/docTemplate.md';
-    // react components path
-    const compFile = fs.readFileSync('.tmp/Components.md', 'utf-8');
-    // store path
-    const storeFile = fs.readFileSync('.tmp/Store.md', 'utf-8');
+    // react components file with adjusted headline
+    const compFile = fs
+        .readFileSync('.tmp/Components.md', 'utf-8')
+        .replace(/#+/g, match => `${match}#`);
+    // store file with adjusted headline
+    const storeFile = fs
+        .readFileSync('.tmp/Store.md', 'utf-8')
+        .replace(/#+/g, match => `${match}#`);
 
     return (
         gulp
@@ -26,8 +30,6 @@ function docs(config) {
                     _.trimEnd(storeFile, '\n')
                 )
             )
-            // add additional '#' to every '#*'-line except first one
-            .pipe(replace(/(?!^)#+/g, match => `${match}#`))
             .pipe(concat('README.md'))
             .pipe(gulp.dest(config.docTemplateTarget || 'docs/'))
     );
