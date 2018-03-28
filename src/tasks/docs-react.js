@@ -33,7 +33,7 @@ const template = json => {
         );
     });
 
-    return `# ${displayName}
+    return `{{newStartStringMarker}}# ${displayName}
 
 ${description}
 
@@ -68,12 +68,6 @@ function convert2Docs() {
             helpers.name = parsed.displayName || path.basename(file.path);
 
             converted = reactDocs2Markdown(parsed);
-
-            /*
-            converted += '```json\n';
-            converted += JSON.stringify(parsed, null, 2);
-            converted += '```';
-            */
         } catch (e) {
             helpers.log(`${file.path} contains no React Component`);
         }
@@ -89,11 +83,54 @@ function convert2Docs() {
     });
 }
 
+// order parts to ensure the doc elements are stable
+function orderDocs() {
+    return through.obj((file, enc, cb) => {
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        if (file.isStream()) {
+            cb(
+                new helpers.PluginError('docs-react', 'Streaming not supported')
+            );
+            return;
+        }
+
+        const fileContent = file.contents.toString(enc);
+        let converted = '';
+
+        try {
+            let splitted = fileContent.split('{{newStartStringMarker}}');
+
+            // if first element is empty
+            if (_.isEmpty(_.first(splitted))) {
+                splitted.shift();
+            }
+
+            splitted = _.sortBy(splitted, text => {
+                const newText = text.match(/^# \S+/);
+                return newText[0];
+            });
+
+            converted = splitted.join('\n');
+        } catch (e) {
+            helpers.log(`${file.path} contains no React Component`);
+        }
+
+        const newFile = file;
+        newFile.contents = Buffer.from(converted, 'utf-8');
+        cb(null, newFile);
+    });
+}
+
 module.exports = function(config) {
     const glob = config.docPath || './src/**/*.{sass,scss,js,jsx}';
     return gulp
         .src(glob)
         .pipe(convert2Docs())
         .pipe(concat('Components.md'))
+        .pipe(orderDocs())
         .pipe(gulp.dest(config.docTarget || './.tmp/'));
 };
