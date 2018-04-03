@@ -83,7 +83,7 @@ function convert2Docs() {
     });
 }
 
-// order parts to ensure the doc elements are stable
+// order parts to ensure the doc elements rankings are stable
 function orderDocs() {
     return through.obj((file, enc, cb) => {
         if (file.isNull()) {
@@ -104,15 +104,34 @@ function orderDocs() {
         try {
             let splitted = fileContent.split('{{newStartStringMarker}}');
 
-            // if first element is empty
+            // if first element is empty remove it
             if (_.isEmpty(_.first(splitted))) {
                 splitted.shift();
             }
 
-            splitted = _.sortBy(splitted, text => {
+            let splittedEntry = [];
+            let splittedNoNEntry = [];
+            // devide prioritised once
+            _.forEach(splitted, text => {
+                if (!_.isNull(text.match(/\n@entryPoint/))) {
+                    splittedEntry.push(text.replace(/\n@entryPoint/, ''));
+                } else {
+                    splittedNoNEntry.push(text);
+                }
+            });
+
+            // sort parts alphabetically (# a)
+            splittedEntry = _.sortBy(splittedEntry, text => {
                 const newText = text.match(/^# \S+/);
                 return newText[0];
             });
+            splittedNoNEntry = _.sortBy(splittedNoNEntry, text => {
+                const newText = text.match(/^# \S+/);
+                return newText[0];
+            });
+
+            // merge parts
+            splitted = _.concat(splittedEntry, splittedNoNEntry);
 
             converted = splitted.join('\n');
         } catch (e) {

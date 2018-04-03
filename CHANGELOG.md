@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
 ## [Unreleased]
+### Added
+- `gulp docs` now supports '@entryPoint' marker to set a specific component to the top
+
 ### Fixed
 - `gulp docs` auto adding of `#` in README.md
 - `gulp docs` multiple new lines in README.md
