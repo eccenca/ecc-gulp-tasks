@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ProxyPolyfillPlugin = require('babel-plugin-proxy');
 
 const path = require('path');
 const {toUnix} = require('upath');
@@ -44,7 +45,7 @@ module.exports = config => ({
             rx: 'rx/dist/rx.all.js',
             'ecc-superagent': '@eccenca/superagent',
         },
-        plugins: [new EccencaResolverPlugin()],
+        plugins: [new EccencaResolverPlugin(), new ProxyPolyfillPlugin()],
     },
     node: {
         fs: 'empty',
