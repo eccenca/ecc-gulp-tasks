@@ -14,6 +14,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - `gulp docs` will remove headlines from partial documents so custom ones in docTemplate.md can be set
 - `gulp docs` docsTemplate placeholder now ends with `-->` instead of `->`
 - `gulp docs` components are ordered alphabetically now to ensure a stable arrangement
+- `gulp docs` stores are ordered alphabetically now to ensure a stable arrangement
 
 ## [3.16.4] 2018-03-13
 ### Fixed
