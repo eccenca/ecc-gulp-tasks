@@ -1,6 +1,7 @@
 var React = require('react');
 
 /**
+ * @entryPoint
  * General component description.
  */
 var Component = React.createClass({
