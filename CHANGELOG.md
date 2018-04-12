@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [3.16.5] 2018-04-12
 ### Added
 - `gulp docs` now supports '@entryPoint' marker to set a specific component to the top
 
