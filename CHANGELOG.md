@@ -2,6 +2,20 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.16.5] 2018-04-12
+### Added
+- `gulp docs` now supports '@entryPoint' marker to set a specific component to the top
+
+### Fixed
+- `gulp docs` auto adding of `#` in README.md
+- `gulp docs` multiple new lines in README.md
+
+### Changed
+- `gulp docs` will remove headlines from partial documents so custom ones in docTemplate.md can be set
+- `gulp docs` docsTemplate placeholder now ends with `-->` instead of `->`
+- `gulp docs` components are ordered alphabetically now to ensure a stable arrangement
+- `gulp docs` stores are ordered alphabetically now to ensure a stable arrangement
+
 ## [3.16.4] 2018-03-13
 ### Fixed
 - component names for `gulp docs`

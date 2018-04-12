@@ -177,9 +177,17 @@ class Doctor {
 
         if (!_.isEmpty(this.addDocTemplate)) {
             const docDir = path.dirname(this.addDocTemplate);
-            const template = `<!-- <<Component_Head>> ->
+            const template = `# component name (TODO)
 
-<!-- <<Component_Channels>> ->
+describe me (TODO)
+
+## Component
+
+<!-- <<Component_Head>> -->
+
+## Channels
+
+<!-- <<Component_Channels>> -->
 `;
 
             messages += `\nTrying to add doc template at ${

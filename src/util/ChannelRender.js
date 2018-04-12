@@ -112,10 +112,18 @@ exports.ChannelRender = function(args, {data}) {
 
     const docPublic = _.chain(publicChannels)
         .map(json => template(json))
+        .sortBy(text => {
+            const newText = text.match(/^\n### \S+/);
+            return newText[0];
+        })
         .join('\n')
         .value();
     const docPrivat = _.chain(privateChannels)
         .map(json => template(json))
+        .sortBy(text => {
+            const newText = text.match(/^\n### \S+/);
+            return newText[0];
+        })
         .join('\n')
         .value();
 
