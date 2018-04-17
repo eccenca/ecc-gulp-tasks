@@ -33,11 +33,11 @@ const template = json => {
         );
     });
 
-    return `{{newStartStringMarker}}# ${displayName}
+    return `{{newStartStringMarker}}## ${displayName}
 
 ${description}
 
-## Properties
+### Properties
 ${_.join(propTypes, '\n')}
 `;
 };
@@ -123,15 +123,15 @@ function orderDocs() {
             // sort parts alphabetically (# a)
             splittedEntry = _.sortBy(splittedEntry, text => {
                 const newText = text.match(/^# \S+/);
-                return newText[0];
+                return _.isNull(newText) ? '' : newText[0];
             });
             splittedNoNEntry = _.sortBy(splittedNoNEntry, text => {
                 const newText = text.match(/^# \S+/);
-                return newText[0];
+                return _.isNull(newText) ? '' : newText[0];
             });
 
-            // merge parts
-            splitted = _.concat(splittedEntry, splittedNoNEntry);
+            // merge parts and add default headline
+            splitted = _.concat('# Component', splittedEntry, splittedNoNEntry);
 
             converted = splitted.join('\n');
         } catch (e) {
