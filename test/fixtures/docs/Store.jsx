@@ -23,6 +23,15 @@ const publicFunction = (foo) => {
 };
 
 /**
+ * This is a public second function without return.
+ * @param replySubject {object} - i have no name
+ * @publicSubject ChannelName - config.get
+ */
+const publicFunctionSecond = (foo) => {
+    return foo;
+};
+
+/**
  * Handler which should not be shown
  * @param {object} - example
  * @returns current endpoint config

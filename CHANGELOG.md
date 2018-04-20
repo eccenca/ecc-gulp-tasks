@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ### Fixed
 - adjust `gulp docs` component headline order
 - error with `gulp docs` component not created successful
+- `gulp docs` channel shows empty return statement when params are set
 
 ## [3.16.5] 2018-04-12
 ### Added
