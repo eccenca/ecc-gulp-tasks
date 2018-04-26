@@ -82,7 +82,7 @@ const template = json => {
 Parameter
 ${param}
 `;
-    const usedReturns = _.isEmpty(param)
+    const usedReturns = _.isEmpty(returning)
         ? ''
         : `Return
 ${returning}`;

@@ -2,6 +2,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.16.6] 2018-04-26
+### Fixed
+- adjust `gulp docs` component headline order
+- error with `gulp docs` component not created successful
+- `gulp docs` channel shows empty return statement when params are set
+
 ## [3.16.5] 2018-04-12
 ### Added
 - `gulp docs` now supports '@entryPoint' marker to set a specific component to the top
