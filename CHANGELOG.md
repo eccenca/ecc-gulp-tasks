@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
-## [Unreleased]
+## [3.16.6] 2018-04-26
 ### Fixed
 - adjust `gulp docs` component headline order
 - error with `gulp docs` component not created successful
