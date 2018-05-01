@@ -6,7 +6,7 @@ module.exports = {
             type: 'object',
             properties: {
                 name: {
-                    pattern: '^(@eccenca/[a-z-]+|ecc-[a-z-]+)$',
+                    pattern: '^(@eccenca/[a-z-]+[1-9]*|ecc-[a-z-]+)$',
                 },
                 version: {
                     format: 'semver',
@@ -34,7 +34,7 @@ module.exports = {
                         },
                         precommit: {
                             type: 'string',
-                            template: 'lint-staged',
+                            template: 'lint-staged && npm run docs',
                         },
                     },
                     required: ['precommit', 'lint', 'test', 'start'],

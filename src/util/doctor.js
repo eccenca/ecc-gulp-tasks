@@ -465,27 +465,26 @@ describe me (TODO)
                     _.set(
                         fixedPJSON,
                         ['scripts', 'prepare'],
-                        `${_.get(originalPJSON, [
-                            'scripts',
-                            'prepublish',
-                        ])} && npm run docs`
+                        `${_.get(originalPJSON, ['scripts', 'prepublish'])}`
                     );
                     _.set(fixedPJSON, ['scripts', 'prepublish'], undefined);
-                    //  when prepare is already used check for docs argument within
-                } else if (
-                    !_.includes(
+                }
+                if (
+                    _.includes(
                         _.get(originalPJSON, ['scripts', 'prepare']),
                         'npm run docs'
                     )
                 ) {
-                    messages.push('Still not auto generate docs (fixable)');
+                    messages.push(
+                        'docs are generated on wrong command (fixable)'
+                    );
                     _.set(
                         fixedPJSON,
                         ['scripts', 'prepare'],
-                        `${_.get(originalPJSON, [
-                            'scripts',
-                            'prepare',
-                        ])} && npm run docs`
+                        _.chain(originalPJSON)
+                            .get(['scripts', 'prepare'])
+                            .replace(' && npm run docs', '')
+                            .value()
                     );
                 }
 
@@ -495,14 +494,36 @@ describe me (TODO)
                 }
 
                 if (!_.has(originalPJSON, ['lint-staged'])) {
-                    messages.push('Missing linting (fixable)');
-                    _.set(fixedPJSON, ['scripts', 'precommit'], 'lint-staged');
+                    messages.push(
+                        'Missing linting and doc generation (fixable)'
+                    );
+                    _.set(
+                        fixedPJSON,
+                        ['scripts', 'precommit'],
+                        'lint-staged && npm run docs'
+                    );
                     _.set(
                         fixedPJSON,
                         ['scripts', 'lint'],
                         "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix"
                     );
                     _.set(fixedPJSON, ['lint-staged', '*.{js,jsx}'], 'eslint');
+                    //  when precommit is already used check for docs argument within
+                } else if (
+                    !_.includes(
+                        _.get(originalPJSON, ['scripts', 'precommit']),
+                        'npm run docs'
+                    )
+                ) {
+                    messages.push('Still not auto generate docs (fixable)');
+                    _.set(
+                        fixedPJSON,
+                        ['scripts', 'precommit'],
+                        `${_.get(originalPJSON, [
+                            'scripts',
+                            'precommit',
+                        ])} && npm run docs`
+                    );
                 }
             }
 
