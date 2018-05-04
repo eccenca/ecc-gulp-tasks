@@ -2,6 +2,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.16.7] 2018-05-04
+### Fixed
+- `gulp doctor`'s package.json check now allows a number at the end of `name`
+
+### Changed
+- `gulp docs` are now triggered on `precommit` instead of `prepare`
+
 ## [3.16.6] 2018-04-26
 ### Fixed
 - adjust `gulp docs` component headline order
