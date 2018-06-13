@@ -1,1 +1,17 @@
+#START
+# PLEASE PLACE CUSTOM ESLINT IGNORES BELOW #END
+#
+# ANYTHING YOU PLACE BEFORE THE END TAG
+# WILL BE OVERWRITTEN BY ecc-dotfiles
+# INSTALL-SCRIPT
+
+# node && npm
+node_modules/
+
+# ignore compiled
+es5/
+.tmp/
+
+#END
+
 test/fixtures
