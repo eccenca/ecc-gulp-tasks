@@ -122,11 +122,11 @@ function orderDocs() {
 
             // sort parts alphabetically (# a)
             splittedEntry = _.sortBy(splittedEntry, text => {
-                const newText = text.match(/^# \S+/);
+                const newText = text.match(/^## \S+/);
                 return _.isNull(newText) ? '' : newText[0];
             });
             splittedNoNEntry = _.sortBy(splittedNoNEntry, text => {
-                const newText = text.match(/^# \S+/);
+                const newText = text.match(/^## \S+/);
                 return _.isNull(newText) ? '' : newText[0];
             });
 

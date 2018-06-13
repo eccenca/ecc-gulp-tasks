@@ -4,9 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Fixed
+- `gulp docs` component ordering
 
 ## [3.16.7] 2018-05-04
+
 ### Fixed
 - `gulp doctor`'s package.json check now allows a number at the end of `name`
 
@@ -14,12 +16,14 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - `gulp docs` are now triggered on `precommit` instead of `prepare`
 
 ## [3.16.6] 2018-04-26
+
 ### Fixed
 - adjust `gulp docs` component headline order
 - error with `gulp docs` component not created successful
 - `gulp docs` channel shows empty return statement when params are set
 
 ## [3.16.5] 2018-04-12
+
 ### Added
 - `gulp docs` now supports '@entryPoint' marker to set a specific component to the top
 
@@ -34,11 +38,13 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - `gulp docs` stores are ordered alphabetically now to ensure a stable arrangement
 
 ## [3.16.4] 2018-03-13
+
 ### Fixed
 - component names for `gulp docs`
 - order of channels for `gulp docs`
 
 ## [3.16.3] 2018-02-26
+
 ### Fixed
 - file paths for task `gulp docs`
 
@@ -174,14 +180,17 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
     - `mocha@^3.4.2`
 
 ## [3.6.2] 2017-05-18
+
 ### Fixed
 - adjust versions for environment check
 
 ## [3.6.1] 2017-05-18
+
 ### Fixed
 - Update git url in package.json
 
 ## [3.6.0] 2017-05-09
+
 ### Added
 - `sassyjson` dependency, so that it can be used in our sass workflows
 - `webpackConfig.application.minify` option which defaults to ture. Can be set to false, to get a unminified source code version, where only the comments are stripped.
@@ -200,10 +209,12 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - unused `less` dependency
 
 ## [3.5.0] 2017-03-27
+
 ### Changed
 - Update `babel-loader` and `style-loader` to new versions
 
 ## [3.4.0] 2017-03-20
+
 ### Changed
 
 - Upgrade to `webpack@2`
@@ -214,10 +225,12 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - Remove unused `less-loader`
 
 ## [3.3.2] 2017-02-15
+
 ### Fixed
 - Added missing `__BRANCH__` variable
 
 ## [3.3.1] 2017-02-09
+
 ### Fixed
 - Enable `sourceMap` option correctly in uglify js plugin if source maps are enabled via `dev-tool` true
 
@@ -234,6 +247,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - Updated all dependencies (minor and patch updates)
 
 ## [3.2.0] 2017-01-25
+
 ### Added
 - add `--self-check` option for gulp doctor which checks if `ecc-gulp-tasks` and `ecc-dotfiles` are up to date.
 
@@ -241,6 +255,7 @@ TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security se
 - moved definitions for tools to json file
 
 ## [3.1.2] 2017-01-11
+
 ### Fixed
 - upgraded `ecc-license-checker`, whoch fixes bugs in `gulp licenses-yaml2json`
 
@@ -334,6 +349,7 @@ Generally upgrading should be possible without any problems, especially in simpl
 - included `.eslintrc` rules. The config file which is specified for the source file will be used.
 
 ## [2.5.0] 2016-09-05
+
 ### Added
 - `lib` subfolders are now ignored for `eslint` during development
 - normally webpack pulls in all locales for `moment.js`. A `momentLocales` parameter has been added to the buildConfig. This parameter takes an regex which evaluates which locales will be pulled in.
@@ -342,6 +358,7 @@ Generally upgrading should be possible without any problems, especially in simpl
 - `reduce-css-calc` dependency, as the issue has been resolved upstream
 
 ## [2.4.3] 2016-08-22
+
 ### Changed
 - Added `http://` to serve task, so that it can be opened in the browser per click
 
@@ -349,14 +366,17 @@ Generally upgrading should be possible without any problems, especially in simpl
 - Added `reduce-css-calc@1.2.4` as a dependecy, as `1.2.5` broke stuff: https://github.com/MoOx/reduce-css-calc/issues/13
 
 ## [2.4.2] 2016-07-25
+
 ### Fixed
 - Updated eslint jsdoc rule regarding void functions
 
 ## [2.4.1] 2016-07-25
+
 ### Fixed
 - Updated eslint rule regarding jsdoc
 
 ## [2.4.0] 2016-07-21
+
 ### Added
 - `gulp lint` target for linting gulp-tasks file
 
@@ -365,6 +385,7 @@ Generally upgrading should be possible without any problems, especially in simpl
 - updated webpack loaders: `sass-loader` and `file-loader`
 
 ## [2.3.0] 2016-06-23
+
 ### Added
 - Added `__DEBUG__` Flag which is set to true while running `gulp debug`.
 `gulp build-app` will strip all `__DEBUG__` flags while `gulp build` leaves them be.
