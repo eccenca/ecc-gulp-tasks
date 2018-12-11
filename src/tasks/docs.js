@@ -29,7 +29,7 @@ function docs(config) {
             // shrink newLines
             .pipe(replace(/\n{3,}/g, '\n\n'))
             .pipe(concat('README.md'))
-            .pipe(gulp.dest(config.docTemplateTarget || 'docs/'))
+            .pipe(gulp.dest(config.docTemplateTarget || './docs/'))
     );
 }
 
