@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.16.9] 2018-12-11
+
+### Fixed
+- `gulp docs` file target
+
 ## [3.16.8] 2018-06-13
 
 ### Fixed
