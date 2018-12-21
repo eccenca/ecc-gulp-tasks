@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- use of husky
+ 
+### Removed
+- prettier as we are not happy with it in combination with eslint rules
 
 ## [3.16.9] 2018-12-11
 
