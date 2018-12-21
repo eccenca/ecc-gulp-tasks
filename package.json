@@ -15,7 +15,6 @@
     "prepare": "npm run init",
     "eslint-check": "eslint --print-config .eslintrc.yml && eslint --print-config .eslintrc.yml",
     "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix",
-    "precommit": "lint-staged",
     "start": "echo ''",
     "docs": "gulp docs"
   },
