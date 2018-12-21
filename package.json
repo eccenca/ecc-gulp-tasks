@@ -63,7 +63,7 @@
     "istanbul": "^0.4.5",
     "jsdoc-to-markdown": "^4.0.1",
     "json-loader": "^0.5.7",
-    "lint-staged": "^6.1.0",
+    "lint-staged": "^8.1.0",
     "lodash": "^4.17.4",
     "method-override": "^2.3.10",
     "mocha": "^5.0.0",
@@ -109,6 +109,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint"
+    "*.{js,jsx}": ["eslint --fix", "git add"]
   }
 }
