@@ -18,9 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@eccenca/dotfiles@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@eccenca/dotfiles/-/dotfiles-2.5.1.tgz#e34485cef2b5ff9e3de1013aeab515d839a45285"
+"@eccenca/dotfiles@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.npmjs.org/@eccenca/dotfiles/-/dotfiles-2.6.0.tgz#bd2c447325d7908c8455dedc8f564e9d619b5a37"
+  integrity sha512-fJ7XLOVjZxiF/mX66lxL7xhH1CpDZ620cYJSUjaAAPy/wvFs08I+OgwzmfHG3KSTE4kL2zq6SDXHcySDdlCUvA==
   dependencies:
     fs-extra "^5.0.0"
 
