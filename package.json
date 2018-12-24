@@ -102,12 +102,15 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,jsx}": ["eslint --fix", "git add"]
   }
 }

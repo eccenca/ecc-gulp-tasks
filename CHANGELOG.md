@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 ## [Unreleased]
 
 ### Changed
-- use of husky
+- use of husky due to update to 1.x
+- gulp doctor checks
  
 ### Removed
 - prettier as we are not happy with it in combination with eslint rules
