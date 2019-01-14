@@ -9,7 +9,7 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 - gulp doctor checks
  
 ### Removed
-- prettier as we are not happy with it in combination with eslint rules
+- prettier as our eslint rules are enough
 
 ## [3.16.9] 2018-12-11
 
