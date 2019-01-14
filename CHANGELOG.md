@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.16.10] 2019-01-14
+
+### Changed
+- use of husky due to update to 1.x
+- gulp doctor checks
+ 
+### Removed
+- prettier as our eslint rules are enough
+
 ## [3.16.9] 2018-12-11
 
 ### Fixed

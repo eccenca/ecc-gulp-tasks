@@ -3,7 +3,7 @@ const path = require('upath');
 const _ = require('lodash');
 const fs = require('fs-extra');
 const semver = require('semver');
-const {execSync, exec} = require('child_process');
+const { execSync, exec } = require('child_process');
 
 const textTable = require('text-table');
 
@@ -16,13 +16,13 @@ const fileCache = new FileCacheService({
     defaultExpiration: 200 * 60,
     verbose: false,
 });
-const cache = new CacheService({verbose: false}, [fileCache]);
+const cache = new CacheService({ verbose: false }, [fileCache]);
 const superagentCache = require('superagent-cache-plugin')(cache);
 const superagent = require('superagent');
 
 const Ajv = require('ajv');
 
-const ajv = new Ajv({allErrors: true});
+const ajv = new Ajv({ allErrors: true });
 ajv.addFormat('semver', value => semver.valid(value) !== null);
 ajv.addFormat('prepackage', () => false);
 ajv.addSchema(require('./schema/package.eccenca.js'), 'package.eccenca');
@@ -63,10 +63,9 @@ function validatorFn(
         },
     };
 
-    error.message =
-        _.size(anyOf) > 1
-            ? `should be one of "${anyOf.join('", "')}"`
-            : `should be "${anyOf[0]}"`;
+    error.message = _.size(anyOf) > 1
+        ? `should be one of "${anyOf.join('", "')}"`
+        : `should be "${anyOf[0]}"`;
 
     validatorFn.errors = [error];
 
@@ -88,9 +87,7 @@ function customizer(objValue, srcValue) {
         return objValue.concat(srcValue);
     }
     if (_.isPlainObject(objValue)) {
-        return _.mergeWith({}, objValue, srcValue, (a, b) =>
-            _.compact(_.flatten([a, b]))
-        );
+        return _.mergeWith({}, objValue, srcValue, (a, b) => _.compact(_.flatten([a, b])));
     }
     return undefined;
 }
@@ -118,8 +115,8 @@ function ajvToMessages(errors, fileName, data) {
 
     const table = [['message', 'value', 'details']];
 
-    _.forEach(reduced, entry => {
-        let {dataPath} = entry;
+    _.forEach(reduced, (entry) => {
+        let { dataPath } = entry;
         const value = JSON.stringify(_.get(data, dataPath, ''));
         if (dataPath === '') {
             dataPath = fileName;
@@ -128,11 +125,11 @@ function ajvToMessages(errors, fileName, data) {
         let message = '';
 
         switch (dataPath) {
-            case '/scripts/prepackage':
-                message = `${dataPath} should be renamed to '/scripts/prepare'`;
-                break;
-            default:
-                message = `${dataPath} ${entry.message}`;
+        case '/scripts/prepackage':
+            message = `${dataPath} should be renamed to '/scripts/prepare'`;
+            break;
+        default:
+            message = `${dataPath} ${entry.message}`;
         }
 
         const details = _.chain(entry.params)
@@ -164,7 +161,7 @@ class Doctor {
 
         let messages = 'The doctor tries to heal...';
 
-        _.forEach(this.deleteCandidates, file => {
+        _.forEach(this.deleteCandidates, (file) => {
             messages += `\nTrying to delete ${file} ... `;
             try {
                 fs.removeSync(file);
@@ -211,7 +208,7 @@ describe me (TODO)
         if (!_.isNull(this.fixedPJSON)) {
             messages += `\nTrying to fix ${this.pjsonFile} ... `;
             try {
-                fs.writeJSONSync(this.pjsonFile, this.fixedPJSON, {spaces: 2});
+                fs.writeJSONSync(this.pjsonFile, this.fixedPJSON, { spaces: 2 });
                 messages += 'Success.';
             } catch (e) {
                 messages += 'Failed.';
@@ -224,7 +221,7 @@ describe me (TODO)
         return messages;
     }
 
-    static asyncSelfCheck({dir, logger = console.log, callback = _.noop}) {
+    static asyncSelfCheck({ dir, logger = console.log, callback = _.noop }) {
         const checkPackages = {
             '@eccenca/dotfiles': path.joinSafe(
                 dir,
@@ -314,7 +311,7 @@ describe me (TODO)
         this.checkEnv(wait);
     }
 
-    printEnv({logger = console.log, callback = _.noop}) {
+    printEnv({ logger = console.log, callback = _.noop }) {
         if (!this.messages.envMessages) {
             logger('Your environment is perfectly set up');
             return callback();
@@ -337,7 +334,7 @@ describe me (TODO)
             .get('https://download.eccenca.com/js/versions.json')
             .use(superagentCache)
             .then(
-                ret => {
+                (ret) => {
                     const messages = [];
 
                     const checkCommands = ret.body;
@@ -372,13 +369,12 @@ describe me (TODO)
                     });
 
                     if (!_.isEmpty(messages)) {
-                        let envMessages =
-                            'The following problems have been found with your environment:';
-                        _.map(messages, message => {
+                        let envMessages = 'The following problems have been found with your environment:';
+                        _.map(messages, (message) => {
                             envMessages += `\n\t${message}`;
                         });
 
-                        envMessages += `\n\n\tPlease run 'gulp doctor --env' for more information/resolutions.`;
+                        envMessages += '\n\n\tPlease run \'gulp doctor --env\' for more information/resolutions.';
 
                         this.messages.envMessages = envMessages;
                     }
@@ -387,7 +383,7 @@ describe me (TODO)
                         wait();
                     }
                 },
-                e => {
+                (e) => {
                     this.messages.envMessages = `Skipping version checks from ${
                         e.host
                     }: "${e.code}".`;
@@ -403,7 +399,7 @@ describe me (TODO)
 
         const deprecatedValues = ['path', 'serverStart', 'serverOverrides'];
 
-        _.forEach(deprecatedValues, key => {
+        _.forEach(deprecatedValues, (key) => {
             const value = _.get(this.config, key, false);
 
             if (value) {
@@ -414,9 +410,8 @@ describe me (TODO)
         });
 
         if (!_.isEmpty(messages)) {
-            let gulpConfigMessage =
-                'The following problems are in this projects buildConfig:';
-            _.map(messages, message => {
+            let gulpConfigMessage = 'The following problems are in this projects buildConfig:';
+            _.map(messages, (message) => {
                 gulpConfigMessage += `\n\t${message}`;
             });
 
@@ -449,8 +444,8 @@ describe me (TODO)
                 }
 
                 if (
-                    _.has(originalPJSON, ['devDependencies', 'react']) ||
-                    _.has(originalPJSON, ['peerDependencies', 'react'])
+                    _.has(originalPJSON, ['devDependencies', 'react'])
+                    || _.has(originalPJSON, ['peerDependencies', 'react'])
                 ) {
                     messages.push(
                         'Still uses react in a fixed peer dependency (fixable)'
@@ -495,34 +490,45 @@ describe me (TODO)
 
                 if (!_.has(originalPJSON, ['lint-staged'])) {
                     messages.push(
-                        'Missing linting and doc generation (fixable)'
-                    );
-                    _.set(
-                        fixedPJSON,
-                        ['scripts', 'precommit'],
-                        'lint-staged && npm run docs'
+                        'Missing linting (fixable)'
                     );
                     _.set(
                         fixedPJSON,
                         ['scripts', 'lint'],
-                        "eslint --ignore-path .gitignore --ignore-path .eslintignore '**/*.{js,jsx}' --fix"
+                        'eslint --ignore-path .gitignore --ignore-path .eslintignore \'**/*.{js,jsx}\' --fix'
                     );
-                    _.set(fixedPJSON, ['lint-staged', '*.{js,jsx}'], 'eslint');
-                    //  when precommit is already used check for docs argument within
+                    _.set(fixedPJSON, ['lint-staged', '*.{js,jsx}'], '["eslint --fix", "git add"]');
                 } else if (
-                    !_.includes(
-                        _.get(originalPJSON, ['scripts', 'precommit']),
-                        'npm run docs'
-                    )
+                    ['eslint --fix', 'git add'] !== _.get(originalPJSON, ['lint-staged', '*.{js,jsx}'])
                 ) {
-                    messages.push('Still not auto generate docs (fixable)');
+                    messages.push(
+                        'Deprecated lint-staged settings (fixable)'
+                    );
                     _.set(
                         fixedPJSON,
-                        ['scripts', 'precommit'],
-                        `${_.get(originalPJSON, [
-                            'scripts',
-                            'precommit',
-                        ])} && npm run docs`
+                        ['lint-staged', '*.{js,jsx}'],
+                        ['eslint --fix', 'git add']
+                    );
+                }
+                if (!_.has(originalPJSON, ['husky'])) {
+                    messages.push(
+                        'Missing husky settings (fixable)'
+                    );
+                    _.set(
+                        fixedPJSON,
+                        ['husky', 'hooks', 'pre-commit'],
+                        'lint-staged'
+                    );
+                }
+
+                if (_.has(originalPJSON, ['precommit'])) {
+                    messages.push(
+                        'Still has script precommit (fixable)'
+                    );
+                    _.set(
+                        fixedPJSON,
+                        ['precommit'],
+                        undefined
                     );
                 }
             }
@@ -530,9 +536,8 @@ describe me (TODO)
             if (!_.isEmpty(messages)) {
                 this.fixedPJSON = fixedPJSON;
 
-                let PJSONMessage =
-                    'The following problems are in this projects package.json:';
-                _.map(messages, message => {
+                let PJSONMessage = 'The following problems are in this projects package.json:';
+                _.map(messages, (message) => {
                     PJSONMessage += `\n\t${message}`;
                 });
 
@@ -554,9 +559,8 @@ describe me (TODO)
         );
 
         if (!_.isEmpty(this.deleteCandidates)) {
-            let deleteCandidates =
-                'The following files should be deleted (auto-fixable):';
-            _.map(this.deleteCandidates, filePath => {
+            let deleteCandidates = 'The following files should be deleted (auto-fixable):';
+            _.map(this.deleteCandidates, (filePath) => {
                 deleteCandidates += `\n\t${filePath}`;
             });
 
@@ -580,9 +584,9 @@ describe me (TODO)
 
     hasFixableProblems() {
         return (
-            !_.isEmpty(this.deleteCandidates) ||
-            !_.isEmpty(this.addDocTemplate) ||
-            !_.isNull(this.fixedPJSON)
+            !_.isEmpty(this.deleteCandidates)
+            || !_.isEmpty(this.addDocTemplate)
+            || !_.isNull(this.fixedPJSON)
         );
     }
 
@@ -597,13 +601,13 @@ describe me (TODO)
 
         let result = 'The doctor found a few symptoms:';
 
-        _.map(this.messages, message => {
+        _.map(this.messages, (message) => {
             result += `\n\n${message}`;
         });
 
         if (this.hasFixableProblems()) {
-            result +=
-                '\n\nSome (or all) of these problems can be fixed automatically.';
+            result
+                += '\n\nSome (or all) of these problems can be fixed automatically.';
             result += '\nPlease run `gulp doctor --heal` to fix them.';
         }
 
