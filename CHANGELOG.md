@@ -4,7 +4,12 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Changed
+- use of husky due to update to 1.x
+- gulp doctor checks
+ 
+### Removed
+- prettier as our eslint rules are enough
 
 ## [3.16.9] 2018-12-11
 

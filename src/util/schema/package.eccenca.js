@@ -37,7 +37,7 @@ module.exports = {
                             template: 'lint-staged && npm run docs',
                         },
                     },
-                    required: ['precommit', 'lint', 'test', 'start'],
+                    required: ['lint', 'test', 'start', 'docs'],
                 },
                 dependencies: {},
                 peerDependencies: {
@@ -70,11 +70,27 @@ module.exports = {
                     type: 'object',
                     properties: {
                         '*.{js,jsx}': {
-                            type: 'string',
-                            template: 'eslint',
+                            type: 'array',
                         },
                     },
                     required: ['*.{js,jsx}'],
+                },
+                husky: {
+                    type: 'object',
+                    properties: {
+                        hooks: {
+                            type: 'object',
+                            properties: {
+                                'pre-commit': {
+                                    type: 'string',
+                                    template: 'lint-staged',
+                                },
+                            },
+                            required: ['pre-commit'],
+                        },
+
+                    },
+                    required: ['hooks'],
                 },
             },
             required: [
@@ -85,6 +101,7 @@ module.exports = {
                 'author',
                 'license',
                 'lint-staged',
+                'husky',
             ],
             additionalProperties: false,
         },
