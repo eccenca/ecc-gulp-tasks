@@ -4,7 +4,8 @@ This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Ch
 
 ## [Unreleased]
 
-TODO: add at least one Added, Changed, Deprecated, Removed, Fixed or Security section
+### Added
+- dependency `eslint-plugin-jest` to allow eslint for jest
 
 ## [3.16.10] 2019-01-14
 
