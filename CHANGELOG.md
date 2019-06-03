@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/) and [Keep A Changelog's Format](http://keepachangelog.com/).
 
+## [3.17.0] 2019-06-03
+
+### Added
+- dependency `eslint-plugin-jest` to allow eslint for jest
+
 ## [3.16.10] 2019-01-14
 
 ### Changed

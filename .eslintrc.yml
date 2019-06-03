@@ -20,6 +20,11 @@ parserOptions:
     # enable JSX support
     jsx: true
 rules:
+  # FIXME: deactivate rules for arrow functions until we find out why they fail sometimes
+  # READ more about it here: https://github.com/eslint/eslint/issues/10137
+  array-callback-return: "off"
+  arrow-body-style: "off"
+  implicit-arrow-linebreak: "off"
   # use only single quotes/backquotes for strings
   quotes: ["error", "single"]
   # trailing commas are mandatory
@@ -27,7 +32,7 @@ rules:
   # indentation made with spaces not tabs
   indent: ["error", 4, { "ignoreComments": true }]
   # lines are max. 100 signs long
-  max-len: ["error", { "code": 100 }]
+  max-len: ["error", { "code": 120 }]
   # a line ends with semicolon, period
   semi: ["error", "always"]
   # addon to 'semi', cares about spaces before and after semicolon usage
@@ -72,9 +77,8 @@ rules:
     }
   ]
   # limit the max amount of conditionals
-  complexity: ["error", { "max": 4 }]
-  # allow functions with a maximum of 50 lines
-  max-lines-per-function: ["error", { "max": 50, "skipBlankLines": true, "skipComments": true}]
+  complexity: ["error", { "max": 14 }]
+  arrow-parens: [2, "as-needed"]
   react/jsx-no-bind: ["warn"]
   react/forbid-prop-types: ["warn"]
   react/prefer-es6-class: ["warn"]
@@ -84,3 +88,26 @@ rules:
   react/jsx-boolean-value: ["off"]
   # align closing react component bracket with opening bracket
   react/jsx-closing-bracket-location: [1, "line-aligned"]
+  # disable checks as default eslint indent rule already do it
+  react/jsx-indent: ["off"]
+  react/jsx-indent-props: ["off"]
+
+overrides: [
+{
+  files: [
+    "**/*.test.js",
+    "**/*.test.jsx"
+  ],
+  env: {
+    jest: true,
+  },
+  plugins: ["jest"],
+  rules: {
+    jest/no-disabled-tests: "warn",
+    jest/no-focused-tests: "error",
+    jest/no-identical-title: "error",
+    jest/prefer-to-have-length: "warn",
+    jest/valid-expect: "error"
+  }
+}
+]
